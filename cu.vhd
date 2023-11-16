@@ -5,7 +5,7 @@ ENTITY cu IS
 PORT  ( Ck, nSS, SCk, TC8, TC15	 : IN STD_LOGIC;
 	State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	RD, WR, LE, SE, SEC, SEA, SED, EC, RST : OUT STD_LOGIC
- )
+ );
 END cu;
 
 ARCHITECTURE Behavioral OF cu IS
@@ -25,9 +25,9 @@ BEGIN
 	WHEN WAITSCK => IF (SCk='1') THEN next_state <= SCKH_C; ELSE next_state <= WAITSCK; END IF;
 	WHEN SCKH_C => IF (SCk='0') THEN next_state <= SCKL0_C; ELSE next_state <= SCKH_C; END IF;
 	WHEN SCKL0_C => next_state <= SCKL1_C;
-	WHEN SCKL1_C => IF (SCk='1' AND TC8='1') THEN next_state <= SCKH_A; ELSIF (SCk='1' AND TC8='0') next_state <= SCKH_C; ELSE next_state <=SCKL1_C ; END IF;
+	WHEN SCKL1_C => IF (SCk='1' AND TC8='1') THEN next_state <= SCKH_A; ELSIF (SCk='1' AND TC8='0') THEN next_state <= SCKH_C; ELSE next_state <=SCKL1_C ; END IF;
 	WHEN SCKH_A => IF (SCk='0') THEN next_state <= SCKL0_A; ELSE next_state <= SCKH_A; END IF;
-	WHEN SCKL0_A => IF (State="00100000" AND TC15='1') THEN next_state <= SCKH_DIN; ELSIF (State="00100001" AND TC15='1') next_state <= S_READ; ELSE next_state <=SCKL1_A ; END IF;
+	WHEN SCKL0_A => IF (State="00100000" AND TC15='1') THEN next_state <= SCKH_DIN; ELSIF (State="00100001" AND TC15='1') THEN next_state <= S_READ; ELSE next_state <=SCKL1_A ; END IF;
 	WHEN SCKL1_A => IF (SCk='1') THEN next_state <= SCKL0_W; ELSE next_state <= SCKL1_A; END IF;
 	WHEN SCKL0_W => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
 	WHEN SCKH_DIN => IF (nSS='0' AND SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
@@ -38,7 +38,7 @@ BEGIN
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
 	WHEN SCKL_DOUT => IF (SCk='1') THEN next_state <= SCKH0_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
-	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= S_WAIT; ELSE next_state <= SCHK1_DOUT; END IF;
+	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= S_WAIT; ELSE next_state <= SCKH1_DOUT; END IF;
 	WHEN SCKH1_DOUT => IF (SCk='1') THEN next_state <= SCKH1_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
 	WHEN OTHERS => next_state <= IDLE;
 	END CASE;
@@ -62,25 +62,25 @@ BEGIN
 
 	CASE present_state IS
 	WHEN IDLE => RST<='1';
-	WHEN WAITSCK => ;
-	WHEN SCKH_C => ;
+	WHEN WAITSCK => 
+	WHEN SCKH_C => 
 	WHEN SCKL0_C => SEC<='1'; EC<='1';
-	WHEN SCKL1_C => ;
-	WHEN SCKH_A => ;
+	WHEN SCKL1_C => 
+	WHEN SCKH_A => 
 	WHEN SCKL0_A => SEA<='1'; EC<='1';
-	WHEN SCKL1_A => ;
-	WHEN SCKL0_W => ;
-	WHEN SCKH_DIN => ;
+	WHEN SCKL1_A => 
+	WHEN SCKL0_W => 
+	WHEN SCKH_DIN => 
 	WHEN SCKL0_DIN => SED<='1'; EC<='1';
-	WHEN SCKL1_DIN => ;
+	WHEN SCKL1_DIN => 
 	WHEN S_WRITE => WR<='1';
-	WHEN S_WAIT => ;
+	WHEN S_WAIT => 
 	WHEN S_READ => RD<='1';
 	WHEN LOAD => LE<='1';
-	WHEN SCKL_DOUT => ;
+	WHEN SCKL_DOUT => 
 	WHEN SCKH0_DOUT => SED<='1'; EC<='1';
-	WHEN SCKH1_DOUT => ;
-	WHEN OTHERS => ;
+	WHEN SCKH1_DOUT => 
+	WHEN OTHERS => 
 	END CASE;
 
 END PROCESS;
