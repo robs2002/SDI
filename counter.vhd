@@ -17,8 +17,9 @@ BEGIN
 
 PROCESS (Clock,Reset) IS
 BEGIN
+
 IF (Reset='1') THEN
-T<=(OTHERS => '0');
+	T<=(OTHERS => '0');
 ELSIF (Clock'EVENT AND Clock='1') THEN
    IF (Enable='1') THEN
          T<=T+1;
