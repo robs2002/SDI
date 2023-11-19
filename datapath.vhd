@@ -34,7 +34,6 @@ COMPONENT  reg_load IS
 	GENERIC (N : integer:=16); 
 	PORT ( DOUT : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 	Clock,Reset,Load,Enable: IN STD_LOGIC; 
-	Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 	R: OUT STD_lOGIC
 	);
 END COMPONENT;
@@ -79,11 +78,10 @@ shift_register_load_dout : reg_load GENERIC MAP(16)
 		Reset => RST_DOUT,
 		Load => LE,
 		Enable => SE, 
-		Q => slq,
 		R => MISO
 		);
 		
-contatore : counter GENERIC MAP (16)
+contatore : counter GENERIC MAP (4)
 	PORT MAP( 
 		Enable => EC,
 		Clock => CK,

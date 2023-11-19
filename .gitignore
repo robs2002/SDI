@@ -4,5 +4,16 @@
 db
 incremental_db
 output_files
+*.rpt
+*.done
+*.smsg
+*.summary
+*.jdi
+*.pin
+*.qws
+*.sld
+*.sof
+*.txt
+
  
 !.gitignore
