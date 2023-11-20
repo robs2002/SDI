@@ -24,8 +24,6 @@ ELSIF (Clock'EVENT AND Clock = '1') THEN
 	IF (Enable='1') THEN
 		R <= Q(0);
 		Q <= '0' & Q(N-1 DOWNTO 1);
-	ELSE
-		R <= 'Z';
 	END IF;
 	IF (Load='1') THEN
 		Q <= DOUT;

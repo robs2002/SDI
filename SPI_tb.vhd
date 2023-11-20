@@ -36,11 +36,12 @@ sck_tb <= '1';
 wait for 500 ns;
 END PROCESS;
 
-nss_tb <= '1', '0' after 120 ns, '1' after 32600 ns;
+nss_tb <= '1', '0' after 120 ns,'1' after 35000 ns;
 
 dout_tb <= "0101010101010101"; 
 
-mosi_tb <= '0','1' after 5700 ns, '0' after 6700 ns, '1' after 8700 ns;  --00000100    00100000
+mosi_tb <= '1','0' after 1700 ns,'1' after 5700 ns, '0' after 6700 ns, '1' after 8700 ns; --lettura 10000100 00100001
+--mosi_tb <= '0','1' after 5700 ns, '0' after 6700 ns, '1' after 8700 ns; --scrittura 00000100 00100000
 
 test: SPI PORT MAP(ck_tb, mosi_tb, nss_tb, sck_tb, dout_tb, a_tb, din_tb, miso_tb, rd_tb, wr_tb);
 
