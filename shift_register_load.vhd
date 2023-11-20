@@ -19,6 +19,7 @@ PROCESS (Clock, Reset)
 BEGIN
 IF (Reset = '1') THEN
 	Q <= (OTHERS => '0');
+	R <= 'Z';
 ELSIF (Clock'EVENT AND Clock = '1') THEN
 	IF (Enable='1') THEN
 		R <= Q(0);

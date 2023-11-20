@@ -18,23 +18,23 @@ SIGNAL next_state: State_type;
 
 BEGIN
 
-transitions: PROCESS(present_state, nSS, TC8, TC15, State)
+transitions: PROCESS(present_state, nSS, TC8, TC15, State, SCk)
 BEGIN
 	CASE present_state IS
-	WHEN IDLE => IF (nSS='0' AND SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
+	WHEN IDLE => IF (SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
 	WHEN WAITSCK => IF (SCk='1') THEN next_state <= SCKH_C; ELSE next_state <= WAITSCK; END IF;
 	WHEN SCKH_C => IF (SCk='0') THEN next_state <= SCKL0_C; ELSE next_state <= SCKH_C; END IF;
 	WHEN SCKL0_C => next_state <= SCKL1_C;
 	WHEN SCKL1_C => IF (SCk='1' AND TC8='1') THEN next_state <= SCKH_A; ELSIF (SCk='1' AND TC8='0') THEN next_state <= SCKH_C; ELSE next_state <=SCKL1_C ; END IF;
 	WHEN SCKH_A => IF (SCk='0') THEN next_state <= SCKL0_A; ELSE next_state <= SCKH_A; END IF;
-	WHEN SCKL0_A => IF (State="00100000" AND TC15='1') THEN next_state <= SCKH_DIN; ELSIF (State="00100001" AND TC15='1') THEN next_state <= S_READ; ELSE next_state <=SCKL1_A ; END IF;
-	WHEN SCKL1_A => IF (SCk='1') THEN next_state <= SCKL0_W; ELSE next_state <= SCKL1_A; END IF;
+	WHEN SCKL0_A => IF (State="00100000" AND TC15='1') THEN next_state <= SCKL0_W; ELSIF (State="00100001" AND TC15='1') THEN next_state <= S_READ; ELSE next_state <=SCKL1_A ; END IF;
+	WHEN SCKL1_A => IF (SCk='1') THEN next_state <= SCKH_A; ELSE next_state <= SCKL1_A; END IF;
 	WHEN SCKL0_W => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
-	WHEN SCKH_DIN => IF (nSS='0' AND SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
-	WHEN SCKL0_DIN => next_state <= SCKL1_DIN; 
+	WHEN SCKH_DIN => IF (SCk='0') THEN next_state <= SCKL0_DIN; ELSE next_state <= SCKH_DIN; END IF;
+	WHEN SCKL0_DIN => IF (TC15='0') THEN next_state <= SCKL1_DIN; ELSE next_state <= S_WRITE; END IF;
 	WHEN SCKL1_DIN => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
 	WHEN S_WRITE => next_state <= S_WAIT;
-	WHEN S_WAIT => IF (nSS='1') THEN next_state <= IDLE; ELSE next_state <= S_WAIT; END IF;
+	WHEN S_WAIT => next_state <= S_WAIT;
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
 	WHEN SCKL_DOUT => IF (SCk='1') THEN next_state <= SCKH0_DOUT; ELSE next_state <= SCKL_DOUT; END IF;

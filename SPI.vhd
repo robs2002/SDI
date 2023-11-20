@@ -1,7 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY lab2 IS
+ENTITY SPI IS
 PORT(
 	CK, MOSI, nSS, SCK : IN std_logic;
 	DOUT : IN std_logic_vector(15 downto 0);
@@ -11,7 +11,7 @@ PORT(
 	);
 END ENTITY;
 
-ARCHITECTURE behavior OF lab2 IS
+ARCHITECTURE behavior OF SPI IS
 
 COMPONENT cu IS 
 	PORT( 
