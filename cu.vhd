@@ -37,8 +37,8 @@ BEGIN
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
 	WHEN SCKL_DOUT => IF (SCk='1') THEN next_state <= SCKH0_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
-	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= S_WAIT; ELSE next_state <= SCKH1_DOUT; END IF;
-	WHEN SCKH1_DOUT => IF (SCk='0' AND TC0='0') THEN next_state <= SCKL_DOUT; ELSIF (SCk='0' AND TC0='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT;
+	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT; END IF;
+	WHEN SCKH1_DOUT => IF (SCk='0' AND TC0='0') THEN next_state <= SCKL_DOUT; ELSIF (SCk='0' AND TC0='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT; END IF;
 	WHEN OTHERS => next_state <= IDLE;
 	END CASE;
 END PROCESS;

@@ -15,7 +15,7 @@ ARCHITECTURE behavior OF SPI IS
 
 COMPONENT cu IS 
 	PORT( 
-		Ck, nSS, SCk, TC8, TC15	 : IN STD_LOGIC;
+		Ck, nSS, SCk, TC0, TC8, TC15	 : IN STD_LOGIC;
 		State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
 		);
@@ -26,7 +26,7 @@ COMPONENT datapath IS
 		CK : IN std_logic;
 		MOSI, SEC, SEA, SED, SE, LE, EC, RST, RST_SL : IN std_logic;
 		dout : IN std_logic_vector(15 downto 0);
-		MISO, TC8, TC15 : OUT std_logic;
+		MISO, TC0, TC8, TC15 : OUT std_logic;
 		state, A : OUT std_logic_vector(7 downto 0);
 		din : OUT std_logic_vector(15 downto 0)
 		);
