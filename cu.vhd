@@ -2,16 +2,16 @@ library ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY cu IS 
-PORT  ( Ck, nSS, SCk, TC8, TC15	 : IN STD_LOGIC;
+PORT  ( Ck, nSS, SCk, TC0, TC8, TC15	 : IN STD_LOGIC;
 	State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	RD, WR, LE, SE, SEC, SEA, SED, EC, RST : OUT STD_LOGIC
+	RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
  );
 END cu;
 
 ARCHITECTURE Behavioral OF cu IS
 
 TYPE State_type IS ( IDLE, WAITSCK, SCKH_C, SCKL0_C, SCKL1_C, SCKH_A, SCKL0_A, SCKL1_A, SCKL0_W,
-		     SCKH_DIN, SCKL0_DIN, SCKL1_DIN, S_WRITE, S_READ, LOAD, SCKL_DOUT, SCKH0_DOUT, SCKH1_DOUT, S_WAIT ); 
+		     SCKH_DIN, SCKL0_DIN, SCKL1_DIN, S_WRITE, S_READ, LOAD, SCKL_DOUT, SCKH0_DOUT, SCKH1_DOUT ); 
 
 SIGNAL present_state: State_type;
 SIGNAL next_state: State_type;
@@ -33,13 +33,12 @@ BEGIN
 	WHEN SCKH_DIN => IF (SCk='0') THEN next_state <= SCKL0_DIN; ELSE next_state <= SCKH_DIN; END IF;
 	WHEN SCKL0_DIN => IF (TC15='0') THEN next_state <= SCKL1_DIN; ELSE next_state <= S_WRITE; END IF;
 	WHEN SCKL1_DIN => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
-	WHEN S_WRITE => next_state <= S_WAIT;
-	WHEN S_WAIT => next_state <= S_WAIT;
+	WHEN S_WRITE => next_state <= WAITSCK;
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
 	WHEN SCKL_DOUT => IF (SCk='1') THEN next_state <= SCKH0_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
 	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= S_WAIT; ELSE next_state <= SCKH1_DOUT; END IF;
-	WHEN SCKH1_DOUT => IF (SCk='1') THEN next_state <= SCKH1_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
+	WHEN SCKH1_DOUT => IF (SCk='0' AND TC0='0') THEN next_state <= SCKL_DOUT; ELSIF (SCk='0' AND TC0='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT;
 	WHEN OTHERS => next_state <= IDLE;
 	END CASE;
 END PROCESS;
@@ -61,9 +60,9 @@ BEGIN
 	RD<='0'; WR<='0'; LE<='0'; SE<='0'; SEC<='0'; SEA<='0'; SED<='0'; EC<='0'; RST<='0';
 
 	CASE present_state IS
-	WHEN IDLE => RST<='1';
+	WHEN IDLE => RST<='1'; RST_SL<='1';
 	WHEN WAITSCK => 
-	WHEN SCKH_C => 
+	WHEN SCKH_C => RST_SL<='1';
 	WHEN SCKL0_C => SEC<='1'; EC<='1';
 	WHEN SCKL1_C => 
 	WHEN SCKH_A => 
@@ -74,7 +73,6 @@ BEGIN
 	WHEN SCKL0_DIN => SED<='1'; EC<='1';
 	WHEN SCKL1_DIN => 
 	WHEN S_WRITE => WR<='1';
-	WHEN S_WAIT => 
 	WHEN S_READ => RD<='1';
 	WHEN LOAD => LE<='1';
 	WHEN SCKL_DOUT => 

@@ -17,14 +17,14 @@ COMPONENT cu IS
 	PORT( 
 		Ck, nSS, SCk, TC8, TC15	 : IN STD_LOGIC;
 		State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-		RD, WR, LE, SE, SEC, SEA, SED, EC, RST : OUT STD_LOGIC
+		RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
 		);
 END COMPONENT;
 
 COMPONENT datapath IS
 	PORT(
 		CK : IN std_logic;
-		MOSI, SEC, SEA, SED, SE, LE, EC, RST_C, RST_S, RST_A, RST_DIN, RST_DOUT : IN std_logic;
+		MOSI, SEC, SEA, SED, SE, LE, EC, RST, RST_SL : IN std_logic;
 		dout : IN std_logic_vector(15 downto 0);
 		MISO, TC8, TC15 : OUT std_logic;
 		state, A : OUT std_logic_vector(7 downto 0);
@@ -32,7 +32,7 @@ COMPONENT datapath IS
 		);
 END COMPONENT;
 
-SIGNAL sec, sea, sed, se, le, ec, rst, tc8, tc15 : std_logic;
+SIGNAL sec, sea, sed, se, le, ec, rst, rst_sl, tc0, tc8, tc15 : std_logic;
 SIGNAL state : std_logic_vector(7 downto 0);
 
 BEGIN
@@ -46,13 +46,11 @@ DP : datapath PORT MAP(
 	SE => se, 
 	LE => le, 
 	EC => ec, 
-	RST_C => rst, 
-	RST_S => rst, 
-	RST_A  => rst, 
-	RST_DIN => rst, 
-	RST_DOUT => rst,
+	RST => rst,  
+	RST_SL => rst_sl,
 	dout => DOUT,
 	MISO => MISO,
+	TC0 => tc0,
 	TC8 => tc8,
 	TC15 => tc15,
 	state => state,
@@ -64,6 +62,7 @@ control_unit : cu PORT MAP(
 	Ck => CK, 
 	nSS => nSS, 
 	SCk => SCK, 
+	TC0 => tc0,
 	TC8 => tc8,
 	TC15 => tc15,
 	State => state,
@@ -75,7 +74,8 @@ control_unit : cu PORT MAP(
 	SEA => sea,
 	SED => sed,
 	EC => ec,
-	RST => rst
+	RST => rst,
+	RST_SL => rst_sl
 	);
 
 END ARCHITECTURE;

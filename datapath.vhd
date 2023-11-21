@@ -4,9 +4,9 @@ use IEEE.std_logic_1164.all;
 ENTITY datapath IS
 PORT(
 	CK : IN std_logic;
-	MOSI, SEC, SEA, SED, SE, LE, EC, RST_C, RST_S, RST_A, RST_DIN, RST_DOUT : IN std_logic;
+	MOSI, SEC, SEA, SED, SE, LE, EC, RST, RST_SL : IN std_logic;
 	dout : IN std_logic_vector(15 downto 0);
-	MISO, TC8, TC15 : OUT std_logic;
+	MISO, TC0, TC8, TC15 : OUT std_logic;
 	state, A : OUT std_logic_vector(7 downto 0);
 	din : OUT std_logic_vector(15 downto 0)
 	);
@@ -47,7 +47,7 @@ BEGIN
 shift_register_state : reg GENERIC MAP(8)
 	PORT MAP(
 		Clock => CK,
-		Reset => RST_S,
+		Reset => RST,
 		Enable => SEC,
 		R => MOSI,
 		Q => state
@@ -56,7 +56,7 @@ shift_register_state : reg GENERIC MAP(8)
 shift_register_address : reg GENERIC MAP(8)
 	PORT MAP(
 		Clock => CK,
-		Reset => RST_A,
+		Reset => RST,
 		Enable => SEA,
 		R => MOSI,
 		Q => A
@@ -65,7 +65,7 @@ shift_register_address : reg GENERIC MAP(8)
 shift_register_din : reg GENERIC MAP(16)
 	PORT MAP(
 		Clock => CK,
-		Reset => RST_DIN,
+		Reset => RST,
 		Enable => SED,
 		R => MOSI,
 		Q => din
@@ -75,7 +75,7 @@ shift_register_load_dout : reg_load GENERIC MAP(16)
 	PORT MAP( 
 		DOUT => dout,
 		Clock => CK,
-		Reset => RST_DOUT,
+		Reset => RST_SL,
 		Load => LE,
 		Enable => SE, 
 		R => MISO
@@ -85,10 +85,11 @@ contatore : counter GENERIC MAP (4)
 	PORT MAP( 
 		Enable => EC,
 		Clock => CK,
-		Reset => RST_C,
+		Reset => RST,
 		Q => cnt
 		);
 		
+TC0 <= '1' when (cnt = "0000" ) else '0';	
 TC8 <= '1' when (cnt = "1000" ) else '0';	
 TC15 <= '1' when (cnt = "1111" ) else '0';
 
