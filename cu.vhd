@@ -18,7 +18,7 @@ SIGNAL next_state: State_type;
 
 BEGIN
 
-transitions: PROCESS(present_state, nSS, TC8, TC15, State, SCk)
+transitions: PROCESS(present_state, TC0, TC8, TC15, State, SCk)
 BEGIN
 	CASE present_state IS
 	WHEN IDLE => IF (SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
@@ -37,7 +37,7 @@ BEGIN
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
 	WHEN SCKL_DOUT => IF (SCk='1') THEN next_state <= SCKH0_DOUT; ELSE next_state <= SCKL_DOUT; END IF;
-	WHEN SCKH0_DOUT => IF (TC15='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT; END IF;
+	WHEN SCKH0_DOUT => next_state <= SCKH1_DOUT; 
 	WHEN SCKH1_DOUT => IF (SCk='0' AND TC0='0') THEN next_state <= SCKL_DOUT; ELSIF (SCk='0' AND TC0='1') THEN next_state <= WAITSCK; ELSE next_state <= SCKH1_DOUT; END IF;
 	WHEN OTHERS => next_state <= IDLE;
 	END CASE;
@@ -57,7 +57,7 @@ END PROCESS;
 output: PROCESS(present_state)
 BEGIN
 
-	RD<='0'; WR<='0'; LE<='0'; SE<='0'; SEC<='0'; SEA<='0'; SED<='0'; EC<='0'; RST<='0';
+	RD<='0'; WR<='0'; LE<='0'; SE<='0'; SEC<='0'; SEA<='0'; SED<='0'; EC<='0'; RST<='0'; RST_SL<='0';
 
 	CASE present_state IS
 	WHEN IDLE => RST<='1'; RST_SL<='1';
