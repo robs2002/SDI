@@ -2,8 +2,8 @@ library ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY cu IS 
-PORT  ( Ck, nSS, SCk, TC0, TC8, TC15	 : IN STD_LOGIC;
-	State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+PORT  ( Ck, nSS, SCk, TC0, TC8, TC15, RST_S : IN STD_LOGIC;
+	State : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
  );
 END cu;
@@ -44,13 +44,17 @@ BEGIN
 END PROCESS;
 
 registers: PROCESS(Ck)
-BEGIN 
-	IF (Ck'event and Ck='1') THEN
-		IF (nSS='1') THEN
-			present_state <= IDLE;
-		ELSE
-			present_state <= next_state;
-		END IF;	
+BEGIN  
+	IF (RST_S='1') THEN
+		present_state <= IDLE;
+	ELSE
+		IF (Ck'event and Ck='1') THEN
+			IF (nSS='1') THEN
+				present_state <= IDLE;
+			ELSE
+				present_state <= next_state;
+			END IF;	
+		END IF;
 	END IF;
 END PROCESS;
 

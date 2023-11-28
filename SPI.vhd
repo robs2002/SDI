@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY SPI IS
 PORT(
-	CK, MOSI, nSS, SCK : IN std_logic;
+	CK, MOSI, nSS, SCK, RST_S : IN std_logic;
 	DOUT : IN std_logic_vector(15 downto 0);
 	A : OUT std_logic_vector(7 downto 0);
 	DIN : OUT std_logic_vector(15 downto 0);
@@ -15,7 +15,7 @@ ARCHITECTURE behavior OF SPI IS
 
 COMPONENT cu IS 
 	PORT( 
-		Ck, nSS, SCk, TC0, TC8, TC15	 : IN STD_LOGIC;
+		Ck, nSS, SCk, TC0, TC8, TC15, RST_S : IN STD_LOGIC;
 		State: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
 		);
@@ -65,6 +65,7 @@ control_unit : cu PORT MAP(
 	TC0 => tc0,
 	TC8 => tc8,
 	TC15 => tc15,
+	RST_S => rst_s,
 	State => state,
 	RD => RD, 
 	WR  => WR, 
