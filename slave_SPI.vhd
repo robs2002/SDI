@@ -2,9 +2,17 @@ LIBRARY ieee;
 USE ieee.STD_LOGIC_1164.all;
 
 ENTITY slave_SPI IS
-PORT(
-	CK, MOSI, nSS, SCK, RST_S : IN STD_LOGIC;
-	MISO: OUT STD_LOGIC
+--PORT(CK, MOSI, nSS, SCK, RST_S : IN STD_LOGIC;MISO: OUT STD_LOGIC);
+	port
+	(
+		-- Main clock inputs
+		mainClk	: in std_logic;
+		-- Logic state analyzer/stimulator
+		lsasBus	: inout std_logic_vector( 3 downto 0 );
+		-- Dip switches
+		switches	: in std_logic_vector( 0 downto 0 );
+		-- LEDs
+		leds		: out std_logic_vector( 0 downto 0 )
 	);
 END slave_SPI;
 
@@ -37,7 +45,16 @@ BEGIN
 
 WRn <= not WR;
 
-mem : memory PORT MAP(CK, RD, WRn, A, DIN, DOUT);
-spi1 :SPI PORT MAP(CK, MOSI, nSS, SCK, RST_S, DOUT, A, DIN, MISO, RD, WR);
+mem : memory PORT MAP(mainClk, RD, WRn, A, DIN, DOUT);
+spi1 :SPI PORT MAP(mainClk, lsasBus(0), lsasBus(1), lsasBus(2), switches(0), DOUT, A, DIN, lsasBus(3), RD, WR);
+
+led: PROCESS (switches(0))
+BEGIN
+	IF (switches(0)='1') THEN
+		leds(0) <= '1';
+	ELSE
+		leds(0) <= '0';
+	END IF;
+END PROCESS;
 
 END behavior;
