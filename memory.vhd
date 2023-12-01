@@ -2,33 +2,33 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-ENTITY memory is
-port(
-  clk, RD, WRn : in std_logic;
-  address : in std_logic_vector(7 downto 0);
-  data_in : in std_logic_vector(15 downto 0);
-  data_out : out std_logic_vector(15 downto 0)
+ENTITY memory IS
+PORT(
+  clk, RD, WRn : IN STD_LOGIC;
+  address : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+  data_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+  data_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 );
-end memory;
+END memory;
 
 ARCHITECTURE Behavioral OF memory IS
 
-type arr_type is array(0 to 255) of std_logic_vector(15 downto 0);
+TYPE arr_type IS ARRAY(0 TO 255) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 
-signal mem: arr_type;
+SIGNAL mem: arr_type;
 
 BEGIN
 
-PROCESS(clk)
+PROCESS(clk,RD)
 
 BEGIN
 
     IF RD = '1' THEN
-         data_out <= mem(to_integer(unsigned(address)));
+         data_out <= mem(TO_INTEGER(UNSIGNED(address)));
     END IF;
     IF RISING_EDGE(clk) THEN
     IF WRn = '0' THEN
-         mem(to_integer(unsigned(address))) <= data_in;
+         mem(TO_INTEGER(UNSIGNED(address))) <= data_in;
     END IF;
     END IF;
 

@@ -37,46 +37,8 @@ SIGNAL state : std_logic_vector(7 downto 0);
 
 BEGIN
 
-DP : datapath PORT MAP(
-	CK => CK, 
-	MOSI => MOSI, 
-	SEC => sec, 
-	SEA => sea, 
-	SED => sed, 
-	SE => se, 
-	LE => le, 
-	EC => ec, 
-	RST => rst,  
-	RST_SL => rst_sl,
-	dout => DOUT,
-	MISO => MISO,
-	TC0 => tc0,
-	TC8 => tc8,
-	TC15 => tc15,
-	state => state,
-	A => A,
-	din => DIN
-	);
+DP : datapath PORT MAP(CK, MOSI, sec, sea, sed, se, le, ec, rst, rst_sl, DOUT, MISO, tc0, tc8, tc15, state, A, DIN);
 
-control_unit : cu PORT MAP( 
-	Ck => CK, 
-	nSS => nSS, 
-	SCk => SCK, 
-	TC0 => tc0,
-	TC8 => tc8,
-	TC15 => tc15,
-	RST_S => rst_s,
-	State => state,
-	RD => RD, 
-	WR  => WR, 
-	LE => le,
-	SE => se,
-	SEC => sec,
-	SEA => sea,
-	SED => sed,
-	EC => ec,
-	RST => rst,
-	RST_SL => rst_sl
-	);
+control_unit : cu PORT MAP(CK, nSS, SCK, tc0, tc8, tc15, rst_s, state, RD, WR, le, se, sec, sea, sed, ec, rst, rst_sl);
 
 END ARCHITECTURE;

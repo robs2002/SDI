@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY reg_load IS
-GENERIC (N : integer:=16); 
+GENERIC (N : INTEGER:=16); 
 PORT ( DOUT : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 Clock,Reset,Load,Enable: IN STD_LOGIC; 
 R: OUT STD_lOGIC

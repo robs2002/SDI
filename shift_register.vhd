@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY reg IS
-GENERIC (N : integer:=16); 
+GENERIC (N : INTEGER:=16); 
 PORT (
 Clock,Reset,Enable,R : IN STD_LOGIC; 
 Q : BUFFER STD_LOGIC_VECTOR(N-1 DOWNTO 0)
