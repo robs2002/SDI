@@ -58,7 +58,7 @@ BEGIN
 WRn <= not WR;
 
 mem : memory PORT MAP(mainClk, RD, WRn, A, DIN, DOUT);
-slv :SPI PORT MAP(mainClk, lsasBus(0), lsasBus(1), lsasBus(2), switches(0), DOUT, A, DIN, lsasBus(3), RD, WR);
+slv :SPI PORT MAP(mainClk, lsasBus(15), lsasBus(12), lsasBus(13), switches(0), DOUT, A, DIN, lsasBus(14), RD, WR);
 
 test: PROCESS (switches(0))
 BEGIN
