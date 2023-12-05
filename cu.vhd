@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 ENTITY cu IS 
 PORT  ( Ck, nSS, SCk, TC0, TC8, TC15, RST_S : IN STD_LOGIC;
 	State : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL : OUT STD_LOGIC
+	RD, WR, LE, SE, SEC, SEA, SED, EC, RST, RST_SL, RST_M : OUT STD_LOGIC
  );
 END cu;
 
@@ -50,7 +50,7 @@ BEGIN
 	ELSE
 		IF (Ck'event and Ck='1') THEN
 			IF (nSS='1') THEN
-				present_state <= IDLE;
+				present_state <= WAITSCK;
 			ELSE
 				present_state <= next_state;
 			END IF;	
@@ -61,11 +61,12 @@ END PROCESS;
 output: PROCESS(present_state)
 BEGIN
 
-	RD<='0'; WR<='0'; LE<='0'; SE<='0'; SEC<='0'; SEA<='0'; SED<='0'; EC<='0'; RST<='0'; RST_SL<='0';
+	RD<='0'; WR<='0'; LE<='0'; SE<='0'; SEC<='0'; SEA<='0'; SED<='0'; EC<='0'; RST<='0'; RST_SL<='0'; RST_M<='0';
+
 
 	CASE present_state IS
-	WHEN IDLE => RST<='1'; RST_SL<='1';
-	WHEN WAITSCK => 
+	WHEN IDLE => RST<='1'; RST_SL<='1'; RST_M<='1';
+	WHEN WAITSCK => RST<='1';
 	WHEN SCKH_C => RST_SL<='1';
 	WHEN SCKL0_C => SEC<='1'; EC<='1';
 	WHEN SCKL1_C => 

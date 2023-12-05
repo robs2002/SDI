@@ -4,7 +4,7 @@ USE ieee.numeric_std.all;
 
 ENTITY memory IS
 PORT(
-  clk, RD, WRn : IN STD_LOGIC;
+  clk, RD, WRn, RST_M : IN STD_LOGIC;
   address : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
   data_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
   data_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
@@ -19,18 +19,23 @@ SIGNAL mem: arr_type;
 
 BEGIN
 
-PROCESS(clk,RD)
+PROCESS(clk,RD,RST_M)
 
 BEGIN
-
-    IF RD = '1' THEN
-         data_out <= mem(TO_INTEGER(UNSIGNED(address)));
-    END IF;
-    IF RISING_EDGE(clk) THEN
-    IF WRn = '0' THEN
-         mem(TO_INTEGER(UNSIGNED(address))) <= data_in;
-    END IF;
-    END IF;
+    IF RST_M ='1' THEN
+		FOR riga IN 0 TO 255 LOOP
+			mem(riga) <= (OTHERS => '0');
+		END LOOP;
+	 ELSE 	
+		 IF RD = '1' THEN
+				data_out <= mem(TO_INTEGER(UNSIGNED(address)));
+		 END IF;
+		 IF (clk'EVENT AND clk = '1') THEN
+		 IF WRn = '0' THEN
+				mem(TO_INTEGER(UNSIGNED(address))) <= data_in;
+		 END IF;
+		 END IF;
+	 END IF;
 
 END PROCESS;
 

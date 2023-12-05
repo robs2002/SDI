@@ -36,13 +36,13 @@ PORT(
 	DOUT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	A : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	DIN : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	MISO, RD, WR : OUT STD_LOGIC
+	MISO, RD, WR, RST_M : OUT STD_LOGIC
 	);
 END COMPONENT;
 
 COMPONENT memory is
 PORT(
-  	 clk, RD, WRn : in STD_LOGIC;
+  	 clk, RD, WRn, RST_M : in STD_LOGIC;
 	 address : in STD_LOGIC_VECTOR(7 DOWNTO 0);
  	 data_in : in STD_LOGIC_VECTOR(15 DOWNTO 0);
  	 data_out : out STD_LOGIC_VECTOR(15 DOWNTO 0)
@@ -50,15 +50,15 @@ PORT(
 END COMPONENT;
 
 SIGNAL DOUT, DIN : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL RD, WR, WRn :  STD_LOGIC;
+SIGNAL RD, WR, WRn, RST_M :  STD_LOGIC;
 SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0);
 	
 BEGIN
 
 WRn <= not WR;
 
-mem : memory PORT MAP(mainClk, RD, WRn, A, DIN, DOUT);
-slv :SPI PORT MAP(mainClk, lsasBus(15), lsasBus(12), lsasBus(13), switches(0), DOUT, A, DIN, lsasBus(14), RD, WR);
+mem : memory PORT MAP(mainClk, RD, WRn, RST_M, A, DIN, DOUT);
+slv :SPI PORT MAP(mainClk, lsasBus(15), lsasBus(12), lsasBus(13), switches(0), DOUT, A, DIN, lsasBus(14), RD, WR, RST_M);
 
 test: PROCESS (switches(0))
 BEGIN

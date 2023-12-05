@@ -19,7 +19,7 @@ IF (Reset = '1') THEN
 Q <= (OTHERS => '0');
 ELSIF (Clock'EVENT AND Clock = '1') THEN
 IF (Enable='1') THEN
-Q <= R & Q(N-1 DOWNTO 1);
+Q <= Q(N-2 DOWNTO 0) & R;
 END IF;
 END IF;
 END PROCESS;
