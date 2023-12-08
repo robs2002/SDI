@@ -14,7 +14,7 @@ COMPONENT subtractor IS
  GENERIC(N: INTEGER:=24);
     PORT ( A : in STD_LOGIC_VECTOR (N-1 downto 0);
            B : in STD_LOGIC_VECTOR (N-1 downto 0);
-           Result : out STD_LOGIC_VECTOR (N-1 downto 0));
+           Result : out STD_LOGIC_VECTOR (N downto 0));
 END COMPONENT;
 
 signal a_s,b_s: STD_LOGIC_VECTOR(23 downto 0);
