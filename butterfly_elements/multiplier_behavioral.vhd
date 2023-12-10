@@ -4,18 +4,23 @@ use IEEE.NUMERIC_STD.ALL;
 
 ENTITY multiplier_behavioral IS
 GENERIC(N: INTEGER:=24);
-    PORT ( A : in STD_LOGIC_VECTOR (N-1 downto 0);
-           B : in STD_LOGIC_VECTOR (N-1 downto 0);
-           Result : out STD_LOGIC_VECTOR (2*N-1 downto 0));
+    PORT ( A : in STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+           B : in STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+           Result : out STD_LOGIC_VECTOR (2*N-2 DOWNTO 0));
 END multiplier_behavioral;
 
 ARCHITECTURE Behavioral of multiplier_behavioral is
 
-    SIGNAL a_signed, b_signed : SIGNED (N-1 DOWNTO 0);
+SIGNAL A_s, B_s: SIGNED (N-1 DOWNTO 0);
+SIGNAL rs_p: SIGNED (2*N-1 DOWNTO 0);
 
 BEGIN
-        a_signed <= (SIGNED(A));
-        b_signed <= (SIGNED(B));
 
-        Result <= STD_LOGIC_VECTOR(a_signed * b_signed);
+	A_s <= SIGNED(A);
+	B_s <= SIGNED(B);
+
+	rs_p <= A_s * B_s;
+
+        Result <= STD_LOGIC_VECTOR(RESIZE(rs_p, Result'LENGTH));
+
 end Behavioral;
