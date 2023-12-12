@@ -34,8 +34,8 @@ END PROCESS;
 nss_tb <= '1', '0' after 120 ns,'1' after 35000 ns;
 rst_s_tb <= '1','0' after 50 ns,'1' after 34000 ns;
 
---mosi_tb <= '1','0' after 1700 ns,'1' after 5700 ns, '0' after 6700 ns, '1' after 8700 ns; --lettura 10000100 00100001
-mosi_tb <= '0','1' after 5700 ns, '0' after 6700 ns, '1' after 8700 ns; --scrittura 00000100 00100000
+mosi_tb <= '0','1' after 2700 ns, '0' after 3700 ns, '1' after 7700 ns; --lettura 00100001
+--mosi_tb <= '0','1' after 2700 ns, '0' after 3700 ns, '1' after 8700 ns; --scrittura 00100000
 
 test: slave_SPI PORT MAP(ck_tb, mosi_tb, nss_tb, sck_tb, rst_s_tb, miso_tb);
 
