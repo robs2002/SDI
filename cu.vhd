@@ -10,7 +10,7 @@ END cu;
 
 ARCHITECTURE Behavioral OF cu IS
 
-TYPE State_type IS ( IDLE, WAITSCK, SCKH_C, SCKL0_C, SCKL1_C, SCKH_A, SCKL0_A, SCKL1_A, SCKL0_W,
+TYPE State_type IS ( IDLE, WAITSS, WAITSCK, SCKH_C, SCKL0_C, SCKL1_C, SCKH_A, SCKL0_A, SCKL1_A, SCKL0_W,
 		     SCKH_DIN, SCKL0_DIN, SCKL1_DIN, S_WRITE, S_READ, LOAD, SCKL_DOUT, SCKH0_DOUT, SCKH1_DOUT ); 
 
 SIGNAL present_state: State_type;
@@ -21,7 +21,8 @@ BEGIN
 transitions: PROCESS(present_state, TC0, TC8, TC15, State, SCk)
 BEGIN
 	CASE present_state IS
-	WHEN IDLE => IF (SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= IDLE; END IF;
+	WHEN IDLE => next_state <= WAITSS;
+	WHEN WAITSS => IF (SCk='0') THEN next_state <= WAITSCK; ELSE next_state <= WAITSS; END IF;
 	WHEN WAITSCK => IF (SCk='1') THEN next_state <= SCKH_C; ELSE next_state <= WAITSCK; END IF;
 	WHEN SCKH_C => IF (SCk='0') THEN next_state <= SCKL0_C; ELSE next_state <= SCKH_C; END IF;
 	WHEN SCKL0_C => next_state <= SCKL1_C;
@@ -50,7 +51,7 @@ BEGIN
 	ELSE
 		IF (Ck'event and Ck='1') THEN
 			IF (nSS='1') THEN
-				present_state <= WAITSCK;
+				present_state <= WAITSS;
 			ELSE
 				present_state <= next_state;
 			END IF;	
@@ -66,6 +67,7 @@ BEGIN
 
 	CASE present_state IS
 	WHEN IDLE => RST<='1'; RST_SL<='1'; RST_M<='1';
+	WHEN WAITSS =>
 	WHEN WAITSCK => RST<='1';
 	WHEN SCKH_C => RST_SL<='1';
 	WHEN SCKL0_C => SEC<='1'; EC<='1';
