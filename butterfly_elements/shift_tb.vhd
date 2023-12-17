@@ -11,8 +11,10 @@ ARCHITECTURE test OF shift_tb IS
 
 signal a_s: STD_LOGIC_VECTOR(23 downto 0);
 signal p_s: STD_LOGIC_VECTOR(24 downto 0);
+signal p_sr: STD_LOGIC_VECTOR(23 downto 0);
 signal p_ss: STD_LOGIC_VECTOR(46 downto 0);
 signal a: SIGNED(24 DOWNTO 0);
+signal b: SIGNED(23 DOWNTO 0);
 
 BEGIN
 
@@ -30,7 +32,11 @@ end process;
 
 a <= SIGNED('0' & a_s);
 
+b <= SIGNED(a_s);
+
 p_s <= STD_LOGIC_VECTOR(a sll 1);
+
+p_sr <= STD_LOGIC_VECTOR(RESIZE(b(23 DOWNTO 1),24));
 
 p_ss <= STD_LOGIC_VECTOR(RESIZE(a sll 1, 47));
 
