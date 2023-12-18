@@ -29,7 +29,7 @@ GENERIC( N: INTEGER:=24);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
 	   C, Clock, Rst : IN STD_LOGIC;
            Result_m : OUT STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
-	   Result_s : OUT STD_LOGIC_VECTOR (2*N-2 DOWNTO 0)
+	   Result_s : OUT STD_LOGIC_VECTOR (2*N-1 DOWNTO 0)
 );
 END COMPONENT;
 
@@ -57,9 +57,10 @@ PORT( DATA_IN : IN STD_LOGIC_VECTOR(48 DOWNTO 0);
 );
 END COMPONENT;
 
-SIGNAL round_a, reg_ar, r_Ar, r_Ai, r_Br, r_Bi, r_Wr, r_Wi, M1, M2: STD_LOGIC_VECTOR (23 DOWNTO 0);
-SIGNAL mm, ms: STD_LOGIC_VECTOR (46 DOWNTO 0);
-SIGNAL ad, AD1, dd, ar, s_mm, s_ms, su, SU1, SU2, r_mm, r_ms, r_ad, r_su, r_Around, r_Ain: STD_LOGIC_VECTOR (48 DOWNTO 0);
+SIGNAL r_Ar, r_Ai, r_Br, r_Bi, r_Wr, r_Wi, M1, M2: STD_LOGIC_VECTOR (23 DOWNTO 0);
+SIGNAL mm, r_mm, Ar_47, Ai_47: STD_LOGIC_VECTOR (46 DOWNTO 0);
+SIGNAL ms, r_ms: STD_LOGIC_VECTOR (47 DOWNTO 0);
+SIGNAL ad, AD1, s_mm, s_ms, su, SU1, SU2, r_ad, r_su, r_Around, r_Ain: STD_LOGIC_VECTOR (48 DOWNTO 0);
 
 BEGIN
 
@@ -105,16 +106,19 @@ muxM2: PROCESS(mux_m2, r_Wr, r_Wi)
 
 mult: multiplier GENERIC MAP(24) PORT MAP(M1, M2, C, Clock, Rst, mm, ms);
 regmm: reg GENERIC MAP(47) PORT MAP( mm, en7, Clock, Rst, r_mm );
-regms: reg GENERIC MAP(47) PORT MAP( ms, en8, Clock, Rst, r_ms );
+regms: reg GENERIC MAP(48) PORT MAP( ms, en9, Clock, Rst, r_ms );
 
-mux_add: PROCESS(mux_a, ad, r_Ar, r_Ai)
+Ai_47 <= r_Ai & "00000000000000000000000";
+Ar_47 <= r_Ar & "00000000000000000000000";
+
+mux_add: PROCESS(mux_a, r_ad, Ar_47, Ai_47)
       BEGIN
         IF (mux_a="00") THEN
-	 AD1 <= ad;
+	 AD1 <= r_ad;
 	ELSIF (mux_a="01") THEN
-	 AD1 <= STD_LOGIC_VECTOR(RESIZE(SIGNED(r_Ar),49));
+	 AD1 <= STD_LOGIC_VECTOR(RESIZE(SIGNED(Ar_47),49));
 	ELSIF (mux_a="10") THEN
-	 AD1 <= STD_LOGIC_VECTOR(RESIZE(SIGNED(r_Ai),49));
+	 AD1 <= STD_LOGIC_VECTOR(RESIZE(SIGNED(Ai_47),49));
         ELSE
 	 AD1 <= (OTHERS => '0');
         END IF;
@@ -124,7 +128,7 @@ s_mm <= STD_LOGIC_VECTOR(RESIZE(SIGNED(r_mm),49));
 s_ms <= STD_LOGIC_VECTOR(RESIZE(SIGNED(r_ms),49));
 
 add1: adder GENERIC MAP(49) PORT MAP(AD1, s_mm, Clock, Rst, ad);
-regad: reg GENERIC MAP(49) PORT MAP( ad, en9, Clock, Rst, r_ad );
+regad: reg GENERIC MAP(49) PORT MAP( ad, en8, Clock, Rst, r_ad );
 
 mux_sub1: PROCESS(mux_s1, r_ad, s_ms)
       BEGIN
@@ -138,9 +142,9 @@ mux_sub1: PROCESS(mux_s1, r_ad, s_ms)
 mux_sub2: PROCESS(mux_s2, r_ad, r_su, s_mm)
       BEGIN
         IF (mux_s2="00") THEN
-	 SU2 <= r_ad;
-	ELSIF (mux_s2="01") THEN
 	 SU2 <= r_su;
+	ELSIF (mux_s2="01") THEN
+	 SU2 <= r_ad;
 	ELSIF (mux_s2="10") THEN
 	 SU2 <= s_mm;
         ELSE

@@ -23,7 +23,7 @@ transitions: PROCESS(present_state, Start)
 	BEGIN
 	CASE present_state IS
 		WHEN IDLE => next_state <= SW;
-		WHEN SW => IF(Start='1') THEN next_state <= S1; ELSE next_state <= IDLE; END IF;
+		WHEN SW => IF(Start='1') THEN next_state <= S1; ELSE next_state <= SW; END IF;
 		WHEN S1 => next_state <= S2;
 		WHEN S2 => next_state <= S3;
 		WHEN S3 => next_state <= S4;
@@ -58,14 +58,14 @@ output: PROCESS(present_state)
 		WHEN IDLE => Rst<='1'; 
 		WHEN SW => 
 		WHEN S1 => en1<='1'; en3<='1'; en5<='1';
-		WHEN S2 => en2<='1'; en4<='1'; en6<='1'; C<='1'; mux_m1<="10"; mux_m2<='0';
-		WHEN S3 => C<='1'; mux_m1<="11"; mux_m2<='1';
-		WHEN S4 => en7<='1'; C<='1'; mux_m1<="10"; mux_m2<='1';
-		WHEN S5 => en7<='1'; C<='1'; mux_m1<="11"; mux_m2<='0'; mux_a<="01";
-		WHEN S6 => en7<='1'; en8<='1'; mux_m1<="00"; mux_a<="10";
-		WHEN S7 => en7<='1'; en8<='1'; mux_s1<='0'; mux_s2<="10"; mux_m1<="01";
-		WHEN S8 => en9<='1'; en10<='1'; mux_a<="00";
-		WHEN S9 => en8<='1'; en9<='1'; mux_s1<='1'; mux_s2<="00";
+		WHEN S2 => en2<='1'; en4<='1'; en6<='1'; C<='0'; mux_m1<="10"; mux_m2<='0';
+		WHEN S3 => C<='0'; mux_m1<="11"; mux_m2<='1';
+		WHEN S4 => en7<='1'; C<='0'; mux_m1<="10"; mux_m2<='1';
+		WHEN S5 => en7<='1'; C<='0'; mux_m1<="11"; mux_m2<='0'; mux_a<="01";
+		WHEN S6 => en7<='1'; en8<='1'; mux_m1<="00"; mux_a<="10"; 
+		WHEN S7 => en7<='1'; en8<='1'; mux_s1<='0'; mux_s2<="10"; mux_m1<="01"; C<='1';
+		WHEN S8 => en9<='1'; en10<='1'; mux_a<="00"; C<='1';
+		WHEN S9 => en8<='1'; en9<='1'; mux_s1<='1'; mux_s2<="00"; en11<='1';
 		WHEN S10 => en10<='1'; mux_s1<='1'; mux_s2<="01";
 		WHEN S11 => en10<='1'; Done<='1'; mux_ra<='1';
 		WHEN OTHERS => 
