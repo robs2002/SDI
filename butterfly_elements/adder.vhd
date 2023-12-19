@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 ENTITY adder IS
-GENERIC(N: INTEGER:=47);
+GENERIC(N: INTEGER:=50);
     PORT ( A : in STD_LOGIC_VECTOR (N-1 downto 0);
            B : in STD_LOGIC_VECTOR (N-1 downto 0);
  	   Clock, Reset : IN STD_LOGIC;

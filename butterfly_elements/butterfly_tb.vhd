@@ -30,9 +30,9 @@ wait for 5 ns;
 END PROCESS;
 
 Reset_tb <= '1', '0' after 10 ns; 
-A_tb <= "001100000000000000000000"; 
-B_tb <= "111100000000000000000000";  
-W_tb <= "000100000000000000000000"; 
+A_tb <= "011111111111111111111111"; 
+B_tb <= "100000000000000000000000";  
+W_tb <= "011111111111111111111111"; 
 Start_tb <= '0', '1' after 40 ns, '0' after 50 ns; 
 
 btb: butterfly_element PORT MAP (A_tb, B_tb, W_tb, Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);

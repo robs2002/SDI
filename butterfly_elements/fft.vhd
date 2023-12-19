@@ -75,14 +75,16 @@ b52: butterfly_element PORT MAP( X92, X112, W2, D52, Clock, Reset, D53, X93, X11
 b62: butterfly_element PORT MAP( X122, X142, W6, D62, Clock, Reset, D63, X123, X143 );
 b72: butterfly_element PORT MAP( X132, X152, W6, D72, Clock, Reset, D73, X133, X153 );
 
-b03: butterfly_element PORT MAP( X03, X1_3, W0, D03, Clock, Reset, D04, X0p, X1p );
-b13: butterfly_element PORT MAP( X23, X33, W4, D13, Clock, Reset, D14, X2p, X3p );
-b23: butterfly_element PORT MAP( X43, X53, W2, D23, Clock, Reset, D24, X4p, X5p );
-b33: butterfly_element PORT MAP( X63, X73, W6, D33, Clock, Reset, D34, X6p, X7p );
-b43: butterfly_element PORT MAP( X83, X93, W1, D43, Clock, Reset, D44, X8p, X9p );
-b53: butterfly_element PORT MAP( X103, X113, W5, D53, Clock, Reset, D54, X10p, X11p );
-b63: butterfly_element PORT MAP( X123, X133, W3, D63, Clock, Reset, D64, X12p, X13p );
-b73: butterfly_element PORT MAP( X143, X153, W7, D73, Clock, Reset, D74, X14p, X15p );
+b03: butterfly_element PORT MAP( X03, X1_3, W0, D03, Clock, Reset, D04, X0p, X8p );
+b13: butterfly_element PORT MAP( X23, X33, W4, D13, Clock, Reset, D14, X4p, X12p );
+b23: butterfly_element PORT MAP( X43, X53, W2, D23, Clock, Reset, D24, X2p, X10p );
+b33: butterfly_element PORT MAP( X63, X73, W6, D33, Clock, Reset, D34, X6p, X14p );
+b43: butterfly_element PORT MAP( X83, X93, W1, D43, Clock, Reset, D44, X1p, X9p );
+b53: butterfly_element PORT MAP( X103, X113, W5, D53, Clock, Reset, D54, X5p, X13p );
+b63: butterfly_element PORT MAP( X123, X133, W3, D63, Clock, Reset, D64, X3p, X11p );
+b73: butterfly_element PORT MAP( X143, X153, W7, D73, Clock, Reset, D74, X7p, X15p );
+
+Done <= D04 AND D14 AND D24 AND D34 AND D44 AND D54 AND D64 AND D74;
 
 END Behavior;
 
