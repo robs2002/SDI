@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 ENTITY datapath IS
-    PORT ( A, B, W : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
+    PORT ( A, B, Wr, Wi : IN STD_LOGIC_VECTOR (23 DOWNTO 0);
 	   C, Clock, Rst, mux_pa, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : IN STD_LOGIC;
 	   mux_m1, mux_a, mux_s2: IN STD_LOGIC_VECTOR(1 DOWNTO 0); 
            A_p, B_p : OUT STD_LOGIC_VECTOR (23 DOWNTO 0)
@@ -79,8 +79,8 @@ regAr: reg GENERIC MAP(24) PORT MAP( A, en1, Clock, Rst, r_Ar );
 regAi: reg GENERIC MAP(24) PORT MAP( A, en2, Clock, Rst, r_Ai );
 regBr: reg GENERIC MAP(24) PORT MAP( B, en3, Clock, Rst, r_Br );
 regBi: reg GENERIC MAP(24) PORT MAP( B, en4, Clock, Rst, r_Bi );
-regWr: reg GENERIC MAP(24) PORT MAP( W, en5, Clock, Rst, r_Wr );
-regWi: reg GENERIC MAP(24) PORT MAP( W, en6, Clock, Rst, r_Wi );
+regWr: reg GENERIC MAP(24) PORT MAP( Wr, en5, Clock, Rst, r_Wr );
+regWi: reg GENERIC MAP(24) PORT MAP( Wi, en6, Clock, Rst, r_Wi );
 
 muxM1: PROCESS(mux_m1, r_Ar, r_Ai, r_Br, r_Bi)
 	BEGIN
