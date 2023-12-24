@@ -44,7 +44,7 @@ BEGIN
 	END CASE;
 END PROCESS;
 
-registers: PROCESS(Ck)
+registers: PROCESS(Ck,RST_S)
 BEGIN  
 	IF (RST_S='1') THEN
 		present_state <= IDLE;

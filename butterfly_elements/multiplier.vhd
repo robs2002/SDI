@@ -12,7 +12,7 @@ GENERIC(N: INTEGER:=24);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
 	   C, Clock, Rst : IN STD_LOGIC;
            Result_m : out STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
-	   Result_s : out STD_LOGIC_VECTOR (2*N-2 DOWNTO 0)
+	   Result_s : out STD_LOGIC_VECTOR (2*N-1 DOWNTO 0)
 );
 END multiplier;
 
@@ -23,8 +23,9 @@ ARCHITECTURE Behavioral of multiplier is
 
 SIGNAL A_s, B_s: SIGNED (N-1 DOWNTO 0);
 SIGNAL rs_p: SIGNED (2*N-1 DOWNTO 0);
-SIGNAL rs_m, rs_mm, rs_s:STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
-SIGNAL A_ss: SIGNED (N DOWNTO 0);
+SIGNAL rs_m, rs_mm:STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
+SIGNAL rs_s:STD_LOGIC_VECTOR (2*N-1 DOWNTO 0);
+SIGNAL A_ss,A_sss: SIGNED (N DOWNTO 0);
 SIGNAL prs: STD_LOGIC_VECTOR(N DOWNTO 0);
 
 BEGIN
@@ -36,7 +37,9 @@ BEGIN
 	rs_p <= A_s * B_s;
         rs_m <= STD_LOGIC_VECTOR(RESIZE(rs_p, Result_m'LENGTH));
 
-	rs_s <= STD_LOGIC_VECTOR(RESIZE(A_ss sll 1, Result_s'LENGTH));
+	A_sss <= A_ss sll 1;
+
+	rs_s <= STD_LOGIC_VECTOR(A_sss) & "00000000000000000000000";
 
 	shift: PROCESS(Clock, Rst)
 	BEGIN
