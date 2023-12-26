@@ -33,7 +33,7 @@ BEGIN
 	WHEN SCKL0_W => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
 	WHEN SCKH_DIN => IF (SCk='0') THEN next_state <= SCKL0_DIN; ELSE next_state <= SCKH_DIN; END IF;
 	WHEN SCKL0_DIN => IF (TC15='0') THEN next_state <= SCKL1_DIN; ELSE next_state <= S_WRITE; END IF;
-	WHEN SCKL1_DIN => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL0_W; END IF;
+	WHEN SCKL1_DIN => IF (SCk='1') THEN next_state <= SCKH_DIN; ELSE next_state <= SCKL1_DIN; END IF;
 	WHEN S_WRITE => next_state <= WAITSCK;
 	WHEN S_READ => next_state <= LOAD; 
 	WHEN LOAD => next_state <= SCKL_DOUT; 
