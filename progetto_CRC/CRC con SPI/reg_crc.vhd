@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-ENTITY reg IS
+ENTITY reg_crc IS
 	PORT (
 		CLK, RST, EN : IN std_logic;
 		D : IN std_logic_vector(15 downto 0);
@@ -11,7 +11,7 @@ ENTITY reg IS
 		);
 END ENTITY;
 
-ARCHITECTURE behavior OF reg IS
+ARCHITECTURE behavior OF reg_crc IS
 
 BEGIN
 

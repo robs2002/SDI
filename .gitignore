@@ -1,9 +1,10 @@
-*.bak
-*.qpf
-*.qsf
 db
 incremental_db
 output_files
+work
+*.bak
+*.qpf
+*.qsf
 *.rpt
 *.done
 *.smsg
@@ -13,7 +14,10 @@ output_files
 *.qws
 *.sld
 *.sof
-*.txt
+*.mti
+*.mpf
+*.wlf
+
 
  
 !.gitignore

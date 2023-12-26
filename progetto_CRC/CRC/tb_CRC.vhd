@@ -23,7 +23,7 @@ SIGNAL clk, rst_sw, rd, wr : std_logic;
 SIGNAL mosi, miso : std_logic_vector(15 downto 0);
 SIGNAL add : std_logic_vector(7 downto 0);
 
-FILE ifile, ofile, testfile : text;
+FILE ifile, ofile : text;
 
 BEGIN
 
@@ -31,31 +31,32 @@ test : CRC PORT MAP(clk, rst_sw, rd, wr, mosi, miso, add);
 
 PROCESS		-- clock=10MHz => T=100 ns
 BEGIN
-	clk <= '0';
-	wait for 50 ns;
 	clk <= '1';
+	wait for 50 ns;
+	clk <= '0';
 	wait for 50 ns;
 END PROCESS;
 
 PROCESS
 
-VARIABLE iline, oline, testline : line;
-VARIABLE din, dout, vettore_test : std_logic_vector(15 downto 0);
+VARIABLE iline, oline : line;
+VARIABLE din : std_logic_vector(15 downto 0);
 
 BEGIN
 
 rst_sw<='0'; rd<='0'; wr<='0'; 
-wait for 100 ns;
+wait for 150 ns;
 rst_sw<='1';		-- reset attivo
-wait for 100 ns;
+wait for 200 ns;
 rst_sw<='0';		-- reset disattivato
-wait for 25 ns;
+wait for 200 ns;
+
 
 file_open(ifile, "crc_test_input.txt", read_mode);
-file_open(ofile, "crc_test_output.txt", read_mode);
-file_open(testfile, "crc-result.txt", write_mode);
-while not endfile(ifile) loop
-	-- immetto nuovo dato
+file_open(ofile, "crc_result.txt", write_mode);
+
+while not endfile(ifile) loop	-- per testare tutti i dati bisogna impostare il tempo della simulazione ad almeno 407 ms con risuluzione di 10 ns
+	-- scrittura registro 0
 	readline(ifile, iline);
 	read(iline, din);
 	mosi <= din;
@@ -63,24 +64,27 @@ while not endfile(ifile) loop
 	add <= "00000000";
 	wait for 100 ns;	-- aspetta per un periodo di clock
 	wr <= '0'; 
-	wait for 16 us;	-- aspetto il tempo che ci mette il modulo SPI a richiedere la lettura
-	readline(ofile, oline);
-	read(oline, dout);
+
+	-- attendo il tempo equivalente a richiedere la lettura del dato dal registro 1, ovvero 16 us
+	wait for 5 us;	-- per accorciare la simulazione metto 5us tanto i dati sono già pronti
+	
+	-- comando di lettura sul registro 1
 	add <= "00000001";
 	rd <= '1';
-	vettore_test := dout XOR miso;
-	write(testline, vettore_test);
-	writeline(testfile, testline);	-- scrivo un file con i risultati del test
 	wait for 100 ns;	-- aspetto per un periodo di clock
+	write(oline, miso);
+	writeline(ofile, oline);	-- scrivo un file con i risultati del test
 	rd <= '0';
 	
-	wait for 1 us; -- dovrei aspettare per 48 us che Ã¨ il tempo necessaro per leggere i dati tramite SPI e mandare il nuovo dato
+	-- attendo il tempo equivalente a ricevere il dato appena letto e di scrivere un nuovo dato sul registro 0, ovvero 48 us
+	wait for 1 us; -- per accorciare la simulazione metto 1us tanto i dati sono già pronti
 		
 end loop;
 
 file_close(ifile);
 file_close(ofile);
-file_close(testfile);
+wait;
+
 
 END PROCESS;
 

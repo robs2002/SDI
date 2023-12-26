@@ -1,14 +1,14 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY cu IS
+ENTITY cu_crc IS
 PORT(
 	CLK, RST_SW, TC, RB, En0 : IN std_logic;
 	RST, RST_reg1, RST_CNT, LD, SE, CE, En1, En2_cu, En3, SB_IN, s_mux : OUT std_logic
 	);
 END ENTITY;
 
-ARCHITECTURE behavior OF cu IS
+ARCHITECTURE behavior OF cu_crc IS
 
 TYPE state IS (RST_S, IDLE, LOAD, SHIFT, CRC_OUT, CRC_RST);
 
@@ -42,7 +42,7 @@ END PROCESS;
 
 output: PROCESS(present_state)
 BEGIN
-	RST<='0'; RST_reg1<='0'; RST_CNT<='0'; LD<='0'; SE<='0'; CE<='0'; En1<='0'; En2_cu<='0'; En3<='0'; SB_IN<='1'; s_mux<='0';
+	RST<='0'; RST_reg1<='0'; RST_CNT<='0'; LD<='0'; SE<='0'; CE<='0'; En1<='0'; En2_cu<='0'; En3<='0'; SB_IN<='0'; s_mux<='0';
 
 	CASE present_state IS
 	WHEN RST_S => RST<='1'; RST_reg1<='1'; RST_CNT<='1';

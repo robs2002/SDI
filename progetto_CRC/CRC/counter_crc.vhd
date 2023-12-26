@@ -2,20 +2,20 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
-ENTITY counter IS
+ENTITY counter_crc IS
 	PORT (
 		CLK, RST, CE : IN std_logic;
 		TC : OUT std_logic
 	);
 END ENTITY;
 
-ARCHITECTURE behavior OF counter IS
+ARCHITECTURE behavior OF counter_crc IS
 
-SIGNAL count : unsigned(4 downto 0);	-- valore del contatore
+SIGNAL count : unsigned(3 downto 0);	-- valore del contatore
 
 BEGIN
 
-TC <= '1' when (count = "10000"  ) else '0';	
+TC <= '1' when (count = "1111"  ) else '0';	
 
 PROCESs(CLK)
 BEGIN
