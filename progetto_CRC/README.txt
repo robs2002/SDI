@@ -1,5 +1,5 @@
 Se si vuole testare solo il modulo CRC andare sulla cartella CRC e creare li un workspace modelsim o quartus
-Se si vuole testare il blocco completo (SPI + CRC) andare sulla cartella "CRC con SPI" e creare li un workspace modelsim o quartus
+Se si vuole testare il blocco completo (SPI + CRC) andare sulla cartella "CRC con SPI" e creare li un workspace modelsim o quartus. Usare come file padre il file "SPIconCRC" che ha anche un file ti tb associato. Se invece si vuole generare il codice da mettere sulla virtlab, nella stessa cartella usare il file "slave_CRC" al posto di "SPIconCNC".
 
 PROGRAMMI PYTHON
 Ci sono 3 programmi python che generano/usano dei file txt:
