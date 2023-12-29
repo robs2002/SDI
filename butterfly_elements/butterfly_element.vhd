@@ -21,21 +21,21 @@ COMPONENT datapath IS
 	);
 END COMPONENT;
 
-COMPONENT cu IS
-PORT (
-           Start, Clock, Reset : IN STD_LOGIC;
-	   Done, C, Rst, mux_pa, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : OUT STD_LOGIC;
-	   mux_m1, mux_a, mux_s2: OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+COMPONENT sequencer IS
+PORT(
+  Start, Clock : IN STD_LOGIC;
+  Done, C, Rst, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : OUT STD_LOGIC;
+  mux_m1, mux_a, mux_s2: OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 );
 END COMPONENT;
 
-SIGNAL C, Rst, mux_pa, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : STD_LOGIC;
+SIGNAL C, Rst, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : STD_LOGIC;
 SIGNAL mux_m1, mux_a, mux_s2: STD_LOGIC_VECTOR(1 DOWNTO 0); 
 
 BEGIN
 
-control: cu PORT MAP ( Start, Clock, Reset, Done, C, Rst, mux_pa, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11, mux_m1, mux_a, mux_s2 );
-data: datapath PORT MAP ( A, B, Wr, Wi, C, Clock, Rst, mux_pa, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11, mux_m1, mux_a, mux_s2, A_p, B_p );
+control: sequencer PORT MAP ( Start, Clock, Done, C, Rst, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11, mux_m1, mux_a, mux_s2 );
+data: datapath PORT MAP ( A, B, Wr, Wi, C, Clock, Rst, '0', mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11, mux_m1, mux_a, mux_s2, A_p, B_p );
 
 END Behavior;
 
