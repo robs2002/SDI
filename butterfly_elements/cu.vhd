@@ -12,7 +12,7 @@ END cu;
 
 ARCHITECTURE Behavior OF cu IS
 
-TYPE State_type IS (IDLE, SW, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11);
+TYPE State_type IS (IDLE, SW, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S9c, S10c, S11c);
 
 SIGNAL present_state: State_type;
 SIGNAL next_state: State_type;
@@ -31,10 +31,13 @@ transitions: PROCESS(present_state, Start)
 		WHEN S5 => next_state <= S6;
 		WHEN S6 => next_state <= S7;
 		WHEN S7 => next_state <= S8;
-		WHEN S8 => next_state <= S9;
+		WHEN S8 => IF(Start='1') THEN next_state <= S9c; ELSE next_state <= S9; END IF;
 		WHEN S9 => next_state <= S10;
 		WHEN S10 => next_state <= S11;
 		WHEN S11 => next_state <= SW;
+		WHEN S9c => next_state <= S10c;
+		WHEN S10c => next_state <= S11c;
+		WHEN S11c => next_state <= S4;
 		WHEN OTHERS =>  next_state <= IDLE;
 	END CASE;
 END PROCESS;
@@ -62,12 +65,15 @@ output: PROCESS(present_state)
 		WHEN S3 => C<='0'; mux_m1<="11"; mux_m2<='1';
 		WHEN S4 => en7<='1'; C<='0'; mux_m1<="10"; mux_m2<='1';
 		WHEN S5 => en7<='1'; C<='0'; mux_m1<="11"; mux_m2<='0'; mux_a<="01";
-		WHEN S6 => en7<='1'; en8<='1'; mux_m1<="00"; mux_a<="10"; 
-		WHEN S7 => en7<='1'; en8<='1'; mux_s1<='0'; mux_s2<="10"; mux_m1<="01"; C<='1';
-		WHEN S8 => en9<='1'; en10<='1'; mux_a<="00"; C<='1';
+		WHEN S6 => en7<='1'; en8<='1'; mux_a<="10"; 
+		WHEN S7 => en7<='1'; en8<='1'; mux_s1<='0'; mux_s2<="10"; C<='1'; mux_m1<="00";
+		WHEN S8 => en9<='1'; en10<='1'; mux_a<="00"; C<='1'; mux_m1<="01";
 		WHEN S9 => en8<='1'; en9<='1'; mux_s1<='1'; mux_s2<="00"; en11<='1';
 		WHEN S10 => en10<='1'; mux_s1<='1'; mux_s2<="01";
 		WHEN S11 => en10<='1'; Done<='1'; mux_ra<='1';
+		WHEN S9c => en8<='1'; en9<='1'; mux_s1<='1'; mux_s2<="00"; en11<='1'; en1<='1'; en3<='1'; en5<='1';
+		WHEN S10c => en10<='1'; mux_s1<='1'; mux_s2<="01"; en2<='1'; en4<='1'; en6<='1'; C<='0'; mux_m1<="10"; mux_m2<='0';
+		WHEN S11c => en10<='1'; Done<='1'; mux_ra<='1'; C<='0'; mux_m1<="11"; mux_m2<='1';
 		WHEN OTHERS => 
 	END CASE;
 	END PROCESS;

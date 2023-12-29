@@ -16,7 +16,7 @@ PORT(
 );
 END COMPONENT;
 
-SIGNAL A_tb, B_tb, Wr_tb, Wi_tb, A_p_tb, B_p_tb : STD_LOGIC_VECTOR (23 DOWNTO 0); 
+SIGNAL A_tb, B_tb, A_p_tb, B_p_tb : STD_LOGIC_VECTOR (23 DOWNTO 0); 
 SIGNAL Start_tb, Clock_tb, Reset_tb, Done_tb : STD_LOGIC;
 
 BEGIN
@@ -30,11 +30,11 @@ wait for 5 ns;
 END PROCESS;
 
 Reset_tb <= '1', '0' after 10 ns; 
-A_tb <= "UUUUUUUUUUUUUUUUUUUUUUUU" , "011111111111111111111111" after 55 ns, "000000000000000000000000" after 65 ns;
+A_tb <= "UUUUUUUUUUUUUUUUUUUUUUUU" , "010000000000000000000000" after 55 ns, "000000000000000000000000" after 65 ns;
 B_tb <= "UUUUUUUUUUUUUUUUUUUUUUUU" , "000000000000000000000000" after 55 ns, "000000000000000000000000" after 65 ns; 
 Start_tb <= '0', '1' after 40 ns, '0' after 50 ns; 
 
-btb: butterfly_element PORT MAP (A_tb, B_tb, "011111111111111111111111", "000000000000000000000000", Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);
+btb: butterfly_element PORT MAP (A_tb, B_tb, "010000000000000000000000", "000000000000000000000000", Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);
 
 END test;
 
