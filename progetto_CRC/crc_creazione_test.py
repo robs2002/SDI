@@ -3,23 +3,9 @@ def xor(a, b):
         return '0'
     else:
         return '1'
-
-# apertura documento su cui salvare i valori
-ifile = open("CRC//crc_test_input.txt", "w")
-ofile = open("CRC//crc_test_output.txt", "w")
-
-#numero = 50469     # INSERISCI QUI IL NUMERO DA TESTARE IN BASE 10
-
-for numero in range(65536):
-
+    
+def CRC_calculator(numero):
     numero_bin = format(numero, f'0{16}b')  # trasforma il numero interno in un numero binario su 16 bit
-    numero_hex = format(numero, f'0{4}X')   # trasforma il numero interno in un numero esadecimale su 4 bit
-    #print("Input: ", numero_bin)
-    #print("Input: ", numero)
-    #print("Input: ", numero_hex)
-    ifile.write(numero_bin)
-    ifile.write("\n")
-
 
     vettore = []
     for bit in numero_bin:              # aggiungo al vettore i bit del numero
@@ -40,8 +26,30 @@ for numero in range(65536):
     risultato_bin = ''.join(str(bit) for bit in vettore)
     #print("Risultato: ", stringa_binaria)
     risultato = int(risultato_bin, 2)
-    risultato_hex = format(risultato, f'0{4}X')   # trasforma il numero interno in un numero esadecimale su 4 bit
+    
+    return (risultato, risultato_bin)
+
+
+
+# apertura documento su cui salvare i valori
+ifile = open("CRC//crc_test_input.txt", "w")
+ofile = open("CRC//crc_test_output.txt", "w")
+
+#numero = 50469     # INSERISCI QUI IL NUMERO DA TESTARE IN BASE 10
+
+for numero in range(65536):
+
+    numero_bin = format(numero, f'0{16}b')  # trasforma il numero interno in un numero binario su 16 bit
+    #print("Input: ", numero_bin)
+    #print("Input: ", numero)
+    #print("Input: ", numero_hex)
+    ifile.write(numero_bin)
+    ifile.write("\n")
+
+    (risultato, risultato_bin) = CRC_calculator(numero)  # funzione che calcola il CRC
+
     #print("Risultato: ", risultato)
+    risultato_bin = format(risultato, f'0{16}b')  # trasforma il numero interno in un numero binario su 16 bit
     print("Risultato: ", risultato_bin)
     ofile.write(risultato_bin)
     ofile.write("\n")
