@@ -25,6 +25,7 @@ BEGIN
 FOR i IN 0 TO 22 LOOP
 	  IF ( d(i)='1' ) THEN
 	    t <= '1';
+            EXIT;
 	  ELSE
 	    t <= '0';
 	  END IF;
