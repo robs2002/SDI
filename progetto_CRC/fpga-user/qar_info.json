@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/max/vlsi/didattica/virtlab/hardware/fpga-user/",
+	"acds_version" : "Version 20.1.0",
+	"platform" : "linux",
+	"os" : "CentOS Linux",
+	"qpf" : "fpga-user.qpf"
+}
