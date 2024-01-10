@@ -53,7 +53,7 @@ fileID = fopen('xout.txt', 'r');
 while ~feof(fileID)
     numero_binario = fgetl(fileID);
     numero_decimale = -bin2dec(numero_binario(1)) + bin2dec(numero_binario(2:end)) / (2^(length(numero_binario) - 1));
-    vettore_numeri(n) = numero_decimale;
+    vettore_numeri(n) = numero_decimale*32;
     n=n+1;
 end
 
@@ -78,10 +78,8 @@ for k = 1:length(vettore_numeri)
     n=n+1;
 end
 
-matrice_risultati = (matrice_reali + matrice_immaginari*1i)*32;
-
-matrice_risultati_teorici = fft(matrice_vettori, [], 2)*2;
-
+matrice_risultati = (matrice_reali + matrice_immaginari*1i);
+matrice_risultati_teorici = fft(matrice_vettori*2, [], 2);
 result = matrice_risultati - matrice_risultati_teorici;
 
 for riga = 1:num_vettori
@@ -94,9 +92,32 @@ for riga = 1:num_vettori
     end
 end
 
+matrice_reali_th=real(matrice_risultati_teorici);
+matrice_immaginari_th=imag(matrice_risultati_teorici);
+vettore_numeri_th=zeros(size(vettore_numeri));
 
+for k = 1:num_vettori
+    vettore_numeri_th(32*k-31:32*k-16) = matrice_reali_th(k,:);
+    vettore_numeri_th(32*k-15:32*k) = matrice_immaginari_th(k,:);
+end
 
-
-
-
+for k = 1:192
+        numero_decimale = vettore_numeri(k);
+        numero_sfixed = fi(numero_decimale, 1, bit_totali, bit_frazionari);
+        numero_binario = bin(numero_sfixed);
+        numero_decimale_th = vettore_numeri_th(k);
+        numero_sfixed_th = fi(numero_decimale_th, 1, bit_totali, bit_frazionari);
+        numero_binario_th = bin(numero_sfixed_th);  
+        diff_decimale = abs(numero_decimale - numero_decimale_th);
+        diff_sfixed = fi(diff_decimale, 1, bit_totali, bit_frazionari);
+        diff_binario = bin(diff_sfixed);
+        % if strcmp(numero_binario, numero_binario_th) == 0
+        %     disp('Le stringhe differenti sono:')
+        %     disp(numero_binario)
+        %     disp(numero_binario_th)
+        % end
+        if strcmp(diff_binario, '000000000000000000000000') == 0
+            disp(['La differenza binaria è: ' diff_binario])
+        end
+end
     
