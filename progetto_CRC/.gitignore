@@ -1,5 +1,5 @@
 work
 *.wlf
- *.mti
- *.mpf
+*.mti
+*.mpf
 !.gitignore
