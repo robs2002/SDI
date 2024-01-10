@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 ENTITY round IS
 PORT( DATA_IN : IN STD_LOGIC_VECTOR(49 DOWNTO 0);
-	Clock, Reset : IN STD_LOGIC;
+	Clock : IN STD_LOGIC;
       DATA_OUT : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
 );
 END round;
@@ -32,7 +32,7 @@ FOR i IN 0 TO 22 LOOP
         END LOOP;
 END PROCESS;
 
-PROCESS(Clock,Reset)
+PROCESS(Clock)
 BEGIN
 IF(Clock'EVENT AND Clock='1') THEN
 	IF ( d(22)='0' ) THEN --se il bit dopo LSB che tronco è 0 allora il numero approssimato è semplicemente il numero che ho

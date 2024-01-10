@@ -6,7 +6,7 @@ ENTITY adder IS
 GENERIC(N: INTEGER:=50);
     PORT ( A : in STD_LOGIC_VECTOR (N-1 downto 0);
            B : in STD_LOGIC_VECTOR (N-1 downto 0);
- 	   Clock, Reset : IN STD_LOGIC;
+ 	   Clock : IN STD_LOGIC;
            Result : out STD_LOGIC_VECTOR (N-1 downto 0)
 );
 END adder;
@@ -22,11 +22,9 @@ BEGIN
      B_s <= SIGNED(B);
      R_s <= A_s+B_s;	
 
-     PROCESS (Clock, Reset)
+     PROCESS (Clock)
 	BEGIN
-	IF (Reset = '1') THEN
-	Result <= (OTHERS => '0');
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
+	IF (Clock'EVENT AND Clock = '1') THEN
 	--Result <= STD_LOGIC_VECTOR(TO_SIGNED(TO_INTEGER(SIGNED(A))+ TO_INTEGER(SIGNED(B)),N));
 	Result <= STD_LOGIC_VECTOR(R_s);
 	END IF;

@@ -6,18 +6,16 @@ ENTITY subtractor IS
 GENERIC(N: INTEGER:=47);
     PORT ( A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-	   Clock, Reset : IN STD_LOGIC;
+	   Clock : IN STD_LOGIC;
            Result : OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0));
 END subtractor;
 
 ARCHITECTURE Behavioral of subtractor is
 
 BEGIN
-     PROCESS (Clock, Reset)
+     PROCESS (Clock)
 	BEGIN
-	IF (Reset = '1') THEN
-	Result <= (OTHERS => '0');
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
+	IF (Clock'EVENT AND Clock = '1') THEN
 	--Result <= STD_LOGIC_VECTOR(TO_SIGNED(TO_INTEGER(SIGNED(A))- TO_INTEGER(SIGNED(B)),N));
 	Result <= STD_LOGIC_VECTOR(SIGNED(A)-SIGNED(B));
 	END IF;

@@ -18,7 +18,7 @@ COMPONENT subtractor IS
 GENERIC( N: INTEGER:=47);
     PORT ( A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-	   Clock, Reset : IN STD_LOGIC;
+	   Clock : IN STD_LOGIC;
            Result : OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0)
 );
 END COMPONENT;
@@ -27,7 +27,7 @@ COMPONENT multiplier IS
 GENERIC( N: INTEGER:=24);
     PORT ( A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-	   C, Clock, Rst : IN STD_LOGIC;
+	   C, Clock : IN STD_LOGIC;
            Result_m : OUT STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
 	   Result_s : OUT STD_LOGIC_VECTOR (2*N-1 DOWNTO 0)
 );
@@ -37,7 +37,7 @@ COMPONENT adder IS
 GENERIC( N: INTEGER:=47);
     PORT ( A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-	   Clock, Reset : IN STD_LOGIC;
+	   Clock : IN STD_LOGIC;
            Result : OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0)
 );
 END COMPONENT;
@@ -52,7 +52,7 @@ END COMPONENT;
 
 COMPONENT round IS
 PORT( DATA_IN : IN STD_LOGIC_VECTOR(49 DOWNTO 0);
-	Clock, Reset : IN STD_LOGIC;
+	Clock : IN STD_LOGIC;
       DATA_OUT : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
 );
 END COMPONENT;
@@ -63,17 +63,6 @@ SIGNAL ms, r_ms: STD_LOGIC_VECTOR (47 DOWNTO 0);
 SIGNAL ad, AD1, s_mm, s_ms, su, SU1, SU2, r_ad, r_su, r_Around, r_Ain: STD_LOGIC_VECTOR (49 DOWNTO 0);
 
 BEGIN
-
---mux_Aport: PROCESS(mux_pa, A, round_a)
- --     BEGIN
- --       IF (mux_pa='0') THEN
---	 reg_ar <= A;
- --       ELSE
---	 reg_ar <= round_a;
- --       END IF;
- --     END PROCESS;
-
---regAr: reg GENERIC MAP(24) PORT MAP( reg_ar, en1, Clock, Rst, r_Ar );
 
 regAr: reg GENERIC MAP(24) PORT MAP( A, en1, Clock, Rst, r_Ar );
 regAi: reg GENERIC MAP(24) PORT MAP( A, en2, Clock, Rst, r_Ai );
@@ -104,7 +93,7 @@ muxM2: PROCESS(mux_m2, r_Wr, r_Wi)
 	END IF;
 	END PROCESS;
 
-mult: multiplier GENERIC MAP(24) PORT MAP(M1, M2, C, Clock, Rst, mm, ms);
+mult: multiplier GENERIC MAP(24) PORT MAP(M1, M2, C, Clock, mm, ms);
 regmm: reg GENERIC MAP(47) PORT MAP( mm, en7, Clock, Rst, r_mm );
 regms: reg GENERIC MAP(48) PORT MAP( ms, en9, Clock, Rst, r_ms );
 
@@ -127,7 +116,7 @@ mux_add: PROCESS(mux_a, r_ad, Ar_47, Ai_47)
 s_mm <= r_mm(46) & r_mm(46) & r_mm(46) & r_mm;
 s_ms <= r_ms(47) & r_ms(47) & r_ms;
 
-add1: adder GENERIC MAP(50) PORT MAP(AD1, s_mm, Clock, Rst, ad);
+add1: adder GENERIC MAP(50) PORT MAP(AD1, s_mm, Clock, ad);
 regad: reg GENERIC MAP(50) PORT MAP( ad, en8, Clock, Rst, r_ad );
 
 mux_sub1: PROCESS(mux_s1, r_ad, s_ms)
@@ -152,7 +141,7 @@ mux_sub2: PROCESS(mux_s2, r_ad, r_su, s_mm)
         END IF;
       END PROCESS;
 
-sub1: subtractor GENERIC MAP(50) PORT MAP(SU1, SU2, Clock, Rst, su);
+sub1: subtractor GENERIC MAP(50) PORT MAP(SU1, SU2, Clock, su);
 regsu: reg GENERIC MAP(50) PORT MAP( su, en10, Clock, Rst, r_su );
 
 regAround: reg GENERIC MAP(50) PORT MAP( r_su, en11, Clock, Rst, r_Ain );
@@ -166,8 +155,8 @@ mux_roundA: PROCESS(mux_ra, r_Ain, r_ad)
               END IF;
          END PROCESS;
 
-roundA: round PORT MAP (r_Around, Clock, Rst, A_p);
-roundB: round PORT MAP (r_su, Clock, Rst, B_p);
+roundA: round PORT MAP (r_Around, Clock, A_p);
+roundB: round PORT MAP (r_su, Clock, B_p);
   
 end Behavioral;
 

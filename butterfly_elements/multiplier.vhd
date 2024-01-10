@@ -10,7 +10,7 @@ ENTITY multiplier IS
 GENERIC(N: INTEGER:=24);
     PORT ( A : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
            B : IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
-	   C, Clock, Rst : IN STD_LOGIC;
+	   C, Clock : IN STD_LOGIC;
            Result_m : out STD_LOGIC_VECTOR (2*N-2 DOWNTO 0);
 	   Result_s : out STD_LOGIC_VECTOR (2*N-1 DOWNTO 0)
 );
@@ -41,33 +41,27 @@ BEGIN
 
 	rs_s <= STD_LOGIC_VECTOR(A_sss) & "00000000000000000000000";
 
-	shift: PROCESS(Clock, Rst)
+	shift: PROCESS(Clock)
 	BEGIN
-	IF (Rst = '1') THEN
-		Result_s <= (OTHERS => '0');
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
+	IF (Clock'EVENT AND Clock = '1') THEN
 		IF (C='1') THEN
 		Result_s <= rs_s;
 		END IF;
 	END IF;
 	END PROCESS;
 
-	pipe1: PROCESS(Clock, Rst)
+	pipe1: PROCESS(Clock)
 	BEGIN
-	IF (Rst = '1') THEN
-		rs_mm <= (OTHERS => '0');
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
+	IF (Clock'EVENT AND Clock = '1') THEN
 		IF (C='0') THEN
 		rs_mm <= rs_m;
 		END IF;
 	END IF;
 	END PROCESS;
 
-	pipe2: PROCESS(Clock, Rst)
+	pipe2: PROCESS(Clock)
 	BEGIN	
-	IF (Rst = '1') THEN
-		Result_m <= (OTHERS => '0');
-	ELSIF (Clock'EVENT AND Clock = '1') THEN
+	IF (Clock'EVENT AND Clock = '1') THEN
 		Result_m <= rs_mm;
 	END IF;
 	END PROCESS;
