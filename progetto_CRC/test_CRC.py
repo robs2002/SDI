@@ -13,7 +13,7 @@ def risposta_scheda():
 
 #------------------------------------------------
 NUMERO_PROVE = 1000
-LUNGHEZZA_MASSIMA_WORD = 1000
+LUNGHEZZA_MASSIMA_MESSAGGIO = 1000
 
 # Configura la porta seriale
 ser = serial.Serial('COM12', 9600)  # Abilito la seriale
@@ -28,7 +28,7 @@ for test in range(NUMERO_PROVE):
     ser.write(data_to_send)     # invio dati tramite seriale
     risposta_scheda()    # ignoro la risposta
 
-    lunghezza_word = random.randint(1, LUNGHEZZA_MASSIMA_WORD)
+    lunghezza_word = random.randint(1, LUNGHEZZA_MASSIMA_MESSAGGIO)
     crc_input = ""
     for word in range(lunghezza_word): 
         numero_casuale = random.randint(0, 65535)   # genere un numero casuale tra 0 e 2^16-1

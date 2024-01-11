@@ -1,8 +1,8 @@
+-- impostare tempo di simulazione a 18us con risoluzione minima di 100ns
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-
-USE ieee.std_logic_textio.all;
-USE STD.textio.all;
+use ieee.numeric_std.all;
 
 ENTITY tb_CRC IS
 END ENTITY;
@@ -23,14 +23,12 @@ SIGNAL clk, rst_sw, rd, wr : std_logic;
 SIGNAL mosi, miso : std_logic_vector(15 downto 0);
 SIGNAL add : std_logic_vector(7 downto 0);
 
-FILE ifile, ofile : text;
-
 BEGIN
 
 test : CRC PORT MAP(clk, rst_sw, rd, wr, mosi, miso, add);
 
 PROCESS		-- clock=10MHz => T=100 ns
-BEGIN
+	BEGIN	
 	clk <= '1';
 	wait for 50 ns;
 	clk <= '0';
@@ -38,53 +36,65 @@ BEGIN
 END PROCESS;
 
 PROCESS
+	BEGIN
 
-VARIABLE iline, oline : line;
-VARIABLE din : std_logic_vector(15 downto 0);
-
-BEGIN
-
-rst_sw<='0'; rd<='0'; wr<='0'; 
-wait for 150 ns;
-rst_sw<='1';		-- reset attivo
-wait for 200 ns;
-rst_sw<='0';		-- reset disattivato
-wait for 200 ns;
+	-- reset
+	rst_sw<='0'; rd<='0'; wr<='0'; 
+	wait for 150 ns;
+	rst_sw<='1';		-- reset attivo
+	wait for 200 ns;
+	rst_sw<='0';		-- reset disattivato
+	wait for 200 ns;
 
 
-file_open(ifile, "crc_test_input.txt", read_mode);
-file_open(ofile, "crc_result.txt", write_mode);
+	-- leggo nei registri da 0 a 5
+	for address in 0 to 5 loop
+		add <= std_logic_vector(to_unsigned(address, 8)); -- imposto come indirizzo tutti i numeri da 0 e a 5
+		rd <= '1';
+		wait for 100 ns;	-- aspetta per un tempo di clk
+		rd <= '0';
+		wait for 1 us;	
+		-- i dati vengono mandati in uscita il colpo di clk successivo. 
+		-- L'SPI però ci mette molto a richiedere una nuova lettura (32us). 
+		-- Metto un tempo minore per maggiore compantezza sulla simulazione
+	end loop;
 
-while not endfile(ifile) loop	-- per testare tutti i dati bisogna impostare il tempo della simulazione ad almeno 407 ms con risuluzione di 10 ns
-	-- scrittura registro 0
-	readline(ifile, iline);
-	read(iline, din);
-	mosi <= din;
-	wr <= '1';
+	-- scrittura nel registro 0
+	mosi <= "0001001101111111"; -- crc input: 0x137F => crc atteso: C457
 	add <= "00000000";
-	wait for 100 ns;	-- aspetta per un periodo di clock
-	wr <= '0'; 
-
-	-- attendo il tempo equivalente a richiedere la lettura del dato dal registro 1, ovvero 16 us
-	wait for 5 us;	-- per accorciare la simulazione metto 5us tanto i dati sono gi� pronti
-	
-	-- comando di lettura sul registro 1
-	add <= "00000001";
-	rd <= '1';
-	wait for 100 ns;	-- aspetto per un periodo di clock
-	write(oline, miso);
-	writeline(ofile, oline);	-- scrivo un file con i risultati del test
-	rd <= '0';
-	
-	-- attendo il tempo equivalente a ricevere il dato appena letto e di scrivere un nuovo dato sul registro 0, ovvero 48 us
-	wait for 1 us; -- per accorciare la simulazione metto 1us tanto i dati sono gi� pronti
+	wr <= '1';
+	wait for 100 ns;	-- aspetta per un tempo di clk;
+	wr <= '0';
+	wait for 2 us;
+	-- il circuito per avere i dati pronti in uscita ci mette 1.9 us
+	-- Se volessimo richiedere una lettura consegutiva con l'SPI ci vuole 16 us
+	-- Metto un tempo di 2us in modo che il circuito possa calcolare correttamente il CRC ma non aspetto a vuoto per una maggiore leggibilità della simulazione
 		
-end loop;
+	-- scrittura nel registro 0	per test CRC consecutivo
+	mosi <= "0001001000110100"; -- input = 0x1234. 
+	-- Nel calcolo del CRC precedente ho aggiunto la seguente word perciò:
+	-- crc input: 0x137F1234 => crc atteso: E344
+	add <= "00000000";
+	wr <= '1';
+	wait for 100 ns;	-- aspetta per un tempo di clk
+	wr <= '0';
+	wait for 4 us;	-- sono necessari 3.5us per completare il calcolo del CRC. Ne aspetto poco di più
 
-file_close(ifile);
-file_close(ofile);
-wait;
+	-- reset CRC => 1 nel LSB del registro 2
+	mosi <= "0000000000000001"; -- input = 0x0001. 
+	add <= "00000010";
+	wr <= '1';
+	wait for 100 ns;	-- aspetta per un tempo di clk
+	wr <= '0';
+	wait for 2 us;
 
+	-- scrittura nel registro 0
+	mosi <= "1010101111001101"; -- crc input: 0xABCD => crc atteso: D46A
+	add <= "00000000";
+	wr <= '1';
+	wait for 100 ns;	-- aspetta per un tempo di clk
+	wr <= '0';
+	wait;
 
 END PROCESS;
 
