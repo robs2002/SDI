@@ -117,7 +117,7 @@ for k = 1:num_vettori
     vettore_numeri_th(32*k-15:32*k) = matrice_immaginari_th(k,:);
 end
 
-for k = 1:num_vettori
+for k = 1:length(vettore_numeri)
         numero_decimale = vettore_numeri(k);
         numero_sfixed = fi(numero_decimale, 1, bit_totali, bit_frazionari);
         numero_binario = bin(numero_sfixed);
