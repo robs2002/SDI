@@ -5,7 +5,7 @@ USE ieee.numeric_std.all;
 ENTITY selettore_uscita IS
 	PORT (
 		CLK, RD : IN std_logic;
-		IN0, IN1, IN2, IN3, IN4, IN5 : IN std_logic_vector(15 downto 0);
+		IN0, IN1, IN2, IN3: IN std_logic_vector(15 downto 0);
 		ADDRESS : IN std_logic_vector(7 downto 0);
 		DATA_OUT : OUT std_logic_vector(15 downto 0)
 		);
@@ -33,8 +33,6 @@ IF ( Q='1' ) THEN
 		WHEN "00000001" =>	DATA_OUT <= IN1;
 		WHEN "00000010" =>	DATA_OUT <= IN2;
 		WHEN "00000011" =>	DATA_OUT <= IN3;
-		WHEN "00000100" =>	DATA_OUT <= IN4;
-		WHEN "00000101" =>	DATA_OUT <= IN5;
 		WHEN OTHERS 	=> 	DATA_OUT <= (OTHERS => '0');
 	END CASE;
 ELSE

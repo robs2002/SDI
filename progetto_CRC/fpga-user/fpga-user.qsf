@@ -136,3 +136,4 @@ set_global_assignment -name VHDL_FILE SLAVE_CRC/crc_hardware.vhd
 set_global_assignment -name VHDL_FILE SLAVE_CRC/CRC.vhd
 set_global_assignment -name VHDL_FILE SLAVE_CRC/counter.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SOURCE_FILE "db/fpga-user.cmp.rdb"

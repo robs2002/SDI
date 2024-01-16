@@ -1,5 +1,5 @@
 Fitter report for fpga-user
-Wed Jan 10 20:58:52 2024
+Tue Jan 16 10:14:50 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 10 20:58:52 2024       ;
+; Fitter Status                      ; Successful - Tue Jan 16 10:14:50 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fpga-user                                   ;
 ; Top-level Entity Name              ; user                                        ;
@@ -74,7 +74,7 @@ refer to the applicable agreement for further details.
 ; Device                             ; 10CL025YE144C8G                             ;
 ; Timing Models                      ; Final                                       ;
 ; Total logic elements               ; 239 / 24,624 ( < 1 % )                      ;
-;     Total combinational functions  ; 210 / 24,624 ( < 1 % )                      ;
+;     Total combinational functions  ; 209 / 24,624 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 184 / 24,624 ( < 1 % )                      ;
 ; Total registers                    ; 184                                         ;
 ; Total pins                         ; 51 / 77 ( 66 % )                            ;
@@ -170,8 +170,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 533 ) ; 0.00 % ( 0 / 533 )         ; 0.00 % ( 0 / 533 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 533 ) ; 0.00 % ( 0 / 533 )         ; 0.00 % ( 0 / 533 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 532 ) ; 0.00 % ( 0 / 532 )         ; 0.00 % ( 0 / 532 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 532 ) ; 0.00 % ( 0 / 532 )         ; 0.00 % ( 0 / 532 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -194,7 +194,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 529 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 528 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 4 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -202,7 +202,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.pin.
+The pin-out file can be found in C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.pin.
 
 
 +----------------------------------------------------------------------+
@@ -212,17 +212,17 @@ The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/f
 +---------------------------------------------+------------------------+
 ; Total logic elements                        ; 239 / 24,624 ( < 1 % ) ;
 ;     -- Combinational with no register       ; 55                     ;
-;     -- Register only                        ; 29                     ;
-;     -- Combinational with a register        ; 155                    ;
+;     -- Register only                        ; 30                     ;
+;     -- Combinational with a register        ; 154                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 87                     ;
+;     -- 4 input functions                    ; 70                     ;
 ;     -- 3 input functions                    ; 56                     ;
-;     -- <=2 input functions                  ; 67                     ;
-;     -- Register only                        ; 29                     ;
+;     -- <=2 input functions                  ; 83                     ;
+;     -- Register only                        ; 30                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 210                    ;
+;     -- normal mode                          ; 209                    ;
 ;     -- arithmetic mode                      ; 0                      ;
 ;                                             ;                        ;
 ; Total registers*                            ; 184 / 24,934 ( < 1 % ) ;
@@ -247,12 +247,12 @@ The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/f
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.4% / 0.4% / 0.4%     ;
-; Peak interconnect usage (total/H/V)         ; 4.7% / 4.3% / 5.3%     ;
+; Average interconnect usage (total/H/V)      ; 0.4% / 0.4% / 0.3%     ;
+; Peak interconnect usage (total/H/V)         ; 4.5% / 4.4% / 4.6%     ;
 ; Maximum fan-out                             ; 184                    ;
 ; Highest non-global fan-out                  ; 59                     ;
-; Total fan-out                               ; 1435                   ;
-; Average fan-out                             ; 2.55                   ;
+; Total fan-out                               ; 1400                   ;
+; Average fan-out                             ; 2.49                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -267,17 +267,17 @@ The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/f
 ;                                             ;                       ;                                ;
 ; Total logic elements                        ; 239 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
 ;     -- Combinational with no register       ; 55                    ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
-;     -- Combinational with a register        ; 155                   ; 0                              ;
+;     -- Register only                        ; 30                    ; 0                              ;
+;     -- Combinational with a register        ; 154                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 87                    ; 0                              ;
+;     -- 4 input functions                    ; 70                    ; 0                              ;
 ;     -- 3 input functions                    ; 56                    ; 0                              ;
-;     -- <=2 input functions                  ; 67                    ; 0                              ;
-;     -- Register only                        ; 29                    ; 0                              ;
+;     -- <=2 input functions                  ; 83                    ; 0                              ;
+;     -- Register only                        ; 30                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 210                   ; 0                              ;
+;     -- normal mode                          ; 209                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 184                   ; 0                              ;
@@ -300,8 +300,8 @@ The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/f
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1433                  ; 2                              ;
-;     -- Registered Connections               ; 588                   ; 0                              ;
+;     -- Total Connections                    ; 1398                  ; 2                              ;
+;     -- Registered Connections               ; 548                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 66                    ; 0                              ;
@@ -655,28 +655,28 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                ; Entity Name      ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------+------------------+--------------+
-; |user                                        ; 239 (0)     ; 184 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 51   ; 0            ; 55 (0)       ; 29 (0)            ; 155 (0)          ; |user                                                              ; user             ; work         ;
-;    |CRC:blocco_CRC|                          ; 132 (0)     ; 112 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 6 (0)             ; 110 (0)          ; |user|CRC:blocco_CRC                                               ; CRC              ; work         ;
+; |user                                        ; 239 (0)     ; 184 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 51   ; 0            ; 55 (0)       ; 30 (0)            ; 154 (0)          ; |user                                                              ; user             ; work         ;
+;    |CRC:blocco_CRC|                          ; 132 (0)     ; 112 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 3 (0)             ; 112 (0)          ; |user|CRC:blocco_CRC                                               ; CRC              ; work         ;
 ;       |cu_crc:control_unit|                  ; 11 (11)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 9 (9)            ; |user|CRC:blocco_CRC|cu_crc:control_unit                           ; cu_crc           ; work         ;
-;       |datapath_crc:dp|                      ; 121 (1)     ; 103 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (1)       ; 6 (0)             ; 101 (0)          ; |user|CRC:blocco_CRC|datapath_crc:dp                               ; datapath_crc     ; work         ;
-;          |counter:contatore|                 ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |user|CRC:blocco_CRC|datapath_crc:dp|counter:contatore             ; counter          ; work         ;
+;       |datapath_crc:dp|                      ; 121 (0)     ; 103 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (0)       ; 3 (0)             ; 103 (1)          ; |user|CRC:blocco_CRC|datapath_crc:dp                               ; datapath_crc     ; work         ;
+;          |counter:contatore|                 ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |user|CRC:blocco_CRC|datapath_crc:dp|counter:contatore             ; counter          ; work         ;
 ;          |crc_hardware:crc|                  ; 37 (37)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 32 (32)          ; |user|CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc              ; crc_hardware     ; work         ;
-;          |decodifica:decod|                  ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; |user|CRC:blocco_CRC|datapath_crc:dp|decodifica:decod              ; decodifica       ; work         ;
-;          |reg_crc:reg0|                      ; 18 (18)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 17 (17)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0                  ; reg_crc          ; work         ;
-;          |reg_crc:reg1|                      ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg1                  ; reg_crc          ; work         ;
-;          |reg_crc:reg2|                      ; 33 (33)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 5 (5)             ; 26 (26)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2                  ; reg_crc          ; work         ;
+;          |decodifica:decod|                  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |user|CRC:blocco_CRC|datapath_crc:dp|decodifica:decod              ; decodifica       ; work         ;
+;          |reg_crc:reg0|                      ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0                  ; reg_crc          ; work         ;
+;          |reg_crc:reg1|                      ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 16 (16)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg1                  ; reg_crc          ; work         ;
+;          |reg_crc:reg2|                      ; 20 (20)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 19 (19)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg3|                      ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg3                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg4|                      ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg5|                      ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg5                  ; reg_crc          ; work         ;
 ;          |selettore_uscita:mux_uscita|       ; 3 (3)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 0 (0)            ; |user|CRC:blocco_CRC|datapath_crc:dp|selettore_uscita:mux_uscita   ; selettore_uscita ; work         ;
-;    |SPI:blocco_SPI|                          ; 121 (0)     ; 72 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 39 (0)       ; 23 (0)            ; 59 (0)           ; |user|SPI:blocco_SPI                                               ; SPI              ; work         ;
+;    |SPI:blocco_SPI|                          ; 123 (0)     ; 72 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (0)       ; 27 (0)            ; 58 (0)           ; |user|SPI:blocco_SPI                                               ; SPI              ; work         ;
 ;       |cu:control_unit|                      ; 30 (30)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 20 (20)          ; |user|SPI:blocco_SPI|cu:control_unit                               ; cu               ; work         ;
-;       |datapath:DP|                          ; 93 (4)      ; 54 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (4)       ; 23 (0)            ; 41 (0)           ; |user|SPI:blocco_SPI|datapath:DP                                   ; datapath         ; work         ;
+;       |datapath:DP|                          ; 95 (3)      ; 54 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (3)       ; 27 (0)            ; 40 (1)           ; |user|SPI:blocco_SPI|datapath:DP                                   ; datapath         ; work         ;
 ;          |counter:contatore|                 ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |user|SPI:blocco_SPI|datapath:DP|counter:contatore                 ; counter          ; work         ;
-;          |reg:shift_register_address|        ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_address        ; reg              ; work         ;
+;          |reg:shift_register_address|        ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_address        ; reg              ; work         ;
 ;          |reg:shift_register_din|            ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_din            ; reg              ; work         ;
-;          |reg:shift_register_state|          ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_state          ; reg              ; work         ;
-;          |reg_load:shift_register_load_dout| ; 57 (57)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 1 (1)             ; 31 (31)          ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout ; reg_load         ; work         ;
+;          |reg:shift_register_state|          ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 1 (1)            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_state          ; reg              ; work         ;
+;          |reg_load:shift_register_load_dout| ; 56 (56)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 31 (31)          ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout ; reg_load         ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -712,8 +712,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lsasBus[9]  ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; lsasBus[10] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; lsasBus[11] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; lsasBus[12] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; lsasBus[13] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; lsasBus[12] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; lsasBus[13] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; lsasBus[14] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; lsasBus[15] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; lsasBus[16] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
@@ -732,7 +732,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lsasBus[29] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; lsasBus[30] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; lsasBus[31] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; switches[0] ; Input    ; (6) 1314 ps   ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; switches[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; switches[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; switches[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; switches[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
@@ -767,38 +767,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lsasBus[10]                                                            ;                   ;         ;
 ; lsasBus[11]                                                            ;                   ;         ;
 ; lsasBus[12]                                                            ;                   ;         ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL_DOUT          ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_C            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSCK            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH1_DOUT         ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_A             ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_A            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_W            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_DIN          ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~23                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~24                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~27                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~29                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~30                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~31                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~33                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~34                 ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~35                 ; 1                 ; 6       ;
-; lsasBus[13]                                                            ;                   ;         ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL_DOUT          ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_C            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSCK            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH1_DOUT         ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_A             ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_A            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_W            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_DIN          ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~23                 ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~24                 ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector8~0                      ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector1~1                      ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~28                 ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~27                 ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~29                 ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~30                 ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state~32                 ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~31                 ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~33                 ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~34                 ; 0                 ; 6       ;
 ;      - SPI:blocco_SPI|cu:control_unit|present_state~35                 ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector4~1                      ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector5~0                      ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector6~0                      ; 0                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|Selector7~0                      ; 0                 ; 6       ;
+; lsasBus[13]                                                            ;                   ;         ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~23                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~24                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector8~0                      ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector1~1                      ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~28                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~30                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~32                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~33                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~34                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state~35                 ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector4~1                      ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector5~0                      ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector6~0                      ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|Selector7~0                      ; 1                 ; 6       ;
 ; lsasBus[14]                                                            ;                   ;         ;
 ; lsasBus[15]                                                            ;                   ;         ;
 ;      - SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[0]      ; 0                 ; 6       ;
@@ -821,33 +821,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; lsasBus[30]                                                            ;                   ;         ;
 ; lsasBus[31]                                                            ;                   ;         ;
 ; switches[0]                                                            ;                   ;         ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL_DOUT          ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_C            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSCK            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH1_DOUT         ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_A             ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_A            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_W            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_DIN          ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH0_DOUT         ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_C             ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.RST_S          ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.LOAD               ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.S_WRITE            ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_RST        ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_A            ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_OUT        ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.REG_DATA       ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.S_READ             ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSS             ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_C            ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_DIN          ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_0         ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_1         ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.IDLE           ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.SHIFT_0        ; 1                 ; 6       ;
-;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.SHIFT_1        ; 1                 ; 6       ;
-;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_DIN           ; 1                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL_DOUT          ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_C            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSCK            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH1_DOUT         ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_A             ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_A            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_W            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_DIN          ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH0_DOUT         ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_C             ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.RST_S          ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.LOAD               ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_RST        ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_OUT        ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.S_READ             ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_A            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.S_WRITE            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.WAITSS             ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_C            ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_DIN          ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_1         ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_0         ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.SHIFT_0        ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.SHIFT_1        ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.IDLE           ; 0                 ; 6       ;
+;      - SPI:blocco_SPI|cu:control_unit|present_state.SCKH_DIN           ; 0                 ; 6       ;
+;      - CRC:blocco_CRC|cu_crc:control_unit|present_state.REG_DATA       ; 0                 ; 6       ;
 ;      - leds[0]~output                                                  ; 0                 ; 6       ;
 ; switches[1]                                                            ;                   ;         ;
 ;      - leds[1]~output                                                  ; 0                 ; 6       ;
@@ -859,32 +859,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                             ;
-+---------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; CRC:blocco_CRC|cu_crc:control_unit|Selector0~0                      ; LCCOMB_X49_Y26_N30 ; 17      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|cu_crc:control_unit|WideOr5                          ; LCCOMB_X49_Y26_N14 ; 4       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_1             ; FF_X49_Y26_N19     ; 37      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|cu_crc:control_unit|present_state.RST_S              ; FF_X48_Y26_N7      ; 59      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg~0         ; LCCOMB_X49_Y26_N10 ; 32      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[6]~1                  ; LCCOMB_X48_Y24_N2  ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2|Q[12]~2                 ; LCCOMB_X48_Y24_N6  ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg3|Q~1                     ; LCCOMB_X48_Y26_N0  ; 16      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[15]~1                 ; LCCOMB_X49_Y26_N6  ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|RST                                  ; LCCOMB_X48_Y26_N2  ; 36      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|RST_SL                               ; LCCOMB_X48_Y26_N28 ; 17      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|present_state.SCKH0_DOUT             ; FF_X49_Y24_N21     ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_A                ; FF_X45_Y24_N29     ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_C                ; FF_X45_Y26_N25     ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_DIN              ; FF_X45_Y24_N25     ; 19      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|Q[1]~7 ; LCCOMB_X49_Y25_N28 ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|R~en   ; FF_X50_Y26_N3      ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
-; lsasBus[12]                                                         ; PIN_105            ; 17      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; mainClk                                                             ; PIN_22             ; 184     ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; switches[0]                                                         ; PIN_46             ; 28      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                              ;
++----------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                 ; Location           ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; CRC:blocco_CRC|cu_crc:control_unit|Selector0~0                       ; LCCOMB_X45_Y25_N0  ; 17      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|cu_crc:control_unit|WideOr5                           ; LCCOMB_X45_Y25_N26 ; 4       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_1              ; FF_X45_Y25_N11     ; 37      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|cu_crc:control_unit|present_state.RST_S               ; FF_X46_Y25_N13     ; 59      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg~0          ; LCCOMB_X45_Y25_N30 ; 32      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[0]~0                   ; LCCOMB_X51_Y25_N28 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2|Q[8]~1                   ; LCCOMB_X51_Y25_N18 ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg3|Q~0                      ; LCCOMB_X49_Y26_N24 ; 16      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[10]~1                  ; LCCOMB_X45_Y25_N20 ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|RST                                   ; LCCOMB_X46_Y25_N20 ; 36      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|RST_SL                                ; LCCOMB_X46_Y25_N26 ; 17      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|present_state.SCKH0_DOUT              ; FF_X49_Y27_N19     ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_A                 ; FF_X49_Y27_N11     ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_C                 ; FF_X46_Y25_N17     ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_DIN               ; FF_X49_Y27_N3      ; 19      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|Q[6]~11 ; LCCOMB_X48_Y25_N2  ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|R~en    ; FF_X47_Y25_N7      ; 1       ; Output enable           ; no     ; --                   ; --               ; --                        ;
+; lsasBus[12]                                                          ; PIN_105            ; 17      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; mainClk                                                              ; PIN_22             ; 184     ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; switches[0]                                                          ; PIN_46             ; 28      ; Async. clear            ; no     ; --                   ; --               ; --                        ;
++----------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -892,7 +892,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; mainClk ; PIN_22   ; 184     ; 9                                    ; Global Clock         ; GCLK4            ; --                        ;
+; mainClk ; PIN_22   ; 184     ; 18                                   ; Global Clock         ; GCLK4            ; --                        ;
 +---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -901,14 +901,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 353 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 8 / 2,597 ( < 1 % )    ;
-; C4 interconnects      ; 196 / 46,848 ( < 1 % ) ;
-; Direct links          ; 66 / 71,559 ( < 1 % )  ;
+; Block interconnects   ; 326 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 9 / 2,597 ( < 1 % )    ;
+; C4 interconnects      ; 160 / 46,848 ( < 1 % ) ;
+; Direct links          ; 60 / 71,559 ( < 1 % )  ;
 ; Global clocks         ; 1 / 20 ( 5 % )         ;
-; Local interconnects   ; 145 / 24,624 ( < 1 % ) ;
+; Local interconnects   ; 144 / 24,624 ( < 1 % ) ;
 ; R24 interconnects     ; 10 / 2,496 ( < 1 % )   ;
-; R4 interconnects      ; 209 / 62,424 ( < 1 % ) ;
+; R4 interconnects      ; 212 / 62,424 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -917,37 +917,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------------+
 ; Number of Logic Elements  (Average = 12.58) ; Number of LABs  (Total = 19) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 1                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 10                           ;
+; 14                                          ; 0                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 12                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.63) ; Number of LABs  (Total = 19) ;
+; LAB-wide Signals  (Average = 2.58) ; Number of LABs  (Total = 19) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 10                           ;
 ; 1 Clock                            ; 19                           ;
 ; 1 Clock enable                     ; 7                            ;
 ; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 4                            ;
-; 2 Async. clears                    ; 2                            ;
-; 2 Clock enables                    ; 7                            ;
+; 1 Sync. load                       ; 3                            ;
+; 2 Async. clears                    ; 1                            ;
+; 2 Clock enables                    ; 8                            ;
 +------------------------------------+------------------------------+
 
 
@@ -958,119 +958,112 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
+; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 3                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 2                            ;
-; 28                                           ; 1                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 2                            ;
+; 27                                           ; 3                            ;
+; 28                                           ; 3                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 3                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
+; 32                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.21) ; Number of LABs  (Total = 19) ;
+; Number of Signals Sourced Out  (Average = 9.47) ; Number of LABs  (Total = 19) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
+; 1                                               ; 2                            ;
 ; 2                                               ; 2                            ;
 ; 3                                               ; 1                            ;
-; 4                                               ; 2                            ;
+; 4                                               ; 0                            ;
 ; 5                                               ; 1                            ;
 ; 6                                               ; 1                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 1                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 0                            ;
 ; 12                                              ; 0                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 3                            ;
-; 15                                              ; 1                            ;
+; 13                                              ; 2                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
 ; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
+; 18                                              ; 1                            ;
 ; 19                                              ; 0                            ;
 ; 20                                              ; 0                            ;
-; 21                                              ; 0                            ;
-; 22                                              ; 0                            ;
-; 23                                              ; 0                            ;
-; 24                                              ; 0                            ;
-; 25                                              ; 0                            ;
-; 26                                              ; 0                            ;
-; 27                                              ; 0                            ;
-; 28                                              ; 0                            ;
-; 29                                              ; 0                            ;
-; 30                                              ; 0                            ;
-; 31                                              ; 1                            ;
+; 21                                              ; 1                            ;
+; 22                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 17.21) ; Number of LABs  (Total = 19) ;
+; Number of Distinct Inputs  (Average = 15.84) ; Number of LABs  (Total = 19) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 3                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 2                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
-; 27                                           ; 2                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
+; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
 ; 31                                           ; 1                            ;
 ; 32                                           ; 0                            ;
-; 33                                           ; 1                            ;
+; 33                                           ; 0                            ;
+; 34                                           ; 0                            ;
+; 35                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1266,12 +1259,12 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node mainClk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
+Info (176353): Automatically promoted node mainClk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1289,100 +1282,100 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (169213): Configuration voltage level of 3.3V is enforced on the I/O bank 1. The VCCIO of the I/O bank 1 is set to 3.3V.
 Info (169213): Configuration voltage level of 3.3V is enforced on the I/O bank 1. The VCCIO of the I/O bank 1 is set to 3.3V.
 Warning (169177): 46 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone 10 LP Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
-    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
-    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
-    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
-    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
-    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
+    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
+    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
+    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
+    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
+    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
+    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
 Warning (169064): Following 32 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
-    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-Info (144001): Generated suppressed messages file C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.fit.smsg
+    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
+    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+Info (144001): Generated suppressed messages file C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5611 megabytes
-    Info: Processing ended: Wed Jan 10 20:58:53 2024
-    Info: Elapsed time: 00:00:11
+    Info: Peak virtual memory: 5612 megabytes
+    Info: Processing ended: Tue Jan 16 10:14:50 2024
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.fit.smsg.
+The suppressed messages can be found in C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.fit.smsg.
 
 

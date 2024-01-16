@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Jan 10 20:58:41 2024
+Analysis & Synthesis Status : Successful - Tue Jan 16 10:14:37 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : fpga-user
 Top-level Entity Name : user
 Family : Cyclone 10 LP
-Total logic elements : 259
-    Total combinational functions : 208
+Total logic elements : 258
+    Total combinational functions : 207
     Dedicated logic registers : 184
 Total registers : 184
 Total pins : 51

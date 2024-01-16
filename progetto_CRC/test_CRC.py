@@ -12,8 +12,8 @@ def risposta_scheda():
     return messaggio
 
 #------------------------------------------------
-NUMERO_PROVE = 1000
-LUNGHEZZA_MASSIMA_MESSAGGIO = 1000
+NUMERO_PROVE = 1000000
+LUNGHEZZA_MASSIMA_MESSAGGIO = 10
 
 # Configura la porta seriale
 ser = serial.Serial('COM12', 9600)  # Abilito la seriale
@@ -21,7 +21,7 @@ crc16_func = crcmod.predefined.mkCrcFun('crc-ccitt-false')
 errori = False
 
 for test in range(NUMERO_PROVE):  
-    print("TEST", test)
+    print("TEST", test+1)
 
     # RESET CRC => inserisco 1 nel LSB del registro 2
     data_to_send = ("W020001").encode('utf-8')  # converte il messaggio inserito dall'utente in byte

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fpga-user
-Wed Jan 10 20:58:41 2024
+Tue Jan 16 10:14:37 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,13 +62,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 10 20:58:41 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 16 10:14:37 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fpga-user                                   ;
 ; Top-level Entity Name              ; user                                        ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 259                                         ;
-;     Total combinational functions  ; 208                                         ;
+; Total logic elements               ; 258                                         ;
+;     Total combinational functions  ; 207                                         ;
 ;     Dedicated logic registers      ; 184                                         ;
 ; Total registers                    ; 184                                         ;
 ; Total pins                         ; 51                                          ;
@@ -183,33 +183,33 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+-----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                    ; Library ;
-+-----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+---------+
-; fpga-user.vhd                     ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd                     ;         ;
-; SLAVE_CRC/SPI.vhd                 ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd                 ;         ;
-; SLAVE_CRC/shift_register_load.vhd ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd ;         ;
-; SLAVE_CRC/shift_register.vhd      ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd      ;         ;
-; SLAVE_CRC/selettore_uscita.vhd    ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd    ;         ;
-; SLAVE_CRC/reg_crc.vhd             ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd             ;         ;
-; SLAVE_CRC/decodifica.vhd          ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd          ;         ;
-; SLAVE_CRC/datapath_crc.vhd        ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd        ;         ;
-; SLAVE_CRC/datapath.vhd            ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd            ;         ;
-; SLAVE_CRC/cu_crc.vhd              ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd              ;         ;
-; SLAVE_CRC/cu.vhd                  ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd                  ;         ;
-; SLAVE_CRC/crc_hardware.vhd        ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd        ;         ;
-; SLAVE_CRC/CRC.vhd                 ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd                 ;         ;
-; SLAVE_CRC/counter.vhd             ; yes             ; User VHDL File                    ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd             ;         ;
-; myaltpll.vhd                      ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd                      ;         ;
-; altpll.tdf                        ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf               ;         ;
-; aglobal181.inc                    ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc           ;         ;
-; stratix_pll.inc                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc          ;         ;
-; stratixii_pll.inc                 ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc        ;         ;
-; cycloneii_pll.inc                 ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc        ;         ;
-; db/myaltpll_altpll.v              ; yes             ; Auto-Generated Megafunction       ; C:/Users/loren/Desktop/progetto_CRC/fpga-user/db/myaltpll_altpll.v              ;         ;
-+-----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++-----------------------------------+-----------------+-----------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                                 ; Library ;
++-----------------------------------+-----------------+-----------------------------------+----------------------------------------------------------------------------------------------+---------+
+; fpga-user.vhd                     ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd                     ;         ;
+; SLAVE_CRC/SPI.vhd                 ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd                 ;         ;
+; SLAVE_CRC/shift_register_load.vhd ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd ;         ;
+; SLAVE_CRC/shift_register.vhd      ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd      ;         ;
+; SLAVE_CRC/selettore_uscita.vhd    ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd    ;         ;
+; SLAVE_CRC/reg_crc.vhd             ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd             ;         ;
+; SLAVE_CRC/decodifica.vhd          ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd          ;         ;
+; SLAVE_CRC/datapath_crc.vhd        ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd        ;         ;
+; SLAVE_CRC/datapath.vhd            ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd            ;         ;
+; SLAVE_CRC/cu_crc.vhd              ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd              ;         ;
+; SLAVE_CRC/cu.vhd                  ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd                  ;         ;
+; SLAVE_CRC/crc_hardware.vhd        ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd        ;         ;
+; SLAVE_CRC/CRC.vhd                 ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd                 ;         ;
+; SLAVE_CRC/counter.vhd             ; yes             ; User VHDL File                    ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd             ;         ;
+; myaltpll.vhd                      ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd                      ;         ;
+; altpll.tdf                        ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                            ;         ;
+; aglobal181.inc                    ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                        ;         ;
+; stratix_pll.inc                   ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                       ;         ;
+; stratixii_pll.inc                 ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                     ;         ;
+; cycloneii_pll.inc                 ; yes             ; Megafunction                      ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                     ;         ;
+; db/myaltpll_altpll.v              ; yes             ; Auto-Generated Megafunction       ; C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/db/myaltpll_altpll.v              ;         ;
++-----------------------------------+-----------------+-----------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -217,16 +217,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 259           ;
+; Estimated Total logic elements              ; 258           ;
 ;                                             ;               ;
-; Total combinational functions               ; 208           ;
+; Total combinational functions               ; 207           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 87            ;
+;     -- 4 input functions                    ; 70            ;
 ;     -- 3 input functions                    ; 56            ;
-;     -- <=2 input functions                  ; 65            ;
+;     -- <=2 input functions                  ; 81            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 208           ;
+;     -- normal mode                          ; 207           ;
 ;     -- arithmetic mode                      ; 0             ;
 ;                                             ;               ;
 ; Total registers                             ; 184           ;
@@ -239,8 +239,8 @@ refer to the applicable agreement for further details.
 ;                                             ;               ;
 ; Maximum fan-out node                        ; mainClk~input ;
 ; Maximum fan-out                             ; 184           ;
-; Total fan-out                               ; 1401          ;
-; Average fan-out                             ; 2.66          ;
+; Total fan-out                               ; 1365          ;
+; Average fan-out                             ; 2.60          ;
 +---------------------------------------------+---------------+
 
 
@@ -249,28 +249,28 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name      ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+------------------+--------------+
-; |user                                        ; 208 (0)             ; 184 (0)                   ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |user                                                              ; user             ; work         ;
+; |user                                        ; 207 (0)             ; 184 (0)                   ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |user                                                              ; user             ; work         ;
 ;    |CRC:blocco_CRC|                          ; 115 (0)             ; 112 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC                                               ; CRC              ; work         ;
 ;       |cu_crc:control_unit|                  ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|cu_crc:control_unit                           ; cu_crc           ; work         ;
 ;       |datapath_crc:dp|                      ; 105 (1)             ; 103 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp                               ; datapath_crc     ; work         ;
 ;          |counter:contatore|                 ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|counter:contatore             ; counter          ; work         ;
 ;          |crc_hardware:crc|                  ; 37 (37)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc              ; crc_hardware     ; work         ;
-;          |decodifica:decod|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|decodifica:decod              ; decodifica       ; work         ;
-;          |reg_crc:reg0|                      ; 3 (3)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0                  ; reg_crc          ; work         ;
+;          |decodifica:decod|                  ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|decodifica:decod              ; decodifica       ; work         ;
+;          |reg_crc:reg0|                      ; 2 (2)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg1|                      ; 16 (16)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg1                  ; reg_crc          ; work         ;
-;          |reg_crc:reg2|                      ; 18 (18)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2                  ; reg_crc          ; work         ;
+;          |reg_crc:reg2|                      ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg3|                      ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg3                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg4|                      ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4                  ; reg_crc          ; work         ;
 ;          |reg_crc:reg5|                      ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg5                  ; reg_crc          ; work         ;
 ;          |selettore_uscita:mux_uscita|       ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|CRC:blocco_CRC|datapath_crc:dp|selettore_uscita:mux_uscita   ; selettore_uscita ; work         ;
-;    |SPI:blocco_SPI|                          ; 93 (0)              ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI                                               ; SPI              ; work         ;
+;    |SPI:blocco_SPI|                          ; 92 (0)              ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI                                               ; SPI              ; work         ;
 ;       |cu:control_unit|                      ; 30 (30)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|cu:control_unit                               ; cu               ; work         ;
-;       |datapath:DP|                          ; 63 (4)              ; 54 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP                                   ; datapath         ; work         ;
+;       |datapath:DP|                          ; 62 (4)              ; 54 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP                                   ; datapath         ; work         ;
 ;          |counter:contatore|                 ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|counter:contatore                 ; counter          ; work         ;
 ;          |reg:shift_register_address|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_address        ; reg              ; work         ;
 ;          |reg:shift_register_din|            ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_din            ; reg              ; work         ;
 ;          |reg:shift_register_state|          ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|reg:shift_register_state          ; reg              ; work         ;
-;          |reg_load:shift_register_load_dout| ; 55 (55)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout ; reg_load         ; work         ;
+;          |reg_load:shift_register_load_dout| ; 54 (54)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout ; reg_load         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -326,10 +326,9 @@ Encoding Type:  One-Hot
 +------------------------------------------------------+--------------------------------------------------------------------+
 ; Register name                                        ; Reason for Removal                                                 ;
 +------------------------------------------------------+--------------------------------------------------------------------+
-; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg5|Q[1..15] ; Stuck at GND due to stuck port data_in                             ;
 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg3|Q[1..15] ; Stuck at GND due to stuck port data_in                             ;
 ; SPI:blocco_SPI|cu:control_unit|present_state.IDLE    ; Merged with CRC:blocco_CRC|cu_crc:control_unit|present_state.RST_S ;
-; Total Number of Removed Registers = 31               ;                                                                    ;
+; Total Number of Removed Registers = 16               ;                                                                    ;
 +------------------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -353,13 +352,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[15]                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg1|Q[7]                  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[6]                  ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2|Q[12]                 ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg[15]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[10]                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg1|Q[0]                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[0]                  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2|Q[8]                  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg[4]      ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |user|CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[15]      ;
-; 259:1              ; 15 bits   ; 2580 LEs      ; 60 LEs               ; 2520 LEs               ; Yes        ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|Q[1] ;
+; 259:1              ; 15 bits   ; 2580 LEs      ; 45 LEs               ; 2535 LEs               ; Yes        ; |user|SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|Q[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
@@ -905,15 +904,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 1                           ;
 ;     plain             ; 3                           ;
 ; cycloneiii_io_obuf    ; 33                          ;
-; cycloneiii_lcell_comb ; 209                         ;
-;     normal            ; 209                         ;
+; cycloneiii_lcell_comb ; 208                         ;
+;     normal            ; 208                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 65                          ;
+;         2 data inputs ; 81                          ;
 ;         3 data inputs ; 56                          ;
-;         4 data inputs ; 87                          ;
+;         4 data inputs ; 70                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.86                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -932,65 +931,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 10 20:58:28 2024
+    Info: Processing started: Tue Jan 16 10:14:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fpga-user -c fpga-user
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file fpga-user.vhd
-    Info (12022): Found design unit 1: user-behavioural File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 31
-    Info (12023): Found entity 1: user File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 9
+    Info (12022): Found design unit 1: user-behavioural File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 31
+    Info (12023): Found entity 1: user File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/spi.vhd
-    Info (12022): Found design unit 1: SPI-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 14
-    Info (12023): Found entity 1: SPI File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 4
+    Info (12022): Found design unit 1: SPI-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 14
+    Info (12023): Found entity 1: SPI File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/shift_register_load.vhd
-    Info (12022): Found design unit 1: reg_load-Behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd Line: 12
-    Info (12023): Found entity 1: reg_load File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd Line: 4
+    Info (12022): Found design unit 1: reg_load-Behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd Line: 12
+    Info (12023): Found entity 1: reg_load File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register_load.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/shift_register.vhd
-    Info (12022): Found design unit 1: reg-Behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd Line: 12
-    Info (12023): Found entity 1: reg File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd Line: 4
+    Info (12022): Found design unit 1: reg-Behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd Line: 12
+    Info (12023): Found entity 1: reg File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/shift_register.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/selettore_uscita.vhd
-    Info (12022): Found design unit 1: selettore_uscita-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 14
-    Info (12023): Found entity 1: selettore_uscita File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 5
+    Info (12022): Found design unit 1: selettore_uscita-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 14
+    Info (12023): Found entity 1: selettore_uscita File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/reg_crc.vhd
-    Info (12022): Found design unit 1: reg_crc-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd Line: 14
-    Info (12023): Found entity 1: reg_crc File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd Line: 5
+    Info (12022): Found design unit 1: reg_crc-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd Line: 14
+    Info (12023): Found entity 1: reg_crc File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/reg_crc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/decodifica.vhd
-    Info (12022): Found design unit 1: decodifica-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd Line: 13
-    Info (12023): Found entity 1: decodifica File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd Line: 5
+    Info (12022): Found design unit 1: decodifica-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd Line: 13
+    Info (12023): Found entity 1: decodifica File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/decodifica.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/datapath_crc.vhd
-    Info (12022): Found design unit 1: datapath_crc-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 15
-    Info (12023): Found entity 1: datapath_crc File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 4
+    Info (12022): Found design unit 1: datapath_crc-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 15
+    Info (12023): Found entity 1: datapath_crc File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/datapath.vhd
-    Info (12022): Found design unit 1: datapath-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 15
-    Info (12023): Found entity 1: datapath File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 4
+    Info (12022): Found design unit 1: datapath-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 15
+    Info (12023): Found entity 1: datapath File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/cu_crc.vhd
-    Info (12022): Found design unit 1: cu_crc-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd Line: 11
-    Info (12023): Found entity 1: cu_crc File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd Line: 4
+    Info (12022): Found design unit 1: cu_crc-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd Line: 11
+    Info (12023): Found entity 1: cu_crc File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu_crc.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/cu.vhd
-    Info (12022): Found design unit 1: cu-Behavioral File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd Line: 11
-    Info (12023): Found entity 1: cu File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd Line: 4
+    Info (12022): Found design unit 1: cu-Behavioral File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd Line: 11
+    Info (12023): Found entity 1: cu File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/cu.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/crc_hardware.vhd
-    Info (12022): Found design unit 1: crc_hardware-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 12
-    Info (12023): Found entity 1: crc_hardware File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 4
+    Info (12022): Found design unit 1: crc_hardware-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 12
+    Info (12023): Found entity 1: crc_hardware File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/crc.vhd
-    Info (12022): Found design unit 1: CRC-behavior File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 15
-    Info (12023): Found entity 1: CRC File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 5
+    Info (12022): Found design unit 1: CRC-behavior File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 15
+    Info (12023): Found entity 1: CRC File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file slave_crc/counter.vhd
-    Info (12022): Found design unit 1: counter-Behavioral File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd Line: 12
-    Info (12023): Found entity 1: counter File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd Line: 5
+    Info (12022): Found design unit 1: counter-Behavioral File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd Line: 12
+    Info (12023): Found entity 1: counter File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/counter.vhd Line: 5
 Info (12127): Elaborating entity "user" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at fpga-user.vhd(19): used implicit default value for signal "mcuUartRx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 19
-Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(33): object "clk" assigned a value but never read File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(34): object "pllLock" assigned a value but never read File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(36): object "lsasBusIn" assigned a value but never read File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 36
-Warning (10541): VHDL Signal Declaration warning at fpga-user.vhd(37): used implicit default value for signal "lsasBusOut" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 37
-Warning (10540): VHDL Signal Declaration warning at fpga-user.vhd(38): used explicit default value for signal "lsasBusEn" because signal was never assigned a value File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 38
+Warning (10541): VHDL Signal Declaration warning at fpga-user.vhd(19): used implicit default value for signal "mcuUartRx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(33): object "clk" assigned a value but never read File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(34): object "pllLock" assigned a value but never read File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at fpga-user.vhd(36): object "lsasBusIn" assigned a value but never read File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 36
+Warning (10541): VHDL Signal Declaration warning at fpga-user.vhd(37): used implicit default value for signal "lsasBusOut" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at fpga-user.vhd(38): used explicit default value for signal "lsasBusEn" because signal was never assigned a value File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 38
 Warning (12125): Using design file myaltpll.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: myaltpll-SYN File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd Line: 54
-    Info (12023): Found entity 1: myAltPll File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd Line: 43
-Info (12128): Elaborating entity "myAltPll" for hierarchy "myAltPll:myAltPll_inst" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 85
-Info (12128): Elaborating entity "altpll" for hierarchy "myAltPll:myAltPll_inst|altpll:altpll_component" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
-Info (12130): Elaborated megafunction instantiation "myAltPll:myAltPll_inst|altpll:altpll_component" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
-Info (12133): Instantiated megafunction "myAltPll:myAltPll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
+    Info (12022): Found design unit 1: myaltpll-SYN File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd Line: 54
+    Info (12023): Found entity 1: myAltPll File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd Line: 43
+Info (12128): Elaborating entity "myAltPll" for hierarchy "myAltPll:myAltPll_inst" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 85
+Info (12128): Elaborating entity "altpll" for hierarchy "myAltPll:myAltPll_inst|altpll:altpll_component" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
+Info (12130): Elaborated megafunction instantiation "myAltPll:myAltPll_inst|altpll:altpll_component" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
+Info (12133): Instantiated megafunction "myAltPll:myAltPll_inst|altpll:altpll_component" with the following parameter: File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/myaltpll.vhd Line: 141
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1047,59 +1046,57 @@ Info (12133): Instantiated megafunction "myAltPll:myAltPll_inst|altpll:altpll_co
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/myaltpll_altpll.v
-    Info (12023): Found entity 1: myAltPll_altpll File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/db/myaltpll_altpll.v Line: 30
+    Info (12023): Found entity 1: myAltPll_altpll File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/db/myaltpll_altpll.v Line: 30
 Info (12128): Elaborating entity "myAltPll_altpll" for hierarchy "myAltPll:myAltPll_inst|altpll:altpll_component|myAltPll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "SPI" for hierarchy "SPI:blocco_SPI" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 117
-Info (12128): Elaborating entity "datapath" for hierarchy "SPI:blocco_SPI|datapath:DP" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 40
-Info (12128): Elaborating entity "reg" for hierarchy "SPI:blocco_SPI|datapath:DP|reg:shift_register_state" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 46
-Info (12128): Elaborating entity "reg" for hierarchy "SPI:blocco_SPI|datapath:DP|reg:shift_register_din" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 50
-Info (12128): Elaborating entity "reg_load" for hierarchy "SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 52
-Info (12128): Elaborating entity "counter" for hierarchy "SPI:blocco_SPI|datapath:DP|counter:contatore" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 54
-Info (12128): Elaborating entity "cu" for hierarchy "SPI:blocco_SPI|cu:control_unit" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 42
-Info (12128): Elaborating entity "CRC" for hierarchy "CRC:blocco_CRC" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 118
-Info (12128): Elaborating entity "datapath_crc" for hierarchy "CRC:blocco_CRC|datapath_crc:dp" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 40
-Info (12128): Elaborating entity "decodifica" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|decodifica:decod" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 64
-Info (12128): Elaborating entity "reg_crc" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 66
-Info (12128): Elaborating entity "crc_hardware" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 78
-Warning (10540): VHDL Signal Declaration warning at crc_hardware.vhd(15): used explicit default value for signal "initial_value" because signal was never assigned a value File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 15
-Info (12128): Elaborating entity "selettore_uscita" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|selettore_uscita:mux_uscita" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(32): signal "IN0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 32
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(33): signal "IN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(34): signal "IN2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(35): signal "IN3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(36): signal "IN4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(37): signal "IN5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 37
-Info (12128): Elaborating entity "cu_crc" for hierarchy "CRC:blocco_CRC|cu_crc:control_unit" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 42
+Info (12128): Elaborating entity "SPI" for hierarchy "SPI:blocco_SPI" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 117
+Info (12128): Elaborating entity "datapath" for hierarchy "SPI:blocco_SPI|datapath:DP" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 40
+Info (12128): Elaborating entity "reg" for hierarchy "SPI:blocco_SPI|datapath:DP|reg:shift_register_state" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 46
+Info (12128): Elaborating entity "reg" for hierarchy "SPI:blocco_SPI|datapath:DP|reg:shift_register_din" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 50
+Info (12128): Elaborating entity "reg_load" for hierarchy "SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 52
+Info (12128): Elaborating entity "counter" for hierarchy "SPI:blocco_SPI|datapath:DP|counter:contatore" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath.vhd Line: 54
+Info (12128): Elaborating entity "cu" for hierarchy "SPI:blocco_SPI|cu:control_unit" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/SPI.vhd Line: 42
+Info (12128): Elaborating entity "CRC" for hierarchy "CRC:blocco_CRC" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 118
+Info (12128): Elaborating entity "datapath_crc" for hierarchy "CRC:blocco_CRC|datapath_crc:dp" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 40
+Info (12128): Elaborating entity "decodifica" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|decodifica:decod" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 64
+Info (12128): Elaborating entity "reg_crc" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 66
+Info (12128): Elaborating entity "crc_hardware" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 78
+Warning (10540): VHDL Signal Declaration warning at crc_hardware.vhd(15): used explicit default value for signal "initial_value" because signal was never assigned a value File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/crc_hardware.vhd Line: 15
+Info (12128): Elaborating entity "selettore_uscita" for hierarchy "CRC:blocco_CRC|datapath_crc:dp|selettore_uscita:mux_uscita" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/datapath_crc.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(32): signal "IN0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(33): signal "IN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(34): signal "IN2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at selettore_uscita.vhd(35): signal "IN3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/selettore_uscita.vhd Line: 35
+Info (12128): Elaborating entity "cu_crc" for hierarchy "CRC:blocco_CRC|cu_crc:control_unit" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/SLAVE_CRC/CRC.vhd Line: 42
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "myAltPll:myAltPll_inst|altpll:altpll_component|myAltPll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/db/myaltpll_altpll.v Line: 92
+        Warning (14320): Synthesized away node "myAltPll:myAltPll_inst|altpll:altpll_component|myAltPll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/db/myaltpll_altpll.v Line: 92
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "mcuI2cSda" has no driver File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
+    Warning (13040): bidirectional pin "mcuI2cSda" has no driver File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "lsasBus[14]" to the node "lsasBus[14]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "lsasBus[14]" to the node "lsasBus[14]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "mcuUartRx" is stuck at GND File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 19
+    Warning (13410): Pin "mcuUartRx" is stuck at GND File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "slowClk" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
-    Warning (15610): No output dependent on input pin "mcuUartTx" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
-    Warning (15610): No output dependent on input pin "mcuI2cScl" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
-    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-Info (21057): Implemented 325 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "slowClk" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
+    Warning (15610): No output dependent on input pin "mcuUartTx" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
+    Warning (15610): No output dependent on input pin "mcuI2cScl" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
+    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 33 bidirectional pins
-    Info (21061): Implemented 274 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Wed Jan 10 20:58:41 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 273 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Tue Jan 16 10:14:37 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:10
 
 

@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY datapath_crc IS
 PORT(
-	CLK, RST, RST_reg1, RST_CNT, LD, SE, CE, En1, En2_cu, En3, En4, En5, SB_IN, WR, RD, s_mux, s_crc: IN std_logic;
+	CLK, RST, RST_reg1, RST_reg5, RST_CNT, LD, SE, CE, En1, En2_cu, En3, En4, En5, SB_IN, WR, RD, s_mux, s_crc: IN std_logic;
 	TC, RB, mode_bit : OUT std_logic;
 	En0 : BUFFER std_logic;
 	MOSI : IN std_logic_vector(15 downto 0);
@@ -49,7 +49,7 @@ END COMPONENT;
 COMPONENT selettore_uscita IS
 	PORT (
 		CLK, RD : IN std_logic;
-		IN0, IN1, IN2, IN3, IN4, IN5 : IN std_logic_vector(15 downto 0);
+		IN0, IN1, IN2, IN3 : IN std_logic_vector(15 downto 0);
 		ADDRESS : IN std_logic_vector(7 downto 0);
 		DATA_OUT : OUT std_logic_vector(15 downto 0)
 		);
@@ -73,11 +73,11 @@ reg3 : reg_crc PORT MAP(CLK, RST, En3, data_reg3_in, "0000000000000001", data_re
 
 reg4 : reg_crc PORT MAP(CLK, RST, En4, crc_out, (others => '0'), data_reg4_out);
 
-reg5 : reg_crc PORT MAP(CLK, RST, En5, data_reg5_in, (others => '0'), data_reg5_out);
+reg5 : reg_crc PORT MAP(CLK, RST_reg5, En5, data_reg5_in, (others => '0'), data_reg5_out);
 
 crc : crc_hardware PORT MAP(CLK, LD, SE, s_crc, crc_in, data_reg4_out, crc_out);
 
-mux_uscita : selettore_uscita PORT MAP(CLK, RD, crc_in, data_reg1_out, data_reg2_out, data_reg3_out, data_reg4_out, data_reg5_out, ADD, MISO);
+mux_uscita : selettore_uscita PORT MAP(CLK, RD, crc_in, data_reg1_out, data_reg2_out, data_reg3_out, ADD, MISO);
 
 contatore : counter GENERIC MAP (4) PORT MAP(CE, CLK, RST_CNT, count);
 TC <= '1' WHEN (count = "1111" ) ELSE '0';	
