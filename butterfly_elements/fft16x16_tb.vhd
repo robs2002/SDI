@@ -54,7 +54,7 @@ X15_tb <= (OTHERS=>'0');
 Start_tb <= '0'; 
 
 WHILE not (ENDFILE(xin)) LOOP
-  WAIT FOR 60 ns;
+  WAIT FOR 50 ns;
 	Start_tb <= '1'; 
   WAIT FOR 10 ns;
 	Start_tb <= '0'; 

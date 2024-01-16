@@ -4,8 +4,8 @@ USE ieee.numeric_std.all;
 
 ENTITY sequencer IS
 PORT(
-  Start, Clock : IN STD_LOGIC;
-  Done, C, Rst, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : OUT STD_LOGIC;
+  Start, Clock, Rst_e : IN STD_LOGIC;
+  Done, C, mux_m2, mux_s1, mux_ra, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10, en11 : OUT STD_LOGIC;
   mux_m1, mux_a, mux_s2: OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 );
 END sequencer;
@@ -15,54 +15,60 @@ ARCHITECTURE Behavioral OF sequencer IS
 COMPONENT microrom IS
 PORT(
   address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-  data_out : OUT STD_LOGIC_VECTOR(28 DOWNTO 0)
+  data_out : OUT STD_LOGIC_VECTOR(27 DOWNTO 0)
 );
 END COMPONENT;
 
 SIGNAL cc1, cc2, sel: STD_LOGIC;
-SIGNAL add_c, jump_add, add : STD_LOGIC_VECTOR(3 DOWNTO 0):= (others => '0');
-SIGNAL d_out : STD_LOGIC_VECTOR(28 DOWNTO 0);
+SIGNAL jump_add, add : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL d_out, instructions : STD_LOGIC_VECTOR(27 DOWNTO 0);
 
 BEGIN
 
-add_ch: PROCESS (Clock)
+uar: PROCESS (Clock, Rst_e)
 	BEGIN
-		IF (Clock'EVENT AND Clock='1') THEN
+		IF (Rst_e='1') THEN
+			add <= (others => '0');
+		ELSIF (Clock'EVENT AND Clock='1') THEN
 			IF (sel='1') THEN
-				add_c <= jump_add;
+				add <= jump_add;
 			ELSE
-				add_c <= STD_LOGIC_VECTOR(UNSIGNED(add)+1);
+				add <= STD_LOGIC_VECTOR(UNSIGNED(add)+1);
 			END IF;
 		END IF;
 END PROCESS;
 
-add <= add_c;
-
 urom: microrom PORT MAP (add, d_out); 
 
-cc2 <= d_out(28);
-cc1 <= d_out(27);
-Done <= d_out(26);
-C <= d_out(25);
-Rst <= d_out(24);
-mux_m1 <= d_out(23 DOWNTO 22);
-mux_m2 <= d_out(21);
-mux_a <= d_out(20 DOWNTO 19);
-mux_s1 <= d_out(18);
-mux_s2 <= d_out(17 DOWNTO 16);
-mux_ra <= d_out(15);
-en1 <= d_out(14);
-en2 <= d_out(13);
-en3 <= d_out(12);
-en4 <= d_out(11);
-en5 <= d_out(10);
-en6 <= d_out(9);
-en7 <= d_out(8);
-en8 <= d_out(7);
-en9 <= d_out(6);
-en10 <= d_out(5);
-en11 <= d_out(4);
-jump_add <= d_out(3 DOWNTO 0);
+uir: PROCESS (Clock)
+	BEGIN
+		IF (Clock'EVENT AND Clock='0') THEN
+			instructions <= d_out;
+		END IF;
+END PROCESS;
+
+cc2 <= instructions(27);
+cc1 <= instructions(26);
+Done <= instructions(25);
+C <= instructions(24);
+mux_m1 <= instructions(23 DOWNTO 22);
+mux_m2 <= instructions(21);
+mux_a <= instructions(20 DOWNTO 19);
+mux_s1 <= instructions(18);
+mux_s2 <= instructions(17 DOWNTO 16);
+mux_ra <= instructions(15);
+en1 <= instructions(14);
+en2 <= instructions(13);
+en3 <= instructions(12);
+en4 <= instructions(11);
+en5 <= instructions(10);
+en6 <= instructions(9);
+en7 <= instructions(8);
+en8 <= instructions(7);
+en9 <= instructions(6);
+en10 <= instructions(5);
+en11 <= instructions(4);
+jump_add <= instructions(3 DOWNTO 0);
 
 status_pla: PROCESS (cc1, cc2, Start)
 	BEGIN

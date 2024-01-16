@@ -63,13 +63,13 @@ pause(15); % dipende da specifiche del PC
 %% postsimulazione
 
 n=1;
-vettore_numeri=zeros([num_vettori*32 1]);
+vettore_numeri=zeros([num_vettori*16 1]);
 fileID = fopen('xout.txt', 'r');
 
 while ~feof(fileID)
     numero_binario = fgetl(fileID);
     numero_decimale = -bin2dec(numero_binario(1)) + bin2dec(numero_binario(2:end)) / (2^(length(numero_binario) - 1));
-    vettore_numeri(n) = numero_decimale*32;
+    vettore_numeri(n) = numero_decimale*16;
     n=n+1;
 end
 
@@ -95,11 +95,11 @@ for k = 1:length(vettore_numeri)
 end
 
 matrice_risultati = (matrice_reali + matrice_immaginari*1i);
-matrice_risultati_teorici = fft(matrice_vettori*2, [], 2);
+matrice_risultati_teorici = fft(matrice_vettori, [], 2);
 result = matrice_risultati - matrice_risultati_teorici;
 
 for riga = 1:num_vettori
-    if max(abs(result(riga,:))) < 5e-6 
+    if max(abs(result(riga,:))) < 4e-6 
         disp(['simulazione ' num2str(riga) ' OK'])
         disp(['Il massimo errore nella simulazione ' num2str(riga) ' è: ' num2str(max(abs(result(riga,:))))])
     else
@@ -117,18 +117,19 @@ for k = 1:num_vettori
     vettore_numeri_th(32*k-15:32*k) = matrice_immaginari_th(k,:);
 end
 
+diff_max = 0;
+
 for k = 1:length(vettore_numeri)
-        numero_decimale = vettore_numeri(k);
-        numero_sfixed = fi(numero_decimale, 1, bit_totali, bit_frazionari);
-        numero_binario = bin(numero_sfixed);
-        numero_decimale_th = vettore_numeri_th(k);
-        numero_sfixed_th = fi(numero_decimale_th, 1, bit_totali, bit_frazionari);
-        numero_binario_th = bin(numero_sfixed_th);  
+        numero_decimale = vettore_numeri(k)/16;
+        numero_decimale_th = vettore_numeri_th(k)/16;
         diff_decimale = abs(numero_decimale - numero_decimale_th);
-        diff_sfixed = fi(diff_decimale, 1, bit_totali, bit_frazionari);
-        diff_binario = bin(diff_sfixed);
-        if strcmp(diff_binario, '000000000000000000000000') == 0
-            disp(['La differenza binaria è: ' diff_binario])
+        if diff_decimale > diff_max
+            diff_max = diff_decimale;
+            diff_sfixed = fi(diff_max, 1, bit_totali, bit_frazionari);
+            diff_binario = bin(diff_sfixed);
         end
 end
-    
+   
+if strcmp(diff_binario, '000000000000000000000000') == 0
+    disp(['La differenza binaria massima della FFT implementata è: ' diff_binario])
+end
