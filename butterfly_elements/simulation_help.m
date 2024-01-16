@@ -44,6 +44,22 @@ if fileID == -1
 end
 fclose(fileID);
 
+%% simulazione Modelsim
+
+projectPath = 'C:/Users/manue/Desktop/SDI/butterfly';
+modelsimPath = 'C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/modelsim.exe';
+compileScriptPath = fullfile(projectPath, 'compile.do');
+simulationCommand = sprintf('"%s" -do "%s"', modelsimPath, compileScriptPath);
+cd(projectPath);
+status = system(simulationCommand);
+if status == 0
+    disp('Simulazione completata con successo.');
+else
+    disp('Si è verificato un errore durante la simulazione.');
+end
+
+pause(15); % dipende da specifiche del PC
+
 %% postsimulazione
 
 n=1;
@@ -101,7 +117,7 @@ for k = 1:num_vettori
     vettore_numeri_th(32*k-15:32*k) = matrice_immaginari_th(k,:);
 end
 
-for k = 1:192
+for k = 1:length(vettore_numeri)
         numero_decimale = vettore_numeri(k);
         numero_sfixed = fi(numero_decimale, 1, bit_totali, bit_frazionari);
         numero_binario = bin(numero_sfixed);
@@ -111,11 +127,6 @@ for k = 1:192
         diff_decimale = abs(numero_decimale - numero_decimale_th);
         diff_sfixed = fi(diff_decimale, 1, bit_totali, bit_frazionari);
         diff_binario = bin(diff_sfixed);
-        % if strcmp(numero_binario, numero_binario_th) == 0
-        %     disp('Le stringhe differenti sono:')
-        %     disp(numero_binario)
-        %     disp(numero_binario_th)
-        % end
         if strcmp(diff_binario, '000000000000000000000000') == 0
             disp(['La differenza binaria è: ' diff_binario])
         end

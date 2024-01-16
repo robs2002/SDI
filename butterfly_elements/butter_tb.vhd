@@ -100,6 +100,6 @@ END PROCESS;
 
 Reset_tb <= '1', '0' after 10 ns; 
 
-btb: butterfly_element PORT MAP (A_tb, B_tb, "101001011000000000000000", "101001011000000000000000", Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);
+btb: butterfly_element PORT MAP (A_tb, B_tb, "011111111111111111111111", "000000000000000000000000", Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);
 
 END Behavioral;
