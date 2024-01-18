@@ -12,8 +12,8 @@ matrice_vettori=[-0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.
            0 0 0 0 0 0 0 0 0.375 0 0 0 0 0 0 0];
 
 n_elementi_totali = 16;
-num_prove=4;
-num_vettori = 6+num_prove; 
+num_prove = 44;
+num_vettori = 6 + num_prove; 
 matrice_vettori(7:num_vettori,:) = rand(num_prove, n_elementi_totali) - 0.5;
 
 fileID = fopen('xin.txt', 'w');
@@ -52,13 +52,12 @@ compileScriptPath = fullfile(projectPath, 'compile.do');
 simulationCommand = sprintf('"%s" -do "%s"', modelsimPath, compileScriptPath);
 cd(projectPath);
 status = system(simulationCommand);
-if status == 0
-    disp('Simulazione completata con successo.');
-else
+if status ~= 0
     disp('Si è verificato un errore durante la simulazione.');
 end
 
-pause(15); % dipende da specifiche del PC
+disp('Premere invio quando si chiude Modelsim.');
+pause; 
 
 %% postsimulazione
 

@@ -76,12 +76,12 @@ IF (Done_tb='1') THEN
 	write(l, A_p_tb);
 	writeline(xout, l);
 	write(l, B_p_tb);
-     	writeline(xout, l);
+    writeline(xout, l);
  WAIT FOR 10 ns;
 	write(l, A_p_tb);
 	writeline(xout, l);
 	write(l, B_p_tb);
-       	writeline(xout, l);
+    writeline(xout, l);
  WAIT FOR 10 ns;
 	file_close(xout);
 END IF;
@@ -98,7 +98,7 @@ Clock_tb <= '1';
 wait for 5 ns;
 END PROCESS;
 
-Reset_tb <= '1', '0' after 10 ns; 
+Reset_tb <= '1', '0' after 15 ns; 
 
 btb: butterfly_element PORT MAP (A_tb, B_tb, "011111111111111111111111", "000000000000000000000000", Start_tb, Clock_tb, Reset_tb, Done_tb, A_p_tb, B_p_tb);
 

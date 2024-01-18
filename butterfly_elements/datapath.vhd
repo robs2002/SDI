@@ -10,8 +10,6 @@ ENTITY datapath IS
 	);
 END datapath;
 
--- mux_pa da togliere
-
 ARCHITECTURE Behavioral OF datapath IS
 
 COMPONENT subtractor IS
@@ -51,7 +49,7 @@ GENERIC( N : INTEGER:=16);
 END COMPONENT;
 
 COMPONENT round IS
-PORT( DATA_IN : IN STD_LOGIC_VECTOR(49 DOWNTO 0);
+PORT( DATA_IN : IN STD_LOGIC_VECTOR(47 DOWNTO 0);
 	Clock : IN STD_LOGIC;
       DATA_OUT : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
 );
@@ -60,7 +58,7 @@ END COMPONENT;
 SIGNAL r_Ar, r_Ai, r_Br, r_Bi, r_Wr, r_Wi, M1, M2: STD_LOGIC_VECTOR (23 DOWNTO 0);
 SIGNAL mm, r_mm, Ar_47, Ai_47: STD_LOGIC_VECTOR (46 DOWNTO 0);
 SIGNAL ms, r_ms: STD_LOGIC_VECTOR (47 DOWNTO 0);
-SIGNAL ad, AD1, s_mm, s_ms, su, SU1, SU2, r_ad, r_su, r_Around, r_Ain: STD_LOGIC_VECTOR (49 DOWNTO 0);
+SIGNAL ad, AD1, s_mm, s_ms, su, SU1, SU2, r_ad, r_su, r_Around, r_Ain: STD_LOGIC_VECTOR (47 DOWNTO 0);
 
 BEGIN
 
@@ -105,19 +103,19 @@ mux_add: PROCESS(mux_a, r_ad, Ar_47, Ai_47)
         IF (mux_a="00") THEN
 	 AD1 <= r_ad;
 	ELSIF (mux_a="01") THEN
-	 AD1 <= Ar_47(46) & Ar_47(46) & Ar_47(46) & Ar_47;
+	 AD1 <= Ar_47(46) & Ar_47;
 	ELSIF (mux_a="10") THEN
-	 AD1 <= Ai_47(46) & Ai_47(46) & Ai_47(46) & Ai_47;
+	 AD1 <= Ai_47(46) & Ai_47;
         ELSE
 	 AD1 <= (OTHERS => '0');
         END IF;
       END PROCESS;
 
-s_mm <= r_mm(46) & r_mm(46) & r_mm(46) & r_mm;
-s_ms <= r_ms(47) & r_ms(47) & r_ms;
+s_mm <= r_mm(46) & r_mm;
+s_ms <= r_ms;
 
-add1: adder GENERIC MAP(50) PORT MAP(AD1, s_mm, Clock, ad);
-regad: reg GENERIC MAP(50) PORT MAP( ad, en8, Clock, r_ad );
+add1: adder GENERIC MAP(48) PORT MAP(AD1, s_mm, Clock, ad);
+regad: reg GENERIC MAP(48) PORT MAP( ad, en8, Clock, r_ad );
 
 mux_sub1: PROCESS(mux_s1, r_ad, s_ms)
       BEGIN
@@ -141,10 +139,10 @@ mux_sub2: PROCESS(mux_s2, r_ad, r_su, s_mm)
         END IF;
       END PROCESS;
 
-sub1: subtractor GENERIC MAP(50) PORT MAP(SU1, SU2, Clock, su);
-regsu: reg GENERIC MAP(50) PORT MAP( su, en10, Clock, r_su );
+sub1: subtractor GENERIC MAP(48) PORT MAP(SU1, SU2, Clock, su);
+regsu: reg GENERIC MAP(48) PORT MAP( su, en10, Clock, r_su );
 
-regAround: reg GENERIC MAP(50) PORT MAP( r_su, en11, Clock, r_Ain );
+regAround: reg GENERIC MAP(48) PORT MAP( r_su, en11, Clock, r_Ain );
 
 mux_roundA: PROCESS(mux_ra, r_Ain, r_ad)
 	     BEGIN
