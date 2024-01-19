@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-15T13:15:31.934Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="i1H8Uo0iTNDpoFEzgjty" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-19T18:21:52.282Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="7mxzC33nRkIEi23Xo3l1" version="22.1.18" type="github">
   <diagram name="Pagina-1" id="f1sffyFF8ADrPdIEwUCC">
-    <mxGraphModel dx="3247" dy="2985" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="601" dy="1905" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1288,7 +1288,7 @@
             <mxPoint x="520" y="1040" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zgFCmv0UGNkScKTH35LV-74" value="RST esterno" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="zgFCmv0UGNkScKTH35LV-74" value="RST_EX" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="380" y="1020" width="60" height="40" as="geometry" />
         </mxCell>
       </root>
