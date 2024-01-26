@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="99366a461769f9a85451"/>
+    <hash md5_digest_80b="96f2087936f8ceddb629"/>
   </project>
   <file_info>
     <file device="10CL025YE144C8G" path="fpga-user.sof" usercode="0xFFFFFFFF"/>

@@ -1,5 +1,5 @@
 Fitter report for fpga-user
-Tue Jan 16 10:14:50 2024
+Fri Jan 26 16:08:17 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jan 16 10:14:50 2024       ;
+; Fitter Status                      ; Successful - Fri Jan 26 16:08:17 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; fpga-user                                   ;
 ; Top-level Entity Name              ; user                                        ;
@@ -202,7 +202,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.pin.
+The pin-out file can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.pin.
 
 
 +----------------------------------------------------------------------+
@@ -1259,7 +1259,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node mainClk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
+Info (176353): Automatically promoted node mainClk~input (placed in PIN 22 (CLK0, DIFFCLK_0p)) File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1286,96 +1286,96 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (169213): Configuration voltage level of 3.3V is enforced on the I/O bank 1. The VCCIO of the I/O bank 1 is set to 3.3V.
 Info (169213): Configuration voltage level of 3.3V is enforced on the I/O bank 1. The VCCIO of the I/O bank 1 is set to 3.3V.
 Warning (169177): 46 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone 10 LP Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
-    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
-    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
-    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
-    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
-    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
-    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
+    Info (169178): Pin slowClk uses I/O standard 3.3-V LVCMOS at 23 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 14
+    Info (169178): Pin reset uses I/O standard 3.3-V LVCMOS at 24 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 16
+    Info (169178): Pin mcuUartTx uses I/O standard 3.3-V LVCMOS at 10 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 18
+    Info (169178): Pin mcuI2cScl uses I/O standard 3.3-V LVCMOS at 6 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 20
+    Info (169178): Pin switches[4] uses I/O standard 3.3-V LVCMOS at 59 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[5] uses I/O standard 3.3-V LVCMOS at 60 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[6] uses I/O standard 3.3-V LVCMOS at 65 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[7] uses I/O standard 3.3-V LVCMOS at 66 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin mcuI2cSda uses I/O standard 3.3-V LVCMOS at 7 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
+    Info (169178): Pin lsasBus[0] uses I/O standard 3.3-V LVCMOS at 76 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[1] uses I/O standard 3.3-V LVCMOS at 77 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[2] uses I/O standard 3.3-V LVCMOS at 80 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[3] uses I/O standard 3.3-V LVCMOS at 83 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[4] uses I/O standard 3.3-V LVCMOS at 85 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[5] uses I/O standard 3.3-V LVCMOS at 86 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[6] uses I/O standard 3.3-V LVCMOS at 87 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[7] uses I/O standard 3.3-V LVCMOS at 98 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[8] uses I/O standard 3.3-V LVCMOS at 99 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[9] uses I/O standard 3.3-V LVCMOS at 100 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[10] uses I/O standard 3.3-V LVCMOS at 101 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[11] uses I/O standard 3.3-V LVCMOS at 103 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[12] uses I/O standard 3.3-V LVCMOS at 105 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[13] uses I/O standard 3.3-V LVCMOS at 106 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[14] uses I/O standard 3.3-V LVCMOS at 111 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[15] uses I/O standard 3.3-V LVCMOS at 112 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[16] uses I/O standard 3.3-V LVCMOS at 113 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[17] uses I/O standard 3.3-V LVCMOS at 114 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[18] uses I/O standard 3.3-V LVCMOS at 115 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[19] uses I/O standard 3.3-V LVCMOS at 119 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[20] uses I/O standard 3.3-V LVCMOS at 120 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[21] uses I/O standard 3.3-V LVCMOS at 121 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[22] uses I/O standard 3.3-V LVCMOS at 125 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[23] uses I/O standard 3.3-V LVCMOS at 132 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[24] uses I/O standard 3.3-V LVCMOS at 133 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[25] uses I/O standard 3.3-V LVCMOS at 135 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[26] uses I/O standard 3.3-V LVCMOS at 136 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[27] uses I/O standard 3.3-V LVCMOS at 137 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[28] uses I/O standard 3.3-V LVCMOS at 141 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[29] uses I/O standard 3.3-V LVCMOS at 142 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[30] uses I/O standard 3.3-V LVCMOS at 143 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin lsasBus[31] uses I/O standard 3.3-V LVCMOS at 144 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169178): Pin switches[0] uses I/O standard 3.3-V LVCMOS at 46 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[1] uses I/O standard 3.3-V LVCMOS at 49 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[2] uses I/O standard 3.3-V LVCMOS at 50 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin switches[3] uses I/O standard 3.3-V LVCMOS at 51 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 25
+    Info (169178): Pin mainClk uses I/O standard 3.3-V LVCMOS at 22 File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 13
 Warning (169064): Following 32 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
-    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
-Info (144001): Generated suppressed messages file C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.fit.smsg
+    Info (169065): Pin mcuI2cSda has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 21
+    Info (169065): Pin lsasBus[0] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[1] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[2] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[3] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[4] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[5] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[6] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[7] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[8] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[9] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[10] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[11] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[12] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[13] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[15] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[16] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[17] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[18] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[19] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[20] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[21] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[22] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[23] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[24] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[25] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[26] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[27] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[28] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[29] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[30] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+    Info (169065): Pin lsasBus[31] has a permanently disabled output enable File: C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.vhd Line: 23
+Info (144001): Generated suppressed messages file C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5612 megabytes
-    Info: Processing ended: Tue Jan 16 10:14:50 2024
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 5603 megabytes
+    Info: Processing ended: Fri Jan 26 16:08:18 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/loren/Documents/GitHub/SDI/progetto_CRC/fpga-user/fpga-user.fit.smsg.
+The suppressed messages can be found in C:/Users/loren/Desktop/progetto_CRC/fpga-user/fpga-user.fit.smsg.
 
 

@@ -52,7 +52,7 @@ architecture behavioural of user is
 	end component;
 
 -- componenti progetto CRC
-	COMPONENT SPI IS
+COMPONENT SPI IS
 PORT(
 	CK, MOSI, nSS, SCK, RST_S : IN STD_LOGIC;
 	DOUT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -66,9 +66,9 @@ COMPONENT CRC IS
 PORT(
 	CLK, RST_SW : IN std_logic;
 	RD, WR : IN std_logic;
-	mosi : IN std_logic_vector(15 downto 0);
-	miso : OUT std_logic_vector(15 downto 0);
-	add : IN std_logic_vector(7 downto 0)
+	DIN : IN std_logic_vector(15 downto 0);
+	DOUT : OUT std_logic_vector(15 downto 0);
+	ADDRESS : IN std_logic_vector(7 downto 0)
 	);
 END COMPONENT;
 
@@ -112,7 +112,7 @@ begin
 			end if;
 		end loop;
 	end process;
-
+	
 	-- progetto CRC
 	blocco_SPI :SPI PORT MAP(mainClk, lsasBus(15), lsasBus(12), lsasBus(13), switches(0), DOUT, add, DIN, lsasBus(14), RD, WR,open);
 	blocco_CRC : CRC PORT MAP(mainClk, switches(0), RD, WR, DIN, DOUT, add);

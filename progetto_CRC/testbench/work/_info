@@ -1,0 +1,691 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+Ecounter
+Z0 w1703704953
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/loren/Desktop/progetto_CRC/testbench
+Z6 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/counter.vhd
+Z7 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/counter.vhd
+l0
+L5
+VBMzlOLS8Malj0[zJ]FPZP0
+!s100 f_^D=cd<S80J^Bi_3:H5O0
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1706280384
+!i10b 1
+Z10 !s108 1706280384.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/counter.vhd|
+Z12 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/counter.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+R4
+DEx4 work 7 counter 0 22 BMzlOLS8Malj0[zJ]FPZP0
+l16
+L12
+VPU?iVi0[A1J[[h;8XbUbm2
+!s100 U0=[2W44Wi7;hZR67Bd;]3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ecrc
+Z15 w1706279467
+R3
+R4
+R5
+Z16 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/CRC.vhd
+Z17 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/CRC.vhd
+l0
+L5
+V2Mc7Cn:X84n9=W80K<^]80
+!s100 c>mUO0C[Aa`H[PNYlV36<3
+R8
+32
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/CRC.vhd|
+Z19 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/CRC.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 3 crc 0 22 2Mc7Cn:X84n9=W80K<^]80
+l38
+L15
+VGL``:SjgzN=@kjMD=mDhd0
+!s100 DGgLl8TDVG3>N45m6_[1d1
+R8
+32
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Ecrc_hardware
+Z20 w1704913480
+R3
+R4
+R5
+Z21 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/crc_hardware.vhd
+Z22 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/crc_hardware.vhd
+l0
+L4
+VaLohFM9Hi4mGmifG[IZNG0
+!s100 m:]kG:c95kn<Pk4M4FM[g2
+R8
+32
+R9
+!i10b 1
+R10
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/crc_hardware.vhd|
+Z24 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/crc_hardware.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 12 crc_hardware 0 22 aLohFM9Hi4mGmifG[IZNG0
+l16
+L12
+VEAQAUB:WAE[L_coIPRBh_0
+!s100 ]]boQKI8]<JR66IOJ3SI>3
+R8
+32
+R9
+!i10b 1
+R10
+R23
+R24
+!i113 1
+R13
+R14
+Ecrcconspi
+Z25 w1706280373
+R3
+R4
+R5
+Z26 8C:/Users/loren/Desktop/progetto_CRC/testbench/CRCconSPI.vhd
+Z27 FC:/Users/loren/Desktop/progetto_CRC/testbench/CRCconSPI.vhd
+l0
+L4
+VBo]WJnC4mjWYA>9Bbj7C=1
+!s100 1`1noN?NjBZ]CQd_=ec^^3
+R8
+32
+Z28 !s110 1706280383
+!i10b 1
+Z29 !s108 1706280383.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/testbench/CRCconSPI.vhd|
+Z31 !s107 C:/Users/loren/Desktop/progetto_CRC/testbench/CRCconSPI.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 9 crcconspi 0 22 Bo]WJnC4mjWYA>9Bbj7C=1
+l37
+L11
+VMJmYC@h2a4O5Md[Ml?V0n2
+!s100 RSk9zS`5cIlmjOP9H;fI20
+R8
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R13
+R14
+Ecu
+Z32 w1703593524
+R3
+R4
+R5
+Z33 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu.vhd
+Z34 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu.vhd
+l0
+L4
+VD25eihPBeCkW5TKmimEz42
+!s100 3jOA[hiV>6BY;dEd];Lf01
+R8
+32
+R9
+!i10b 1
+R10
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu.vhd|
+Z36 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R3
+R4
+DEx4 work 2 cu 0 22 D25eihPBeCkW5TKmimEz42
+l19
+L11
+Vz9YDl:@954:]@]L6gKc6^0
+!s100 Cj?:?LD:6YcDPjgcfKV:f1
+R8
+32
+R9
+!i10b 1
+R10
+R35
+R36
+!i113 1
+R13
+R14
+Ecu_crc
+Z37 w1704916707
+R3
+R4
+R5
+Z38 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu_crc.vhd
+Z39 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu_crc.vhd
+l0
+L4
+V[gB=90mdFB;Y<`dV5FL0d0
+!s100 H5EeW9oE;Ja792NS1=7oh0
+R8
+32
+R9
+!i10b 1
+R10
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu_crc.vhd|
+Z41 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/cu_crc.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 6 cu_crc 0 22 [gB=90mdFB;Y<`dV5FL0d0
+l17
+L11
+VKj0TMJ1X@T@HF5=n2X3@f0
+!s100 LDPYY:ofbBnaB1_YeamR91
+R8
+32
+R9
+!i10b 1
+R10
+R40
+R41
+!i113 1
+R13
+R14
+Edatapath
+R32
+R3
+R4
+R5
+Z42 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath.vhd
+Z43 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath.vhd
+l0
+L4
+V<g=AKD6mb7FWTS4UgM[HP2
+!s100 zZ;D1`7hV>8JHo1lS6z<T2
+R8
+32
+R9
+!i10b 1
+R10
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath.vhd|
+Z45 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 8 datapath 0 22 <g=AKD6mb7FWTS4UgM[HP2
+l44
+L15
+V:=;3mOZ]]CIEZNFYfYcnj3
+!s100 0TP6j[B@l<RDIUY45SgCW2
+R8
+32
+R9
+!i10b 1
+R10
+R44
+R45
+!i113 1
+R13
+R14
+Edatapath_crc
+Z46 w1706279705
+R3
+R4
+R5
+Z47 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath_crc.vhd
+Z48 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath_crc.vhd
+l0
+L4
+VR[e_iWVS4GM]j:LoRhbZz1
+!s100 N[mA?ENmU4QPklSZnNROI0
+R8
+32
+R9
+!i10b 1
+R10
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath_crc.vhd|
+Z50 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/datapath_crc.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 12 datapath_crc 0 22 R[e_iWVS4GM]j:LoRhbZz1
+l62
+L15
+V2@JPc7oeJYU3SIMhcUaAT2
+!s100 fzSf;0f0B_hK8`D<GHjc20
+R8
+32
+R9
+!i10b 1
+R10
+R49
+R50
+!i113 1
+R13
+R14
+Edecodifica
+R32
+Z51 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z52 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/decodifica.vhd
+Z53 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/decodifica.vhd
+l0
+L5
+VEKPO[1]GoQO>Z6P:kM0R?2
+!s100 ]I_B>@1OW[7?c_DKPd[J^0
+R8
+32
+R9
+!i10b 1
+R10
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/decodifica.vhd|
+Z55 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/decodifica.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R51
+R3
+R4
+DEx4 work 10 decodifica 0 22 EKPO[1]GoQO>Z6P:kM0R?2
+l15
+L13
+VcYlg4C0[=DFdC_R`S6az61
+!s100 Ql=@P=hk2bY0[fbSWX0LO2
+R8
+32
+R9
+!i10b 1
+R10
+R54
+R55
+!i113 1
+R13
+R14
+Ereg
+R32
+R3
+R4
+R5
+Z56 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register.vhd
+Z57 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register.vhd
+l0
+L4
+VQCD27FoY^5>66WJ<ki]OT3
+!s100 =8eeNHENJFBQl;n`LjH;91
+R8
+32
+R28
+!i10b 1
+R29
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register.vhd|
+Z59 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 3 reg 0 22 QCD27FoY^5>66WJ<ki]OT3
+l14
+L12
+Vo<60@4BCI;fPo:J4];>aM0
+!s100 lf^MZha@=ZEX^Klm_`dAU2
+R8
+32
+R28
+!i10b 1
+R29
+R58
+R59
+!i113 1
+R13
+R14
+Ereg_crc
+R32
+R51
+R3
+R4
+R5
+Z60 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/reg_crc.vhd
+Z61 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/reg_crc.vhd
+l0
+L5
+VCA@Gce_??I5KDPJhWUl3P3
+!s100 hA:Cf11mF6ngSYR9RXC>J0
+R8
+32
+R28
+!i10b 1
+R29
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/reg_crc.vhd|
+Z63 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/reg_crc.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R51
+R3
+R4
+DEx4 work 7 reg_crc 0 22 CA@Gce_??I5KDPJhWUl3P3
+l16
+L14
+V?MngS3>_NM037XbANEC5=3
+!s100 zk;IeTPHlnS<D2_0Vi?4D0
+R8
+32
+R28
+!i10b 1
+R29
+R62
+R63
+!i113 1
+R13
+R14
+Ereg_load
+R32
+R3
+R4
+R5
+Z64 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register_load.vhd
+Z65 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register_load.vhd
+l0
+L4
+V09P]TEcEAhV2CZEVELPMZ0
+!s100 `URSf?a=>=SnJPdFYVnV00
+R8
+32
+R28
+!i10b 1
+R29
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register_load.vhd|
+Z67 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/shift_register_load.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 8 reg_load 0 22 09P]TEcEAhV2CZEVELPMZ0
+l16
+L12
+VLe75IN:Q`<zFY0FHN[83N0
+!s100 8R]_5;hfQ>gQikZjhaK5o0
+R8
+32
+R28
+!i10b 1
+R29
+R66
+R67
+!i113 1
+R13
+R14
+Eselettore_uscita
+Z68 w1705396157
+R51
+R3
+R4
+R5
+Z69 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/selettore_uscita.vhd
+Z70 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/selettore_uscita.vhd
+l0
+L5
+Vg<UVfm@S6TLLc1gHGAU6b2
+!s100 zZ]2>l0zzh@Bol1Ijj8Tj2
+R8
+32
+R28
+!i10b 1
+R29
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/selettore_uscita.vhd|
+Z72 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/selettore_uscita.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R51
+R3
+R4
+DEx4 work 16 selettore_uscita 0 22 g<UVfm@S6TLLc1gHGAU6b2
+l18
+L14
+VZVnj1ia5Oc71ZE_2BQ>GB2
+!s100 729TNb`e^lW93e2FDDPjT2
+R8
+32
+R28
+!i10b 1
+R29
+R71
+R72
+!i113 1
+R13
+R14
+Espi
+R32
+R3
+R4
+R5
+Z73 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/SPI.vhd
+Z74 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/SPI.vhd
+l0
+L4
+VO:SF6NNBPNA<8NLY?68JT1
+!s100 eNZdY7We27oJ`SLZf>5[R3
+R8
+32
+R9
+!i10b 1
+R10
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/SPI.vhd|
+Z76 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/SPI.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 3 spi 0 22 O:SF6NNBPNA<8NLY?68JT1
+l38
+L14
+V9JHF7chDckX8O3NQTP6P31
+!s100 VVK9mPGB^iFV^Jo>N`P1>0
+R8
+32
+R9
+!i10b 1
+R10
+R75
+R76
+!i113 1
+R13
+R14
+Etb_crc
+Z77 w1706280363
+R51
+R3
+R4
+R5
+Z78 8C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRC.vhd
+Z79 FC:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRC.vhd
+l0
+L7
+V3Z:@EL`h8a35Fh5HbiK[S0
+!s100 0JZJb1a6C`U^fhZb?MF>k2
+R8
+32
+R28
+!i10b 1
+R29
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRC.vhd|
+Z81 !s107 C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRC.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R51
+R3
+R4
+DEx4 work 6 tb_crc 0 22 3Z:@EL`h8a35Fh5HbiK[S0
+l26
+L10
+V?czPdkb^TTKfS=X3DoK6M3
+!s100 ?I6[VLmHL3gnUWDZ]o^?o2
+R8
+32
+R28
+!i10b 1
+R29
+R80
+R81
+!i113 1
+R13
+R14
+Etb_crcconspi
+Z82 w1706201644
+R3
+R4
+R5
+Z83 8C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRCconSPI.vhd
+Z84 FC:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRCconSPI.vhd
+l0
+L7
+VkiWlMjNA4hFA5;hYQle=V2
+!s100 P<^E^GRYdj_G3ZjVC_S3d1
+R8
+32
+R28
+!i10b 1
+R29
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRCconSPI.vhd|
+Z86 !s107 C:/Users/loren/Desktop/progetto_CRC/testbench/tb_CRCconSPI.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R3
+R4
+DEx4 work 12 tb_crcconspi 0 22 kiWlMjNA4hFA5;hYQle=V2
+l22
+L10
+VEhUK_Y8`BnNF0jUJ;oo@A3
+!s100 >8VK]A=HX1RX1j8^VL`eY3
+R8
+32
+R28
+!i10b 1
+R29
+R85
+R86
+!i113 1
+R13
+R14
+Euser
+Z87 w1704908784
+Z88 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z89 DPx3 lpm 14 lpm_components 0 22 BZZBj]8LhndN7CkCjD@L`2
+R51
+R3
+R4
+R5
+Z90 8C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/fpga-user.vhd
+Z91 FC:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/fpga-user.vhd
+l0
+L9
+V_Gh=H1Z>b^I6o=UV1jgdS1
+!s100 `FAOGm1TCW;d^[U`NPmKD1
+R8
+32
+R9
+!i10b 1
+R10
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/fpga-user.vhd|
+Z93 !s107 C:/Users/loren/Desktop/progetto_CRC/SLAVE_CRC/fpga-user.vhd|
+!i113 1
+R13
+R14
+Abehavioural
+R88
+R89
+R51
+R3
+R4
+Z94 DEx4 work 4 user 0 22 _Gh=H1Z>b^I6o=UV1jgdS1
+l79
+L31
+Z95 VQA=d6k1X5FSz1GmDgVj7U3
+Z96 !s100 RMhO19g9A9aPmO0TSzdoD1
+R8
+32
+R9
+!i10b 1
+R10
+R92
+R93
+!i113 1
+R13
+R14

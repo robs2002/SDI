@@ -1,4 +1,4 @@
--- tempo di simulazione di almeno 100 us con risoluzione minima di 100ns
+-- tempo di simulazione di almeno 68 us con risoluzione minima di 100ns
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
@@ -96,23 +96,6 @@ sck_process : PROCESS		-- clock=1MHz => T=1 us
 
 	wait for 16.1 us;	-- aspetta il tempo di trasmissione dati più un pochino
 	nss<='1';			-- deseleziono slave
-
-	wait for 1 us;
-
-	nss<='0';			-- attivo slave
-	-- ciclo di lettura
-	stato := "00100001";		-- valore 33 che significa lettura
-	address := "00000001";
-	for i in 7 downto 0 loop	-- invio tutti i bit di stato
-		wait until rising_edge(sck);
-		mosi<=stato(i);
-	end loop;
-
-	for i in 7 downto 0 loop	-- invio tutti i bit di indirizzo
-		wait until rising_edge(sck);
-		mosi<=address(i);
-	end loop;
-	wait until rising_edge(sck);
 
 	wait;
 

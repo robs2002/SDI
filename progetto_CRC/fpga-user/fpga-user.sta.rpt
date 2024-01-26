@@ -1,5 +1,5 @@
 Timing Analyzer report for fpga-user
-Tue Jan 16 10:14:57 2024
+Fri Jan 26 16:08:25 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -106,12 +106,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.09        ;
+; Average used               ; 1.12        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   1.8%      ;
+;     Processors 2-6         ;   2.4%      ;
 +----------------------------+-------------+
 
 
@@ -286,8 +286,8 @@ HTML report is unavailable in plain text report export.
 ; -3.247 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[6]   ; SPI:blocco_SPI|datapath:DP|reg_load:shift_register_load_dout|Q[14] ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.169      ;
 ; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[9]                   ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
 ; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[6]                   ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
-; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[10]                  ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
 ; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[8]                   ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
+; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[10]                  ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
 ; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[11]                  ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
 ; -3.239 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_address|Q[4]   ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg0|Q[14]                  ; mainClk      ; mainClk     ; 1.000        ; -0.079     ; 4.161      ;
 +--------+--------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -867,10 +867,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.688 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[11]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[11]        ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.954      ;
 ; 0.689 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[15]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[15]        ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.955      ;
 ; 0.690 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[10]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[10]        ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.956      ;
-; 0.691 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[1]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[1]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.957      ;
 ; 0.691 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[6]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[6]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.957      ;
 ; 0.691 ; SPI:blocco_SPI|datapath:DP|reg:shift_register_din|Q[1]             ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg2|Q[1]                    ; mainClk      ; mainClk     ; 0.000        ; 0.524      ; 1.410      ;
 ; 0.691 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[0]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[0]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.957      ;
+; 0.691 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[1]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[1]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.957      ;
 ; 0.693 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[4]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[4]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.959      ;
 ; 0.693 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[2]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[2]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.959      ;
 ; 0.693 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[8]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[8]         ; mainClk      ; mainClk     ; 0.000        ; 0.071      ; 0.959      ;
@@ -1348,11 +1348,11 @@ No synchronizer chains to report.
 ; 0.293 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[11]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[11]        ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.414      ;
 ; 0.293 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[15]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[15]        ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.414      ;
 ; 0.294 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[10]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[10]        ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.415      ;
-; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[1]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[1]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
 ; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[6]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[6]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
 ; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[8]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[8]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
 ; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[12]                  ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[12]        ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
 ; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[0]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[0]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
+; 0.295 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[1]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[1]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.416      ;
 ; 0.296 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[4]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[4]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.417      ;
 ; 0.296 ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[2]                   ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[2]         ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.417      ;
 ; 0.299 ; SPI:blocco_SPI|cu:control_unit|present_state.SCKL_DOUT             ; SPI:blocco_SPI|cu:control_unit|present_state.SCKH0_DOUT             ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.420      ;
@@ -1363,8 +1363,8 @@ No synchronizer chains to report.
 ; 0.306 ; CRC:blocco_CRC|cu_crc:control_unit|present_state.IDLE              ; CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_RST            ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.427      ;
 ; 0.309 ; CRC:blocco_CRC|cu_crc:control_unit|present_state.IDLE              ; CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_0             ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.430      ;
 ; 0.311 ; CRC:blocco_CRC|datapath_crc:dp|counter:contatore|T[3]              ; CRC:blocco_CRC|cu_crc:control_unit|present_state.CRC_OUT            ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.432      ;
-; 0.312 ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[4]        ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[4]                    ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.433      ;
 ; 0.312 ; SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_C               ; SPI:blocco_SPI|cu:control_unit|present_state.SCKH_A                 ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.433      ;
+; 0.312 ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|data_out[4]        ; CRC:blocco_CRC|datapath_crc:dp|reg_crc:reg4|Q[4]                    ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.433      ;
 ; 0.313 ; CRC:blocco_CRC|cu_crc:control_unit|present_state.LOAD_1            ; CRC:blocco_CRC|cu_crc:control_unit|present_state.SHIFT_1            ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.434      ;
 ; 0.314 ; SPI:blocco_SPI|cu:control_unit|present_state.SCKL0_DIN             ; SPI:blocco_SPI|cu:control_unit|present_state.SCKL1_DIN              ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.435      ;
 ; 0.314 ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg[7]       ; CRC:blocco_CRC|datapath_crc:dp|crc_hardware:crc|shift_reg[8]        ; mainClk      ; mainClk     ; 0.000        ; 0.037      ; 0.435      ;
@@ -1988,7 +1988,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 16 10:14:54 2024
+    Info: Processing started: Fri Jan 26 16:08:22 2024
 Info: Command: quartus_sta fpga-user -c fpga-user
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2077,8 +2077,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Jan 16 10:14:57 2024
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Fri Jan 26 16:08:25 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

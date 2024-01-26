@@ -24,9 +24,9 @@ COMPONENT CRC IS
 PORT(
 	CLK, RST_SW : IN std_logic;
 	RD, WR : IN std_logic;
-	mosi : IN std_logic_vector(15 downto 0);
-	miso : OUT std_logic_vector(15 downto 0);
-	add : IN std_logic_vector(7 downto 0)
+	DIN : IN std_logic_vector(15 downto 0);
+	DOUT : OUT std_logic_vector(15 downto 0);
+	ADDRESS : IN std_logic_vector(7 downto 0)
 	);
 END COMPONENT;
 

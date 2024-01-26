@@ -121,19 +121,18 @@ set_location_assignment PIN_22 -to mainClk
 set_global_assignment -name FORCE_CONFIGURATION_VCCIO ON
 set_global_assignment -name CONFIGURATION_VCCIO_LEVEL 3.3V
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/SPI.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/shift_register_load.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/shift_register.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/selettore_uscita.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/reg_crc.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/decodifica.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/datapath_crc.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/datapath.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/cu_crc.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/cu.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/crc_hardware.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/CRC.vhd
+set_global_assignment -name VHDL_FILE ../SLAVE_CRC/counter.vhd
 set_global_assignment -name VHDL_FILE "fpga-user.vhd"
-set_global_assignment -name VHDL_FILE SLAVE_CRC/SPI.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/shift_register_load.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/shift_register.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/selettore_uscita.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/reg_crc.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/decodifica.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/datapath_crc.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/datapath.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/cu_crc.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/cu.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/crc_hardware.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/CRC.vhd
-set_global_assignment -name VHDL_FILE SLAVE_CRC/counter.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SOURCE_FILE "db/fpga-user.cmp.rdb"
