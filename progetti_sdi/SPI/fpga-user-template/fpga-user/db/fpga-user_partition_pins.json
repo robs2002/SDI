@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[12]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[13]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[14]",
+					"strict" : false
+				},
+				{
+					"name" : "lsasBus[15]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mainClk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

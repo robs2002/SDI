@@ -1,0 +1,538 @@
+Analysis & Synthesis report for fpga-user
+Mon Feb 05 20:51:52 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |user|SPI:slv|cu:control_unit|present_state
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_state
+ 13. Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_address
+ 14. Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_din
+ 15. Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg_load:shift_register_load_dout
+ 16. Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|counter:contatore
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Feb 05 20:51:52 2024       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; fpga-user                                   ;
+; Top-level Entity Name              ; user                                        ;
+; Family                             ; Cyclone 10 LP                               ;
+; Total logic elements               ; 7,202                                       ;
+;     Total combinational functions  ; 3,071                                       ;
+;     Dedicated logic registers      ; 4,169                                       ;
+; Total registers                    ; 4169                                        ;
+; Total pins                         ; 51                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10CL025YE144C8G    ;                    ;
+; Top-level entity name                                            ; user               ; fpga-user          ;
+; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation              ; All                ; All                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.08        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.5%      ;
+;     Processor 5            ;   0.5%      ;
+;     Processor 6            ;   0.5%      ;
+;     Processor 7            ;   0.5%      ;
+;     Processor 8            ;   0.5%      ;
+;     Processors 9-16        ;   0.5%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; ../../file.vhd/SPI.vhd                 ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/SPI.vhd                 ;         ;
+; ../../file.vhd/shift_register_load.vhd ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register_load.vhd ;         ;
+; ../../file.vhd/shift_register.vhd      ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register.vhd      ;         ;
+; ../../file.vhd/memory.vhd              ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd              ;         ;
+; ../../file.vhd/fpga-user.vhd           ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd           ;         ;
+; ../../file.vhd/datapath.vhd            ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd            ;         ;
+; ../../file.vhd/cu.vhd                  ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/cu.vhd                  ;         ;
+; ../../file.vhd/counter.vhd             ; yes             ; User VHDL File  ; C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/counter.vhd             ;         ;
++----------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 7,202         ;
+;                                             ;               ;
+; Total combinational functions               ; 3071          ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 2760          ;
+;     -- 3 input functions                    ; 300           ;
+;     -- <=2 input functions                  ; 11            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 3071          ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 4169          ;
+;     -- Dedicated logic registers            ; 4169          ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 51            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; mainClk~input ;
+; Maximum fan-out                             ; 4169          ;
+; Total fan-out                               ; 28708         ;
+; Average fan-out                             ; 3.89          ;
++---------------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+-------------+--------------+
+; |user                                        ; 3071 (0)            ; 4169 (0)                  ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |user                                                       ; user        ; work         ;
+;    |SPI:slv|                                 ; 55 (0)              ; 73 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv                                               ; SPI         ; work         ;
+;       |cu:control_unit|                      ; 30 (30)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|cu:control_unit                               ; cu          ; work         ;
+;       |datapath:DP|                          ; 25 (4)              ; 54 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP                                   ; datapath    ; work         ;
+;          |counter:contatore|                 ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP|counter:contatore                 ; counter     ; work         ;
+;          |reg:shift_register_address|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP|reg:shift_register_address        ; reg         ; work         ;
+;          |reg:shift_register_din|            ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP|reg:shift_register_din            ; reg         ; work         ;
+;          |reg:shift_register_state|          ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP|reg:shift_register_state          ; reg         ; work         ;
+;          |reg_load:shift_register_load_dout| ; 17 (17)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|SPI:slv|datapath:DP|reg_load:shift_register_load_dout ; reg_load    ; work         ;
+;    |memory:mem|                              ; 3016 (3016)         ; 4096 (4096)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |user|memory:mem                                            ; memory      ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |user|SPI:slv|cu:control_unit|present_state                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++--------------------------+--------------------------+--------------------------+-------------------------+--------------------+----------------------+-----------------------+-------------------------+-------------------------+------------------------+-----------------------+-----------------------+-----------------------+----------------------+-----------------------+-----------------------+----------------------+-----------------------+----------------------+--------------------+
+; Name                     ; present_state.SCKH1_DOUT ; present_state.SCKH0_DOUT ; present_state.SCKL_DOUT ; present_state.LOAD ; present_state.S_READ ; present_state.S_WRITE ; present_state.SCKL1_DIN ; present_state.SCKL0_DIN ; present_state.SCKH_DIN ; present_state.SCKL0_W ; present_state.SCKL1_A ; present_state.SCKL0_A ; present_state.SCKH_A ; present_state.SCKL1_C ; present_state.SCKL0_C ; present_state.SCKH_C ; present_state.WAITSCK ; present_state.WAITSS ; present_state.IDLE ;
++--------------------------+--------------------------+--------------------------+-------------------------+--------------------+----------------------+-----------------------+-------------------------+-------------------------+------------------------+-----------------------+-----------------------+-----------------------+----------------------+-----------------------+-----------------------+----------------------+-----------------------+----------------------+--------------------+
+; present_state.IDLE       ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 0                  ;
+; present_state.WAITSS     ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 1                    ; 1                  ;
+; present_state.WAITSCK    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 1                     ; 0                    ; 1                  ;
+; present_state.SCKH_C     ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 1                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL0_C    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 1                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL1_C    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 1                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKH_A     ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 1                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL0_A    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 1                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL1_A    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 1                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL0_W    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 1                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKH_DIN   ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 1                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL0_DIN  ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 1                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL1_DIN  ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 1                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.S_WRITE    ; 0                        ; 0                        ; 0                       ; 0                  ; 0                    ; 1                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.S_READ     ; 0                        ; 0                        ; 0                       ; 0                  ; 1                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.LOAD       ; 0                        ; 0                        ; 0                       ; 1                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKL_DOUT  ; 0                        ; 0                        ; 1                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKH0_DOUT ; 0                        ; 1                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
+; present_state.SCKH1_DOUT ; 1                        ; 0                        ; 0                       ; 0                  ; 0                    ; 0                     ; 0                       ; 0                       ; 0                      ; 0                     ; 0                     ; 0                     ; 0                    ; 0                     ; 0                     ; 0                    ; 0                     ; 0                    ; 1                  ;
++--------------------------+--------------------------+--------------------------+-------------------------+--------------------+----------------------+-----------------------+-------------------------+-------------------------+------------------------+-----------------------+-----------------------+-----------------------+----------------------+-----------------------+-----------------------+----------------------+-----------------------+----------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                         ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                          ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+; memory:mem|data_out[15]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[14]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[13]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[12]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[11]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[10]                             ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[9]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[8]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[7]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[6]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[5]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[4]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[3]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[2]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[1]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; memory:mem|data_out[0]                              ; SPI:slv|cu:control_unit|present_state.S_READ ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                                              ;                        ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4169  ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 4168  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4145  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |user|SPI:slv|datapath:DP|reg_load:shift_register_load_dout|Q[8] ;
+; 256:1              ; 16 bits   ; 2720 LEs      ; 2720 LEs             ; 0 LEs                  ; No         ; |user|memory:mem|Mux0                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_state ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_address ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg:shift_register_din ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|reg_load:shift_register_load_dout ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SPI:slv|datapath:DP|counter:contatore ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 51                          ;
+; cycloneiii_ff         ; 4169                        ;
+;     CLR               ; 15                          ;
+;     CLR SCLR          ; 8                           ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 4144                        ;
+; cycloneiii_io_obuf    ; 33                          ;
+; cycloneiii_lcell_comb ; 3072                        ;
+;     normal            ; 3072                        ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 300                         ;
+;         4 data inputs ; 2760                        ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 6.92                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Feb 05 20:51:40 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fpga-user -c fpga-user
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/spi.vhd
+    Info (12022): Found design unit 1: SPI-behavior File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/SPI.vhd Line: 14
+    Info (12023): Found entity 1: SPI File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/SPI.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/shift_register_load.vhd
+    Info (12022): Found design unit 1: reg_load-Behavior File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register_load.vhd Line: 12
+    Info (12023): Found entity 1: reg_load File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register_load.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/shift_register.vhd
+    Info (12022): Found design unit 1: reg-Behavior File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register.vhd Line: 12
+    Info (12023): Found entity 1: reg File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/shift_register.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/memory.vhd
+    Info (12022): Found design unit 1: memory-Behavioral File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 14
+    Info (12023): Found entity 1: memory File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/fpga-user.vhd
+    Info (12022): Found design unit 1: user-behavioural File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 31
+    Info (12023): Found entity 1: user File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/datapath.vhd
+    Info (12022): Found design unit 1: datapath-behavior File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 15
+    Info (12023): Found entity 1: datapath File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/cu.vhd
+    Info (12022): Found design unit 1: cu-Behavioral File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/cu.vhd Line: 11
+    Info (12023): Found entity 1: cu File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/cu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manue/desktop/progetti_sdi/spi/file.vhd/counter.vhd
+    Info (12022): Found design unit 1: counter-Behavioral File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/counter.vhd Line: 12
+    Info (12023): Found entity 1: counter File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/counter.vhd Line: 5
+Info (12127): Elaborating entity "user" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at fpga-user.vhd(19): used implicit default value for signal "mcuUartRx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 19
+Warning (10873): Using initial value X (don't care) for net "leds[3..1]" at fpga-user.vhd(27) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 27
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at memory.vhd(31): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at memory.vhd(31): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 31
+Warning (10631): VHDL Process Statement warning at memory.vhd(22): inferring latch(es) for signal or variable "data_out", which holds its previous value in one or more paths through the process File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[0]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[1]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[2]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[3]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[4]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[5]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[6]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[7]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[8]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[9]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[10]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[11]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[12]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[13]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[14]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (10041): Inferred latch for "data_out[15]" at memory.vhd(22) File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/memory.vhd Line: 22
+Info (12128): Elaborating entity "SPI" for hierarchy "SPI:slv" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 61
+Info (12128): Elaborating entity "datapath" for hierarchy "SPI:slv|datapath:DP" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/SPI.vhd Line: 40
+Info (12128): Elaborating entity "reg" for hierarchy "SPI:slv|datapath:DP|reg:shift_register_state" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 47
+Info (12128): Elaborating entity "reg" for hierarchy "SPI:slv|datapath:DP|reg:shift_register_din" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 51
+Info (12128): Elaborating entity "reg_load" for hierarchy "SPI:slv|datapath:DP|reg_load:shift_register_load_dout" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 53
+Info (12128): Elaborating entity "counter" for hierarchy "SPI:slv|datapath:DP|counter:contatore" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/datapath.vhd Line: 55
+Info (12128): Elaborating entity "cu" for hierarchy "SPI:slv|cu:control_unit" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/SPI.vhd Line: 42
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "lsasBus[12]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[13]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[15]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "mcuI2cSda" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 21
+    Warning (13040): bidirectional pin "lsasBus[0]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[1]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[2]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[3]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[4]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[5]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[6]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[7]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[8]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[9]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[10]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[11]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[16]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[17]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[18]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[19]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[20]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[21]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[22]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[23]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[24]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[25]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[26]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[27]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[28]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[29]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[30]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+    Warning (13040): bidirectional pin "lsasBus[31]" has no driver File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "mcuUartRx" is stuck at GND File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 19
+    Warning (13410): Pin "leds[1]" is stuck at GND File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 27
+    Warning (13410): Pin "leds[2]" is stuck at GND File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 27
+    Warning (13410): Pin "leds[3]" is stuck at GND File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 27
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "slowClk" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 14
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 16
+    Warning (15610): No output dependent on input pin "mcuUartTx" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 18
+    Warning (15610): No output dependent on input pin "mcuI2cScl" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 20
+    Warning (15610): No output dependent on input pin "switches[1]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[2]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[3]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/manue/Desktop/progetti_sdi/SPI/file.vhd/fpga-user.vhd Line: 25
+Info (21057): Implemented 7253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21060): Implemented 33 bidirectional pins
+    Info (21061): Implemented 7202 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Mon Feb 05 20:51:52 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:04
+
+

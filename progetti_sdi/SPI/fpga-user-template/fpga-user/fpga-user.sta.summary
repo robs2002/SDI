@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : -11.109
+TNS   : -164.936
+
+Type  : Slow 1200mV 85C Model Setup 'mainClk'
+Slack : -5.526
+TNS   : -17267.888
+
+Type  : Slow 1200mV 85C Model Hold 'mainClk'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 2.097
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'mainClk'
+Slack : -3.831
+TNS   : -9397.780
+
+Type  : Slow 1200mV 85C Model Removal 'mainClk'
+Slack : 1.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mainClk'
+Slack : -3.000
+TNS   : -6202.303
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : -10.654
+TNS   : -157.430
+
+Type  : Slow 1200mV 0C Model Setup 'mainClk'
+Slack : -5.177
+TNS   : -16052.191
+
+Type  : Slow 1200mV 0C Model Hold 'mainClk'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 2.010
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'mainClk'
+Slack : -3.547
+TNS   : -8070.485
+
+Type  : Slow 1200mV 0C Model Removal 'mainClk'
+Slack : 1.633
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mainClk'
+Slack : -3.000
+TNS   : -6202.303
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : -4.626
+TNS   : -69.367
+
+Type  : Fast 1200mV 0C Model Setup 'mainClk'
+Slack : -1.919
+TNS   : -5404.656
+
+Type  : Fast 1200mV 0C Model Hold 'mainClk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 1.030
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'mainClk'
+Slack : -1.243
+TNS   : -2293.737
+
+Type  : Fast 1200mV 0C Model Removal 'mainClk'
+Slack : 0.757
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mainClk'
+Slack : -3.000
+TNS   : -5515.150
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SPI:slv|cu:control_unit|present_state.S_READ'
+Slack : 0.421
+TNS   : 0.000
+
+------------------------------------------------------------

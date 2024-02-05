@@ -1,0 +1,22 @@
+
+State Machine - |user|SPI:slv|cu:control_unit|present_state
+Name present_state.SCKH1_DOUT present_state.SCKH0_DOUT present_state.SCKL_DOUT present_state.LOAD present_state.S_READ present_state.S_WRITE present_state.SCKL1_DIN present_state.SCKL0_DIN present_state.SCKH_DIN present_state.SCKL0_W present_state.SCKL1_A present_state.SCKL0_A present_state.SCKH_A present_state.SCKL1_C present_state.SCKL0_C present_state.SCKH_C present_state.WAITSCK present_state.WAITSS present_state.IDLE 
+present_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+present_state.WAITSS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+present_state.WAITSCK 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+present_state.SCKH_C 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+present_state.SCKL0_C 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+present_state.SCKL1_C 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+present_state.SCKH_A 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+present_state.SCKL0_A 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+present_state.SCKL1_A 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+present_state.SCKL0_W 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+present_state.SCKH_DIN 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+present_state.SCKL0_DIN 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+present_state.SCKL1_DIN 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.S_WRITE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.S_READ 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.LOAD 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.SCKL_DOUT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.SCKH0_DOUT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+present_state.SCKH1_DOUT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
