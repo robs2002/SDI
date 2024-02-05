@@ -18,6 +18,7 @@ SIGNAL next_state: State_type;
 
 BEGIN
 
+-- processo per gli stati futuri
 transitions: PROCESS(present_state, TC0, TC8, TC15, State, SCk)
 BEGIN
 	CASE present_state IS
@@ -44,9 +45,10 @@ BEGIN
 	END CASE;
 END PROCESS;
 
+-- processo per la transizione ps, ns
 registers: PROCESS(Ck,RST_S)
 BEGIN  
-	IF (RST_S='1') THEN
+	IF (RST_S='1') THEN		-- reset asincrono
 		present_state <= IDLE;
 	ELSE
 		IF (Ck'event and Ck='1') THEN
@@ -59,6 +61,7 @@ BEGIN
 	END IF;
 END PROCESS;
 
+-- processo per gestione dei segnali
 output: PROCESS(present_state)
 BEGIN
 

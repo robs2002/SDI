@@ -11,13 +11,13 @@ def risposta_scheda():
     messaggio = riga_rx.split()[len(riga_rx.split())-2].upper()   # prendo solo la penultima parte della stringa che sono i 4 numeri in esadecimale che mi interessano
     return messaggio
 
-#------------------------------------------------
-NUMERO_PROVE = 1000000
-LUNGHEZZA_MASSIMA_MESSAGGIO = 10
+#------- main -----------------------------------------
+NUMERO_PROVE = 1000
+LUNGHEZZA_MASSIMA_MESSAGGIO = 1000
 
 # Configura la porta seriale
-ser = serial.Serial('COM12', 9600)  # Abilito la seriale
-crc16_func = crcmod.predefined.mkCrcFun('crc-ccitt-false')
+ser = serial.Serial('COM12', 9600)  # Inserire la seriale a cui è collegata la scheda VirtLab
+crc16_func = crcmod.predefined.mkCrcFun('crc-ccitt-false')  # Abilito libreria per calcolo del crc con lo standard crc-16-ccitt
 errori = False
 
 for test in range(NUMERO_PROVE):  

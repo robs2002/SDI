@@ -22,7 +22,7 @@ COMPONENT counter IS
 		);
 END COMPONENT;
 
-COMPONENT reg IS
+COMPONENT reg IS		-- registro con caricamento in seriale e lettura in parallelo
 	GENERIC (N : INTEGER:=16); 
 	PORT (
 		Clock,Reset,Enable,R : IN STD_LOGIC; 
@@ -30,7 +30,7 @@ COMPONENT reg IS
 		);
 END COMPONENT;
 
-COMPONENT  reg_load IS
+COMPONENT  reg_load IS	-- registro con caricamento in parallelo e lettura in seriale
 	GENERIC (N : INTEGER:=16); 
 	PORT ( DOUT : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 	Clock,Reset,Load,Enable: IN STD_LOGIC; 

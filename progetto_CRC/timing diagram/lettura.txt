@@ -8,3 +8,16 @@
   {name: 'WR', wave: '0....' },
   {name: 'data_reg', wave: 'x.2x.', data: ['data'] },
 ]}
+
+
+variazione di fase
+{signal: [
+  {name: 'clk', wave: 'p....'},
+  {name: 'stato', wave: '2....', data: ['idle'] },
+  {name: 'DIN', wave: 'x....' },
+  {name: 'DOUT', wave: '2.22.', data: ['0x0000', 'data', '0x0000'], phase: -0.3 },
+  {name: 'ADDRESS', wave: 'x.2x.', data: ['add']},
+  {name: 'RD', wave: '010..' },
+  {name: 'WR', wave: '0....' },
+  {name: 'data_reg', wave: 'x.2x.', data: ['data'] },
+]}

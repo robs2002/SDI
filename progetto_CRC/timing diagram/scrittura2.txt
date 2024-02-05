@@ -31,3 +31,41 @@
   {name: 'SB_dp', wave: '1...............' },
   {name: 'RB', wave: '0.....1...0.....' },
 ]}
+
+
+
+
+versione con fase
+{signal: [
+  {name: 'clk', wave: 'p.......', period: 2},
+  {name: 'stato', wave: '2.......3.2.....', data: [ 'idle', 'crc_rst', 'idle'] },
+  {name: 'RST_SW', wave: '................' },
+  {name: 'RST', wave: '0................', phase: 0.5 },
+  {name: 'RST_CNT', wave: '0................', phase: 0.5 },
+  {name: 'RST_reg1', wave: '0........1.0.....', phase: 0.5 },
+  {name: 'RST_reg5', wave: '0........1.0.....', phase: 0.5 },
+  {name: 'DIN', wave: 'x....2.x........', data: ['data', 'data'] },
+  {name: 'DOUT', wave: '2...............', data: ['0x0000'] },
+  {name: 'ADDRESS', wave: 'x....2.x........', data: ['0x0002'] },
+  {name: 'RD', wave: '0...............' },
+  {name: 'WR', wave: '0....1.0........' },
+  {name: 'En0', wave: '0................', phase: 0.5 },
+  {name: 'En1', wave: '0................', phase: 0.5 },
+  {name: 'En2_dp', wave: '0.....1.0........', phase: 0.5 },
+  {name: 'En2_cu', wave: '0........1.0.....', phase: 0.5 },
+  {name: 'En2', wave: '0.....1.01.0.....', phase: 0.5 },
+  {name: 'En3', wave: '0................', phase: 0.5 },
+  {name: 'En4', wave: '0................', phase: 0.5 },
+  {name: 'En5', wave: '0................', phase: 0.5 },
+  {name: 's_mux', wave: '0........1.0.....', phase: 0.5 },
+  {name: 'data_reg0', wave: 'x................', phase: 0.5 },
+  {name: 'data_reg1', wave: 'x..........2.....', data: ['0xFFFF'], phase: 0.5 },
+  {name: 'data_reg2', wave: '2......2...2.....', data: ['0bXXXXXXXXXXXXXXX0', '0xXXX1', '0bXXXXXXXXXXXXXXX0'], phase: 0.5 },
+  {name: 'data_reg3', wave: '2................', data: ['0x0001'], phase: 0.5 },
+  {name: 'data_reg4', wave: 'x................', data: ['0x0000', 'data XOR FFFF', 'crc parziale'], phase: 0.5 },
+  {name: 'data_reg5', wave: '2..........2.....', data: ['0b000000000000000X', '0x0000'], phase: 0.5 },
+  {name: 'crc_out', wave: 'x................', data: ['data XOR FFFF', '','','','CRC','reg4','','','','crc parziale', '','','', 'CRC'], phase: 0.5 },
+  {name: 'mode_bit', wave: 'x..........0.....', phase: 0.5 },
+  {name: 'SB_dp', wave: '1................', phase: 0.5 },
+  {name: 'RB', wave: '0......1...0.....', phase: 0.5 },
+]}
