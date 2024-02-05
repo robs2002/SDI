@@ -1,0 +1,9 @@
+#
+# 1) The default values for assignments are stored in the file:
+#		fpga-user_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
